@@ -4,6 +4,7 @@ format:
   html:
     toc: true
     toc-depth: 3
+    toc-title: "Contingut"
 ---
 
 ## Llista 1. Càlcul de primitives
@@ -1413,7 +1414,15 @@ Determinau la funció àrea $F(x)=\int_0^x f(t)\,dt$.
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+Per a $x<0$ integram una funció nul·la. Si $0\le x\le1$, integram $f(t)=t$, i per a $x>1$ separam la integral en $[0,1]$ i $[1,x]$. Així,
+
+$$
+F(x)=\begin{cases}
+0, & x<0,\\[2mm]
+\displaystyle\int_0^x t\,dt=\dfrac{x^2}{2}, & 0\le x\le1,\\[3mm]
+\displaystyle\int_0^1t\,dt+\int_1^x1\,dt=x-\dfrac12, & x>1.
+\end{cases}
+$$
 
 :::
 
@@ -1423,7 +1432,32 @@ Representau $F$ gràficament i estudiau la seva continuïtat.
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+La gràfica està formada per una recta horitzontal $F(x)=0$ fins a $x=0$, un arc de paràbola $F(x)=x^2/2$ entre $0$ i $1$, i una recta de pendent $1$ a partir de $x=1$.
+
+```{r}
+#| echo: false
+#| fig-width: 7
+#| fig-height: 3.5
+#| fig-cap: "Gràfica de la funció àrea F"
+x <- seq(-1.5, 2.5, length.out = 601)
+F <- ifelse(x < 0, 0, ifelse(x <= 1, x^2 / 2, x - 1/2))
+plot(x, F, type = "l", lwd = 2, col = "#21649b",
+     xlab = "x", ylab = "F(x)")
+abline(h = 0, v = 0, col = "grey80")
+points(c(0, 1), c(0, 1/2), pch = 19, col = "#21649b")
+```
+
+Cada tram és continu. Als punts d'unió, els límits laterals coincideixen amb el valor de la funció:
+
+$$
+\lim_{x\to0^-}F(x)=\lim_{x\to0^+}F(x)=F(0)=0,
+$$
+
+$$
+\lim_{x\to1^-}F(x)=\lim_{x\to1^+}F(x)=F(1)=\frac12.
+$$
+
+Per tant, $F$ és **contínua en tot $\mathbb{R}$**.
 
 :::
 
@@ -1433,7 +1467,17 @@ On és $F$ derivable? Calculau $F'$ en els punts on sigui derivable.
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+Com que $f$ és contínua en tot $\mathbb{R}$, el teorema fonamental del càlcul garanteix que $F$ és derivable pertot i que $F'=f$. En particular,
+
+$$
+F'(x)=\begin{cases}
+0, & x<0,\\
+x, & 0\le x\le1,\\
+1, & x>1.
+\end{cases}
+$$
+
+També es pot comprovar directament que les derivades laterals coincideixen als punts $x=0$ i $x=1$.
 
 :::
 
@@ -1449,7 +1493,11 @@ $$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+Pel teorema fonamental del càlcul i la regla de la cadena, si $G(u)=\int_0^u(1+t^3)^{-1}\,dt$, llavors $G'(u)=(1+u^3)^{-1}$. Com que $F(x)=G(x^2)$,
+
+$$
+F'(x)=\frac{1}{1+(x^2)^3}\,2x=\frac{2x}{1+x^6}.
+$$
 
 :::
 
@@ -1461,7 +1509,14 @@ $$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+El factor $x$ que multiplica la integral no és la variable d'integració, sinó un factor exterior. Aplicam la regla del producte i, després, el teorema fonamental del càlcul:
+
+$$
+\begin{aligned}
+F'(x)&=\frac{d}{dx}\left(x\int_0^xf(t)\,dt\right)\\
+&=\int_0^xf(t)\,dt+xf(x).
+\end{aligned}
+$$
 
 :::
 
@@ -1473,7 +1528,21 @@ $$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+L'integrand és continu per a $t\ge0$. Aplicam la fórmula del teorema fonamental del càlcul quan els dos extrems depenen de $x$:
+
+$$
+\frac{d}{dx}\int_{g(x)}^{h(x)}k(t)\,dt
+=k(h(x))h'(x)-k(g(x))g'(x).
+$$
+
+En aquest cas, $h(x)=x^2+x$, $g(x)=\sqrt{x}$ i $k(t)=1/(2+\sqrt[3]{t^2})$. Per a $x>0$ resulta
+
+$$
+F'(x)=\frac{2x+1}{2+\sqrt[3]{(x^2+x)^2}}
+-\frac{1}{2\sqrt{x}\left(2+\sqrt[3]{x}\right)}.
+$$
+
+La funció està definida per a $x\ge0$, però **no és derivable en $x=0$**: el segon terme divergeix cap a $-\infty$ quan $x\to0^+$.
 
 :::
 
@@ -1485,7 +1554,16 @@ $$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+Derivam primer la potència amb la regla de la cadena i després la integral amb el teorema fonamental del càlcul:
+
+$$
+\begin{aligned}
+F'(x)&=3\left(\int_0^x\frac{dt}{1+\sin^2t}\right)^2
+\frac{d}{dx}\left(\int_0^x\frac{dt}{1+\sin^2t}\right)\\
+&=\frac{3}{1+\sin^2x}
+\left(\int_0^x\frac{dt}{1+\sin^2t}\right)^2.
+\end{aligned}
+$$
 
 :::
 
@@ -1499,7 +1577,13 @@ $$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+Com que $f$ és contínua, podem derivar els dos membres de la igualtat aplicant el teorema fonamental del càlcul:
+
+$$
+f(x)=\frac{d}{dx}\bigl(x^2(1+x)\bigr)=2x+3x^2.
+$$
+
+Avaluant en $x=2$, obtenim $f(2)=4+12=16$.
 
 :::
 
@@ -1517,7 +1601,11 @@ Calculau $F(0)$.
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+Els dos extrems d'integració coincideixen; per tant, sense necessitat de calcular cap primitiva,
+
+$$
+F(0)=\int_0^0\ln(2+t)\,dt=0.
+$$
 
 :::
 
@@ -1527,7 +1615,13 @@ Calculau $F'(x)$ i provau que $F$ és estrictament creixent en el seu domini.
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+La funció $t\mapsto\ln(2+t)$ és contínua en $[0,+\infty)$; pel teorema fonamental del càlcul,
+
+$$
+F'(x)=\ln(2+x).
+$$
+
+Si $x\ge0$, tenim $2+x\ge2>1$, de manera que $\ln(2+x)>0$. Així, $F$ és **estrictament creixent** en tot $[0,+\infty)$.
 
 :::
 
@@ -1545,7 +1639,12 @@ Calculau $F(3)$.
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+Aplicam la regla de Barrow després d'obtenir la primitiva de $t^2-1$:
+
+$$
+F(3)=\int_0^3(t^2-1)\,dt
+=\left[\frac{t^3}{3}-t\right]_0^3=9-3=6.
+$$
 
 :::
 
@@ -1555,7 +1654,17 @@ Determinau els extrems relatius de $F$.
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+Pel teorema fonamental del càlcul,
+
+$$
+F'(x)=x^2-1=(x-1)(x+1).
+$$
+
+La derivada és positiva en $(-\infty,-1)\cup(1,+\infty)$ i negativa en $(-1,1)$. Per tant, $F$ té un **màxim relatiu en $x=-1$** i un **mínim relatiu en $x=1$**. Com que $F(x)=x^3/3-x$, els valors corresponents són
+
+$$
+F(-1)=\frac23,\qquad F(1)=-\frac23.
+$$
 
 :::
 
@@ -1571,7 +1680,12 @@ $$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+El numerador i el denominador tendeixen a zero. Aplicam la regla de L'Hôpital i derivam la integral amb el teorema fonamental del càlcul:
+
+$$
+\lim_{x\to0}\frac{\int_0^xe^{t^2}\,dt}{x}
+=\lim_{x\to0}e^{x^2}=1.
+$$
 
 :::
 
@@ -1583,7 +1697,12 @@ $$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+Novament apareix una indeterminació $0/0$. Pel teorema fonamental del càlcul,
+
+$$
+\lim_{x\to1}\frac{\int_1^x\sqrt{1+2t^2}\,dt}{x-1}
+=\lim_{x\to1}\sqrt{1+2x^2}=\sqrt3.
+$$
 
 :::
 
@@ -1595,7 +1714,26 @@ $$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+Es tracta d'una indeterminació $0/0$. Escrivim el numerador com una diferència de funcions derivables i aplicam L'Hôpital:
+
+$$
+\begin{aligned}
+L&=\lim_{x\to0}\frac{x-\int_0^x\frac{\sin t}{t}\,dt}{x^3}\\
+&=\lim_{x\to0}\frac{1-\frac{\sin x}{x}}{3x^2}
+=\frac13\lim_{x\to0}\frac{x-\sin x}{x^3}.
+\end{aligned}
+$$
+
+Aplicam L'Hôpital successivament a la darrera expressió:
+
+$$
+\lim_{x\to0}\frac{x-\sin x}{x^3}
+=\lim_{x\to0}\frac{1-\cos x}{3x^2}
+=\lim_{x\to0}\frac{\sin x}{6x}
+=\frac16.
+$$
+
+En conseqüència, $L=\frac1{18}$. Hem utilitzat la prolongació contínua de $\sin t/t$ en $t=0$, que val $1$.
 
 :::
 
@@ -1607,7 +1745,19 @@ $$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+Tant el numerador com el denominador tendeixen a zero. Derivam el numerador emprant el teorema fonamental del càlcul i la regla de la cadena:
+
+$$
+\begin{aligned}
+L&=\lim_{x\to0}\frac{\int_0^{\sin x}(e^{t^2}-1)\,dt}{x^3}\\
+&=\lim_{x\to0}\frac{(e^{\sin^2x}-1)\cos x}{3x^2}\\
+&=\frac13\lim_{x\to0}\frac{e^{\sin^2x}-1}{\sin^2x}
+\left(\frac{\sin x}{x}\right)^2\cos x
+=\frac13.
+\end{aligned}
+$$
+
+En el darrer pas hem emprat els límits immediats $\lim_{u\to0}(e^u-1)/u=1$ i $\lim_{x\to0}\sin x/x=1$.
 
 :::
 
@@ -1621,7 +1771,28 @@ $$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+Com que $\alpha>0$, el denominador és positiu. Per trobar el mínim, primer calculam la integral com a funció de $\alpha$. Amb el canvi $t=\sqrt{x}$, tenim $dx=2t\,dt$ i els extrems passen de $x=\alpha,\alpha^2$ a $t=\sqrt\alpha,\alpha$. Per tant,
+
+$$
+\begin{aligned}
+I(\alpha)&=\int_\alpha^{\alpha^2}\frac{dx}{x+\sqrt{x}}\\
+&=2\int_{\sqrt\alpha}^{\alpha}\frac{dt}{t+1}
+=2\ln\frac{1+\alpha}{1+\sqrt\alpha}.
+\end{aligned}
+$$
+
+Per simplificar la derivació, posam $u=\sqrt\alpha>0$. Minimitzar $I(\alpha)$ equival a minimitzar $J(u)=2\ln\bigl((1+u^2)/(1+u)\bigr)$. Derivant,
+
+$$
+J'(u)=2\left(\frac{2u}{1+u^2}-\frac1{1+u}\right)
+=\frac{2(u^2+2u-1)}{(1+u^2)(1+u)}.
+$$
+
+L'única arrel positiva és $u=\sqrt2-1$. La derivada passa de negativa a positiva en aquest punt, de manera que és el mínim global (també tenim $J(u)\to0$ quan $u\to0^+$ i $J(u)\to+\infty$ quan $u\to+\infty$). En conseqüència,
+
+$$
+\alpha=(\sqrt2-1)^2=3-2\sqrt2.
+$$
 
 :::
 
@@ -1637,7 +1808,16 @@ $$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+El radical suggereix el canvi $t=\sqrt{x}$, amb $x=t^2$ i $dx=2t\,dt$. Els nous extrems són $0$ i $2$:
+
+$$
+\begin{aligned}
+\int_0^4\frac{dx}{1+\sqrt{x}}
+&=2\int_0^2\frac{t}{1+t}\,dt\\
+&=2\int_0^2\left(1-\frac1{t+1}\right)dt\\
+&=2[t-\ln(1+t)]_0^2=4-2\ln3.
+\end{aligned}
+$$
 
 :::
 
@@ -1649,7 +1829,11 @@ $$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+Integram per parts, prenent $u=\ln x$ i $dv=dx$. Així $du=dx/x$ i $v=x$, d'on la primitiva $x\ln x-x$. Aplicant Barrow,
+
+$$
+\int_2^4\ln x\,dx=[x\ln x-x]_2^4=6\ln2-2.
+$$
 
 :::
 
@@ -1661,7 +1845,12 @@ $$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+Reconeixem una integral semiimmediata: la derivada de $\ln x$ és $1/x$. També podem explicitar $t=\ln x$, que transforma els extrems $e$ i $e^2$ en $1$ i $2$:
+
+$$
+\int_e^{e^2}\frac{dx}{x\ln x}
+=\int_1^2\frac{dt}{t}=[\ln t]_1^2=\ln2.
+$$
 
 :::
 
@@ -1673,7 +1862,12 @@ $$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+Amb la identitat $\tan^2x=1/\cos^2x-1$ obtenim una integral immediata:
+
+$$
+\int_0^{\pi/4}\tan^2x\,dx
+=[\tan x-x]_0^{\pi/4}=1-\frac\pi4.
+$$
 
 :::
 
@@ -1685,7 +1879,14 @@ $$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+La corba $y=\sqrt{16-x^2}$ és la semicircumferència superior de radi $4$. La integral representa la seva àrea, que és la meitat de l'àrea del cercle:
+
+$$
+\int_{-4}^4\sqrt{16-x^2}\,dx
+=\frac12\pi\cdot4^2=8\pi.
+$$
+
+També es pot obtenir aplicant la regla de Barrow amb una primitiva calculada mitjançant $x=4\sin t$, com als apunts.
 
 :::
 
@@ -1697,7 +1898,12 @@ $$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+És una integral semiimmediata de potència. Per la regla de Barrow,
+
+$$
+\int_0^3\frac{dx}{\sqrt{1+x}}
+=\left[2\sqrt{1+x}\right]_0^3=2(2-1)=2.
+$$
 
 :::
 
@@ -1709,7 +1915,22 @@ $$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+Factoritzam el denominador i descomponem en fraccions simples:
+
+$$
+\frac1{x^2+x-2}=\frac1{(x-1)(x+2)}
+=\frac13\left(\frac1{x-1}-\frac1{x+2}\right).
+$$
+
+Aleshores,
+
+$$
+\begin{aligned}
+\int_2^5\frac{dx}{x^2+x-2}
+&=\frac13\left[\ln\left|\frac{x-1}{x+2}\right|\right]_2^5\\
+&=\frac13\ln\frac{16}{7}.
+\end{aligned}
+$$
 
 :::
 
@@ -1721,7 +1942,22 @@ $$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+Com que l'interval és negatiu, interpretam les potències fraccionàries amb arrels cúbiques reals. Simplificam:
+
+$$
+\frac{x-x^2}{2\sqrt[3]x}
+=\frac12\left(x^{2/3}-x^{5/3}\right).
+$$
+
+Una primitiva és $\frac3{10}x^{5/3}-\frac3{16}x^{8/3}$, d'on
+
+$$
+\begin{aligned}
+\int_{-8}^{-1}\frac{x-x^2}{2\sqrt[3]x}\,dx
+&=\left[\frac3{10}x^{5/3}-\frac3{16}x^{8/3}\right]_{-8}^{-1}\\
+&=\frac{4569}{80}.
+\end{aligned}
+$$
 
 :::
 
@@ -1733,7 +1969,17 @@ $$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+El polinomi $q(x)=x^2-4x+3=(x-1)(x-3)$ canvia de signe en $x=1$ i $x=3$. És positiu en $[0,1]$ i $[3,4]$, i negatiu en $(1,3)$. Per això, dividim la integral:
+
+$$
+\begin{aligned}
+I&=\int_0^1q(x)\,dx-\int_1^3q(x)\,dx+\int_3^4q(x)\,dx\\
+&=\left[\frac{x^3}{3}-2x^2+3x\right]_0^1
+-\left[\frac{x^3}{3}-2x^2+3x\right]_1^3
++\left[\frac{x^3}{3}-2x^2+3x\right]_3^4\\
+&=\frac43+\frac43+\frac43=4.
+\end{aligned}
+$$
 
 :::
 
@@ -1745,7 +1991,12 @@ $$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+Podem reconèixer directament una integral semiimmediata, perquè $(4+\cos x)'=-\sin x$. Equivalentment, el canvi $t=4+\cos x$ porta els extrems $0$ i $\pi$ a $5$ i $3$:
+
+$$
+\int_0^\pi\frac{\sin x}{4+\cos x}\,dx
+=-\int_5^3\frac{dt}{t}=\ln\frac53.
+$$
 
 :::
 
@@ -1757,7 +2008,12 @@ $$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+Basta emprar la identitat $1-\sin^2x=\cos^2x$. Com que $\cos x\ne0$ a $[0,\pi/4]$,
+
+$$
+\int_0^{\pi/4}\frac{1-\sin^2x}{\cos^2x}\,dx
+=\int_0^{\pi/4}1\,dx=\frac\pi4.
+$$
 
 :::
 
@@ -1769,7 +2025,17 @@ $$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+La funció $|x\cos x|$ és parella. En $[0,\pi/2]$ el cosinus és positiu i en $[\pi/2,\pi]$ és negatiu. Per tant,
+
+$$
+I=2\left(\int_0^{\pi/2}x\cos x\,dx-\int_{\pi/2}^{\pi}x\cos x\,dx\right).
+$$
+
+Integrant per parts obtenim $\int x\cos x\,dx=x\sin x+\cos x$. Aplicant Barrow als dos intervals,
+
+$$
+I=2\left[\left(\frac\pi2-1\right)-\left(-1-\frac\pi2\right)\right]=2\pi.
+$$
 
 :::
 
@@ -1779,7 +2045,27 @@ Determinau l'àrea de l'el·lipse de semieixos $a>b>0$.
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+Consideram l'el·lipse centrada a l'origen,
+
+$$
+\frac{x^2}{a^2}+\frac{y^2}{b^2}=1,\qquad a>b>0.
+$$
+
+A la meitat superior, $y=b\sqrt{1-x^2/a^2}$. Per simetria, basta calcular quatre vegades l'àrea del primer quadrant:
+
+$$
+S=4b\int_0^a\sqrt{1-\frac{x^2}{a^2}}\,dx.
+$$
+
+Amb el canvi $x=a\sin t$, els extrems passen a $0$ i $\pi/2$, i $dx=a\cos t\,dt$. En conseqüència,
+
+$$
+\begin{aligned}
+S&=4ab\int_0^{\pi/2}\cos^2t\,dt\\
+&=2ab\int_0^{\pi/2}(1+\cos2t)\,dt
+=\pi ab.
+\end{aligned}
+$$
 
 :::
 
@@ -1789,7 +2075,21 @@ Determinau l'àrea del triangle format pels eixos de coordenades i la recta tang
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+Prenem un punt qualsevol de la hipèrbola, $(a,1/a)$, amb $a\ne0$. Com que $y=1/x$, la derivada és $y'=-1/x^2$ i la recta tangent en aquest punt té equació
+
+$$
+y-\frac1a=-\frac1{a^2}(x-a),
+\quad\text{és a dir,}\quad
+\frac{x}{a^2}+y\,=\frac2a.
+$$
+
+La tangent talla l'eix d'abscisses en $(2a,0)$ i l'eix d'ordenades en $(0,2/a)$. L'àrea del triangle és la meitat del producte de les longituds dels catets:
+
+$$
+S=\frac12|2a|\left|\frac2a\right|=2.
+$$
+
+Per tant, **l'àrea és sempre $2$**, independentment del punt de tangència.
 
 :::
 
@@ -1803,7 +2103,12 @@ $y=\frac{1}{x^2}$ i l'eix d'abscisses per a $1\leq x\leq 5$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+La funció $1/x^2$ és positiva en $[1,5]$. L'àrea cercada es calcula directament amb la regla de Barrow:
+
+$$
+S=\int_1^5\frac{dx}{x^2}
+=\left[-\frac1x\right]_1^5=\frac45.
+$$
 
 :::
 
@@ -1813,7 +2118,30 @@ $y=3x-x^2$ i $y=-x-3$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+Els punts de tall satisfan
+
+$$
+3x-x^2=-x-3
+\quad\Longleftrightarrow\quad
+x^2-4x-3=0,
+$$
+
+i, per tant, són $x=2-\sqrt7$ i $x=2+\sqrt7$. Entre aquests punts la paràbola $3x-x^2$ es troba per damunt de la recta, perquè la diferència és
+
+$$
+(3x-x^2)-(-x-3)=7-(x-2)^2.
+$$
+
+Calculam l'àrea amb el canvi $u=x-2$:
+
+$$
+\begin{aligned}
+S&=\int_{2-\sqrt7}^{2+\sqrt7}\bigl(7-(x-2)^2\bigr)\,dx\\
+&=\int_{-\sqrt7}^{\sqrt7}(7-u^2)\,du
+=\left[7u-\frac{u^3}{3}\right]_{-\sqrt7}^{\sqrt7}
+=\frac{28\sqrt7}{3}.
+\end{aligned}
+$$
 
 :::
 
@@ -1823,7 +2151,16 @@ $y=x^3$ i $y=x$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+Les dues corbes es tallen quan $x^3=x$, és a dir, en $x=-1,0,1$. Hem de separar els dos recintes perquè les funcions intercanvien l'ordre en $x=0$. Per simetria,
+
+$$
+\begin{aligned}
+S&=\int_{-1}^0(x^3-x)\,dx+\int_0^1(x-x^3)\,dx\\
+&=2\int_0^1(x-x^3)\,dx
+=2\left[\frac{x^2}{2}-\frac{x^4}{4}\right]_0^1
+=\frac12.
+\end{aligned}
+$$
 
 :::
 
@@ -1833,7 +2170,24 @@ $y=x^2-2x$ i $y=6x-x^2$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+Igualant les dues expressions de $y$,
+
+$$
+x^2-2x=6x-x^2
+\quad\Longleftrightarrow\quad
+2x(x-4)=0.
+$$
+
+Els punts de tall tenen abscisses $0$ i $4$. En aquest interval, $6x-x^2$ és la funció superior. Així,
+
+$$
+\begin{aligned}
+S&=\int_0^4\bigl((6x-x^2)-(x^2-2x)\bigr)\,dx\\
+&=\int_0^4(8x-2x^2)\,dx
+=\left[4x^2-\frac{2x^3}{3}\right]_0^4
+=\frac{64}{3}.
+\end{aligned}
+$$
 
 :::
 
@@ -1843,7 +2197,17 @@ $y=x^2-4x+3$ i $y=3+4x-x^2$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+La diferència de les funcions és
+
+$$
+(3+4x-x^2)-(x^2-4x+3)=8x-2x^2.
+$$
+
+Per tant, es tallen en $x=0$ i $x=4$, i la segona corba del text és la superior dins aquest interval. L'àrea coincideix amb la de l'apartat anterior:
+
+$$
+S=\int_0^4(8x-2x^2)\,dx=\frac{64}{3}.
+$$
 
 :::
 
@@ -1853,7 +2217,20 @@ $x=\sqrt{y}$, $x=2-y$ i $y=0$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+Aquí és més senzill integrar respecte de $y$. La corba $x=\sqrt y$ està definida per a $y\ge0$, i el punt de tall amb $x=2-y$ es troba resolent
+
+$$
+\sqrt y=2-y
+\quad\Longleftrightarrow\quad y=1,
+$$
+
+ja que $y=1$ és l'única solució compatible amb $y\ge0$ i $2-y\ge0$. La regió està compresa entre $y=0$ i $y=1$; la frontera de la dreta és $x=2-y$ i la de l'esquerra és $x=\sqrt y$. Així,
+
+$$
+S=\int_0^1\bigl(2-y-\sqrt y\bigr)\,dy
+=\left[2y-\frac{y^2}{2}-\frac23y^{3/2}\right]_0^1
+=\frac56.
+$$
 
 :::
 
@@ -1863,7 +2240,25 @@ Dos germans s'han de repartir, a parts iguals, una parcel·la tancada entre dues
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+La regió està limitada per $y=x^2$ i $y=1$. Si integrem respecte de $y$, la seva amplada a una altura $y\in[0,1]$ és $\sqrt y-(-\sqrt y)=2\sqrt y$. L'àrea total és
+
+$$
+S=\int_0^1 2\sqrt y\,dy=\frac43.
+$$
+
+La recta $y=a$ ha de deixar $S/2=2/3$ unitats d'àrea per davall. Per tant,
+
+$$
+\int_0^a2\sqrt y\,dy=\frac23
+\quad\Longleftrightarrow\quad
+\frac43a^{3/2}=\frac23.
+$$
+
+D'aquí resulta $a^{3/2}=1/2$, i la recta cercada és
+
+$$
+a=\left(\frac12\right)^{2/3}=\frac1{\sqrt[3]{4}}.
+$$
 
 :::
 
@@ -1873,7 +2268,23 @@ Sabent que l'àrea de la regió compresa entre $y=x^2$ i $y=\alpha x$ és $\frac
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+Els punts de tall compleixen $x^2=\alpha x$, d'on $x=0$ o $x=\alpha$. Si $\alpha>0$, la recta és superior a la paràbola entre $0$ i $\alpha$, i
+
+$$
+S=\int_0^\alpha(\alpha x-x^2)\,dx
+=\left[\frac{\alpha x^2}{2}-\frac{x^3}{3}\right]_0^\alpha
+=\frac{\alpha^3}{6}.
+$$
+
+Per a $\alpha<0$ s'inverteix l'interval i l'àrea continua essent positiva. En conjunt, $S=|\alpha|^3/6$. Imposant la condició de l'enunciat,
+
+$$
+\frac{|\alpha|^3}{6}=\frac92
+\quad\Longleftrightarrow\quad
+|\alpha|^3=27.
+$$
+
+Hi ha **dues solucions**, $\alpha=3$ i $\alpha=-3$.
 
 :::
 
@@ -1883,7 +2294,29 @@ Determinau per a quin valor de $\lambda\in\mathbb{R}$ la recta $y=\lambda$ divid
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+La paràbola talla l'eix d'abscisses en $x=-3$ i $x=3$. L'àrea total és
+
+$$
+S=\int_{-3}^3(9-x^2)\,dx=36.
+$$
+
+Perquè la recta horitzontal $y=\lambda$ divideixi el recinte en dues parts iguals, l'àrea situada per davall de la recta ha de valer $18$. És més còmode integrar respecte de $y$: a cada altura $y\in[0,9]$, els límits horitzontals són $x=\pm\sqrt{9-y}$ i l'amplada és $2\sqrt{9-y}$.
+
+$$
+\begin{aligned}
+18&=\int_0^\lambda2\sqrt{9-y}\,dy\\
+&=\frac43\left(27-(9-\lambda)^{3/2}\right).
+\end{aligned}
+$$
+
+Així, $(9-\lambda)^{3/2}=27/2$ i obtenim
+
+$$
+\lambda=9-\left(\frac{27}{2}\right)^{2/3}
+=9\left(1-\frac1{\sqrt[3]{4}}\right).
+$$
+
+Aquest valor pertany a $(0,9)$, com correspon a una recta que travessa l'interior del recinte.
 
 :::
 
@@ -1897,7 +2330,16 @@ $y=x^2$ i $y=\sqrt{x}$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+Les corbes es tallen quan $x^2=\sqrt{x}$, és a dir, en $x=0$ i $x=1$. En aquest interval, $\sqrt{x}$ és la corba superior. Girant el recinte al voltant d'OX, empram el mètode de les volanderes (disc exterior menys disc interior):
+
+$$
+\begin{aligned}
+V&=\pi\int_0^1\left[(\sqrt{x})^2-(x^2)^2\right]dx\\
+&=\pi\int_0^1(x-x^4)\,dx
+=\pi\left[\frac{x^2}{2}-\frac{x^5}{5}\right]_0^1
+=\frac{3\pi}{10}.
+\end{aligned}
+$$
 
 :::
 
@@ -1907,7 +2349,18 @@ $y=x^3$, $y=2-x$ i $y=0$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+Les tres fronteres es tallen en $(0,0)$, $(1,1)$ i $(2,0)$. La regió està per damunt de l'eix d'abscisses i té com a frontera superior $y=x^3$ entre $x=0$ i $x=1$, i $y=2-x$ entre $x=1$ i $x=2$.
+
+En girar al voltant d'OX, cada tram genera discs, i el volum total és la suma de les dues integrals:
+
+$$
+\begin{aligned}
+V&=\pi\int_0^1(x^3)^2\,dx
++\pi\int_1^2(2-x)^2\,dx\\
+&=\pi\left(\frac17+\frac13\right)
+=\frac{10\pi}{21}.
+\end{aligned}
+$$
 
 :::
 
@@ -1917,7 +2370,21 @@ $x=(y-1)^2$ i $x=1$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+Els punts de tall de $x=(y-1)^2$ amb $x=1$ tenen ordenades $y=0$ i $y=2$. Per calcular el volum respecte de l'eix OX, podem escriure les dues branques de la paràbola com
+
+$$
+y=1-\sqrt{x}\quad\text{i}\quad y=1+\sqrt{x},\qquad 0\le x\le1.
+$$
+
+Totes dues són no negatives. Per tant, emprant el mètode de les volanderes,
+
+$$
+\begin{aligned}
+V&=\pi\int_0^1\left[(1+\sqrt{x})^2-(1-\sqrt{x})^2\right]dx\\
+&=4\pi\int_0^1\sqrt{x}\,dx
+=\frac{8\pi}{3}.
+\end{aligned}
+$$
 
 :::
 
@@ -1931,7 +2398,17 @@ El segment de la paràbola $y=x^2$ comprès en l'interval $[0,2]$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+Interpretam el segment de paràbola com **la regió situada sota $y=x^2$**, sobre l'eix d'abscisses i entre $x=0$ i $x=2$. En girar aquesta regió al voltant de l'eix OY, el mètode dels tubs cilíndrics dona
+
+$$
+\begin{aligned}
+V&=2\pi\int_0^2x\,x^2\,dx
+=2\pi\int_0^2x^3\,dx\\
+&=2\pi\left[\frac{x^4}{4}\right]_0^2=8\pi.
+\end{aligned}
+$$
+
+Aquesta interpretació pressuposa que es gira el **recinte** sota la paràbola, no només la línia de la corba.
 
 :::
 
@@ -1941,7 +2418,16 @@ $x+y^2=9$ i $x=0$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+Reescrivim la paràbola com $x=9-y^2$. Talla l'eix OY quan $y=\pm3$. La regió queda a la dreta de l'eix i, en girar-la al voltant d'OY, cada secció horitzontal genera un disc de radi $9-y^2$.
+
+$$
+\begin{aligned}
+V&=\pi\int_{-3}^3(9-y^2)^2\,dy\\
+&=2\pi\int_0^3(81-18y^2+y^4)\,dy\\
+&=2\pi\left[81y-6y^3+\frac{y^5}{5}\right]_0^3
+=\frac{1296\pi}{5}.
+\end{aligned}
+$$
 
 :::
 
@@ -1951,7 +2437,32 @@ $y=2-x$, $y=x-2$, $x=y^2$ i $y=0$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+**Cal precisar quina regió es vol fer girar.** Les quatre corbes de l'enunciat dibuixen més d'un recinte tancat. En particular, a la part superior de l'eix d'abscisses apareixen dos recintes:
+
+- El limitat per $x=y^2$, $x=2-y$ i $y=0$, amb $0\le y\le1$.
+- El limitat per $x=2-y$, $x=2+y$ i $x=y^2$, amb $0\le y\le2$ (canvia de frontera esquerra a $y=1$).
+
+Si es demana el **primer recinte**, el mètode de les volanderes al voltant d'OY dona
+
+$$
+\begin{aligned}
+V_1&=\pi\int_0^1\left[(2-y)^2-y^4\right]dy\\
+&=\pi\left[4y-2y^2+\frac{y^3}{3}-\frac{y^5}{5}\right]_0^1
+=\frac{32\pi}{15}.
+\end{aligned}
+$$
+
+Si es consideren **tots dos recintes superiors** conjuntament, la frontera exterior és $x=2+y$ i la interior és $x=y^2$, amb $0\le y\le2$. Per tant,
+
+$$
+\begin{aligned}
+V_{\mathrm{total}}&=\pi\int_0^2\left[(2+y)^2-y^4\right]dy\\
+&=\pi\left[4y+2y^2+\frac{y^3}{3}-\frac{y^5}{5}\right]_0^2
+=\frac{184\pi}{15}.
+\end{aligned}
+$$
+
+Abans de donar un resultat únic a l'alumnat, convindria acompanyar l'enunciat amb una figura que assenyali el recinte desitjat.
 
 :::
 
@@ -1961,7 +2472,31 @@ Calculau el volum del tor (*donut*) com el volum del cos generat en fer girar al
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+Per obtenir un **volum**, entenem que gira el disc interior a la circumferència, no només la seva frontera. Suposam el cas habitual del tor, $a>r>0$, de manera que el disc no talla l'eix de revolució.
+
+El disc té equació $(x-a)^2+y^2\le r^2$. A una altura $y\in[-r,r]$, els radis de les dues circumferències generades són
+
+$$
+R(y)=a+\sqrt{r^2-y^2},\qquad
+r_{\mathrm{int}}(y)=a-\sqrt{r^2-y^2}.
+$$
+
+Pel mètode de les volanderes,
+
+$$
+\begin{aligned}
+V&=\pi\int_{-r}^r\left(R(y)^2-r_{\mathrm{int}}(y)^2\right)dy\\
+&=4\pi a\int_{-r}^r\sqrt{r^2-y^2}\,dy.
+\end{aligned}
+$$
+
+La integral és l'àrea d'un semicercle de radi $r$, que val $\pi r^2/2$. Per tant,
+
+$$
+V=2\pi^2ar^2.
+$$
+
+Si $a<r$, el disc travessa l'eix i la figura resultant ja no és el tor ordinari; aquest cas exigeix tractar separadament la geometria.
 
 :::
 
@@ -1971,7 +2506,28 @@ Calculau la longitud de la corba $y=\ln(1-x^2)$ compresa entre $x=\frac14$ i $x=
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+Per calcular la longitud d'arc empram la fórmula dels apunts
+
+$$
+L=\int_a^b\sqrt{1+(f'(x))^2}\,dx.
+$$
+
+Com que $f(x)=\ln(1-x^2)$, la derivada és $f'(x)=-2x/(1-x^2)$. Així,
+
+$$
+\begin{aligned}
+L&=\int_{1/4}^{3/4}\sqrt{1+\frac{4x^2}{(1-x^2)^2}}\,dx\\
+&=\int_{1/4}^{3/4}\frac{1+x^2}{1-x^2}\,dx
+=\int_{1/4}^{3/4}\left(-1+\frac2{1-x^2}\right)dx.
+\end{aligned}
+$$
+
+Aquí $1-x^2>0$. Amb fraccions simples, $2/(1-x^2)=1/(1-x)+1/(1+x)$, i una primitiva és $-x+\ln((1+x)/(1-x))$. Aplicant Barrow,
+
+$$
+L=\left[-x+\ln\frac{1+x}{1-x}\right]_{1/4}^{3/4}
+=\ln\frac{21}{5}-\frac12.
+$$
 
 :::
 
@@ -1981,7 +2537,25 @@ Calculau la longitud de l'arc de la paràbola semicúbica $y^2=x^3$ en l'interva
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+L'equació $y^2=x^3$ té dues branques per a $x\ge0$: $y=x^{3/2}$ i $y=-x^{3/2}$. Són simètriques respecte de l'eix d'abscisses i tenen la mateixa longitud.
+
+Per a la branca superior, $f'(x)=\frac32\sqrt{x}$. La longitud entre $x=0$ i $x=1$ és
+
+$$
+\begin{aligned}
+L_+&=\int_0^1\sqrt{1+\frac94x}\,dx\\
+&=\left[\frac8{27}\left(1+\frac94x\right)^{3/2}\right]_0^1
+=\frac{13\sqrt{13}-8}{27}.
+\end{aligned}
+$$
+
+Si per «l'arc de la paràbola semicúbica» entenem **les dues branques** en $0\le x\le1$, la longitud total és
+
+$$
+L=2L_+=\frac{2(13\sqrt{13}-8)}{27}.
+$$
+
+Si l'enunciat es refereix només a l'arc superior, el resultat és $L_+$.
 
 :::
 
@@ -1997,7 +2571,24 @@ $$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+L'integrand és continu a $[4,+\infty)$, però l'interval no està fitat. Descomponem en fraccions simples:
+
+$$
+\frac1{x^2-4}=\frac14\left(\frac1{x-2}-\frac1{x+2}\right).
+$$
+
+Així, per definició d'integral impròpia,
+
+$$
+\begin{aligned}
+I&=\lim_{b\to+\infty}\int_4^b\frac{dx}{x^2-4}\\
+&=\frac14\lim_{b\to+\infty}
+\left[\ln\left|\frac{x-2}{x+2}\right|\right]_4^b
+=\frac14\ln3.
+\end{aligned}
+$$
+
+La integral és **convergent**.
 
 :::
 
@@ -2009,7 +2600,17 @@ $$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+Integram per parts amb $u=x$, $dv=e^x\,dx$, de manera que una primitiva és $(x-1)e^x$. L'extrem inferior es tracta mitjançant un límit:
+
+$$
+\begin{aligned}
+I&=\lim_{a\to-\infty}\int_a^1xe^x\,dx\\
+&=\lim_{a\to-\infty}\bigl[(x-1)e^x\bigr]_a^1\\
+&=-\lim_{a\to-\infty}(a-1)e^a=0.
+\end{aligned}
+$$
+
+Com que el límit existeix i és finit, la integral **convergeix i val $0$**; això no significa que l'integrand sigui nul, sinó que les aportacions negativa i positiva es compensen.
 
 :::
 
@@ -2021,7 +2622,23 @@ $$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+És una integral impròpia als dos extrems. Dividim l'interval, per exemple en $x=0$, i estudiam les dues parts per separat. Amb el canvi $t=e^x>0$, tenim $dx=dt/t$ i
+
+$$
+\frac{dx}{e^x+e^{-x}}=\frac{dt}{1+t^2}.
+$$
+
+El canvi porta $x\to-\infty$ a $t\to0^+$ i $x\to+\infty$ a $t\to+\infty$. Les dues parts són convergents, i
+
+$$
+\begin{aligned}
+I&=\int_0^1\frac{dt}{1+t^2}
++\int_1^{+\infty}\frac{dt}{1+t^2}\\
+&=[\arctan t]_0^1
++\lim_{b\to+\infty}[\arctan t]_1^b
+=\frac\pi4+\frac\pi4=\frac\pi2.
+\end{aligned}
+$$
 
 :::
 
@@ -2033,7 +2650,15 @@ $$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+La funció és no fitada quan $x\to0^+$ i l'interval d'integració també és no fitat. El canvi $t=\sqrt{x}$, amb $x=t^2$ i $dx=2t\,dt$, transforma la integral en
+
+$$
+I=2\int_0^{+\infty}\frac{dt}{t^2+4}
+=\left[\arctan\frac t2\right]_0^{+\infty}
+=\frac\pi2.
+$$
+
+Els límits en $t=0$ i $t\to+\infty$ són finits; per tant, **la integral és convergent**.
 
 :::
 
@@ -2045,7 +2670,17 @@ $$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+L'integrand no està fitat en l'extrem $x=3$, i hem de considerar el límit per l'esquerra. Reconeixem una primitiva semiimmediata de l'arcsinus:
+
+$$
+\begin{aligned}
+I&=\lim_{b\to3^-}\int_0^b\frac{dx}{\sqrt{9-x^2}}\\
+&=\lim_{b\to3^-}\left[\arcsin\frac x3\right]_0^b
+=\frac\pi2.
+\end{aligned}
+$$
+
+La integral és **convergent**.
 
 :::
 
@@ -2057,7 +2692,18 @@ $$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+L'integrand es fa no fitat quan $x\to\pi/2^-$, perquè $1-\sin x\to0$. Per estudiar el límit, feim $t=1-\sin x$, amb $dt=-\cos x\,dx$. Els extrems es transformen en $1$ i $0$:
+
+$$
+\begin{aligned}
+I&=\lim_{\varepsilon\to0^+}
+\int_0^{\pi/2-\varepsilon}\frac{\cos x}{\sqrt{1-\sin x}}\,dx\\
+&=\int_0^1 t^{-1/2}\,dt
+=\lim_{a\to0^+}[2\sqrt t]_a^1=2.
+\end{aligned}
+$$
+
+Per tant, **convergeix**.
 
 :::
 
@@ -2069,7 +2715,24 @@ $$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+La funció no està fitada en $x=1$. Observam que
+
+$$
+\frac{d}{dx}(\arcsin x)=\frac1{\sqrt{1-x^2}}.
+$$
+
+Així, podem integrar directament com a semiimmediata, o bé fer el canvi $t=\arcsin x$:
+
+$$
+\begin{aligned}
+I&=\lim_{b\to1^-}\int_0^b\frac{\arcsin x}{\sqrt{1-x^2}}\,dx\\
+&=\lim_{b\to1^-}\left[\frac{(\arcsin x)^2}{2}\right]_0^b
+=\frac12\left(\frac\pi2\right)^2
+=\frac{\pi^2}{8}.
+\end{aligned}
+$$
+
+La integral és **convergent**.
 
 :::
 
@@ -2081,7 +2744,29 @@ $$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+La funció $1/\sqrt[5]x$ presenta una singularitat en $x=0$, a l'interior de l'interval. **No basta emprar la simetria d'una funció senar:** hem de comprovar que les dues integrals laterals convergeixen.
+
+Per a $x\ne0$ una primitiva, interpretant les potències amb l'arrel cinquena real, és
+
+$$
+\int x^{-1/5}\,dx=\frac54x^{4/5}+C.
+$$
+
+Estudiam cada costat:
+
+$$
+\int_{-1}^0\frac{dx}{\sqrt[5]x}
+=\lim_{a\to0^-}\left[\frac54x^{4/5}\right]_{-1}^a
+=-\frac54,
+$$
+
+$$
+\int_0^1\frac{dx}{\sqrt[5]x}
+=\lim_{b\to0^+}\left[\frac54x^{4/5}\right]_b^1
+=\frac54.
+$$
+
+Com que ambdues integrals convergeixen, la integral total és **convergent** i val $-5/4+5/4=0$.
 
 :::
 
@@ -2093,7 +2778,24 @@ $$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+Encara que $\ln x\to-\infty$ quan $x\to0^+$, el producte $x\ln x\to0$. Per això l'integrand admet una prolongació contínua en aquest extrem. També podem estudiar la integral com a impròpia i calcular-ne el límit.
+
+Per parts, amb $u=\ln x$ i $dv=x\,dx$, tenim
+
+$$
+\int x\ln x\,dx=\frac{x^2}{2}\ln x-\frac{x^2}{4}+C.
+$$
+
+Per tant,
+
+$$
+\begin{aligned}
+I&=\lim_{a\to0^+}\left[\frac{x^2}{2}\ln x-\frac{x^2}{4}\right]_a^1\\
+&=-\frac14,
+\end{aligned}
+$$
+
+ja que $\lim_{a\to0^+}a^2\ln a=0$. La integral **convergeix**.
 
 :::
 
@@ -2109,7 +2811,21 @@ $$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+El problema es redueix a estudiar què passa a l'extrem $x=a$. Amb el canvi $t=x-a$,
+
+$$
+I=\int_0^{b-a}t^{-\alpha}\,dt.
+$$
+
+Si $\alpha\ne1$, una primitiva és $t^{1-\alpha}/(1-\alpha)$, i el límit en $t=0^+$ és finit **si, i només si, $\alpha<1$**. En aquest cas,
+
+$$
+I=\lim_{\varepsilon\to0^+}
+\left[\frac{t^{1-\alpha}}{1-\alpha}\right]_{\varepsilon}^{b-a}
+=\frac{(b-a)^{1-\alpha}}{1-\alpha}.
+$$
+
+Per a $\alpha=1$ apareix $\ln t$, que divergeix a $0$, i per a $\alpha>1$ també divergeix. Així, la integral **convergeix exactament per a $\alpha<1$**.
 
 :::
 
@@ -2121,7 +2837,26 @@ $$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+El canvi $t=\ln x$ porta $x=2$ a $t=\ln2$ i $x\to+\infty$ a $t\to+\infty$. Com que $dt=dx/x$,
+
+$$
+I=\int_{\ln2}^{+\infty}t^{-\alpha}\,dt.
+$$
+
+És el mateix tipus d'integral que s'estudia als apunts per a un interval no fitat. Si $\alpha\ne1$,
+
+$$
+\int_{\ln2}^b t^{-\alpha}\,dt
+=\left[\frac{t^{1-\alpha}}{1-\alpha}\right]_{\ln2}^b.
+$$
+
+El límit quan $b\to+\infty$ és finit **si, i només si, $\alpha>1$**. Aleshores,
+
+$$
+I=\frac{(\ln2)^{1-\alpha}}{\alpha-1}.
+$$
+
+Quan $\alpha=1$ la primitiva és $\ln t$ i també divergeix. Per tant, la integral és divergent per a $\alpha\le1$.
 
 :::
 
@@ -2133,7 +2868,21 @@ $$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+Tornam a fer $t=\ln x$, però ara el problema és a l'extrem inferior $x=1$, que correspon a $t=0$:
+
+$$
+I=\int_0^{\ln2}t^{-\alpha}\,dt.
+$$
+
+Seguint l'estudi de les integrals de potència en un interval fitat, obtenim que **convergeix si, i només si, $\alpha<1$**. En aquest cas,
+
+$$
+I=\lim_{\varepsilon\to0^+}
+\left[\frac{t^{1-\alpha}}{1-\alpha}\right]_{\varepsilon}^{\ln2}
+=\frac{(\ln2)^{1-\alpha}}{1-\alpha}.
+$$
+
+Per a $\alpha=1$ el límit logarítmic divergeix, i per a $\alpha>1$ també.
 
 :::
 
@@ -2145,6 +2894,22 @@ $$
 
 ::: {.callout-note collapse="true" title="Solució"}
 
-*Solució pendent.*
+Com que l'interval és tota la recta, hem de separar les integrals a $x=0$. A més, $e^{-\alpha|x|}$ és una funció parella:
+
+$$
+I=\int_{-\infty}^0e^{\alpha x}\,dx
++\int_0^{+\infty}e^{-\alpha x}\,dx
+=2\int_0^{+\infty}e^{-\alpha x}\,dx.
+$$
+
+Si $\alpha>0$, per definició d'integral impròpia,
+
+$$
+I=2\lim_{b\to+\infty}
+\left[-\frac{e^{-\alpha x}}{\alpha}\right]_0^b
+=\frac2\alpha.
+$$
+
+Per a $\alpha=0$ l'integrand és $1$, i per a $\alpha<0$ creix exponencialment quan $|x|\to\infty$. En ambdós casos la integral divergeix. Per tant, **convergeix exactament per a $\alpha>0$**.
 
 :::

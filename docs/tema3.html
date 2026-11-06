@@ -165,7 +165,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+    <h2 id="toc-title">Contingut</h2>
    
   <ul>
   <li><a href="#llista-1.-càlcul-de-primitives" id="toc-llista-1.-càlcul-de-primitives" class="nav-link active" data-scroll-target="#llista-1.-càlcul-de-primitives">Llista 1. Càlcul de primitives</a>
@@ -1793,7 +1793,14 @@ Solució
 </div>
 <div id="callout-45" class="callout-45-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>Per a <span class="math inline">\(x&lt;0\)</span> integram una funció nul·la. Si <span class="math inline">\(0\le x\le1\)</span>, integram <span class="math inline">\(f(t)=t\)</span>, i per a <span class="math inline">\(x&gt;1\)</span> separam la integral en <span class="math inline">\([0,1]\)</span> i <span class="math inline">\([1,x]\)</span>. Així,</p>
+<p><span class="math display">\[
+F(x)=\begin{cases}
+0, &amp; x&lt;0,\\[2mm]
+\displaystyle\int_0^x t\,dt=\dfrac{x^2}{2}, &amp; 0\le x\le1,\\[3mm]
+\displaystyle\int_0^1t\,dt+\int_1^x1\,dt=x-\dfrac12, &amp; x&gt;1.
+\end{cases}
+\]</span></p>
 </div>
 </div>
 </div>
@@ -1811,7 +1818,25 @@ Solució
 </div>
 <div id="callout-46" class="callout-46-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>La gràfica està formada per una recta horitzontal <span class="math inline">\(F(x)=0\)</span> fins a <span class="math inline">\(x=0\)</span>, un arc de paràbola <span class="math inline">\(F(x)=x^2/2\)</span> entre <span class="math inline">\(0\)</span> i <span class="math inline">\(1\)</span>, i una recta de pendent <span class="math inline">\(1\)</span> a partir de <span class="math inline">\(x=1\)</span>.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="tema3_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption>Gràfica de la funció àrea F</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Cada tram és continu. Als punts d’unió, els límits laterals coincideixen amb el valor de la funció:</p>
+<p><span class="math display">\[
+\lim_{x\to0^-}F(x)=\lim_{x\to0^+}F(x)=F(0)=0,
+\]</span></p>
+<p><span class="math display">\[
+\lim_{x\to1^-}F(x)=\lim_{x\to1^+}F(x)=F(1)=\frac12.
+\]</span></p>
+<p>Per tant, <span class="math inline">\(F\)</span> és <strong>contínua en tot <span class="math inline">\(\mathbb{R}\)</span></strong>.</p>
 </div>
 </div>
 </div>
@@ -1829,7 +1854,15 @@ Solució
 </div>
 <div id="callout-47" class="callout-47-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>Com que <span class="math inline">\(f\)</span> és contínua en tot <span class="math inline">\(\mathbb{R}\)</span>, el teorema fonamental del càlcul garanteix que <span class="math inline">\(F\)</span> és derivable pertot i que <span class="math inline">\(F'=f\)</span>. En particular,</p>
+<p><span class="math display">\[
+F'(x)=\begin{cases}
+0, &amp; x&lt;0,\\
+x, &amp; 0\le x\le1,\\
+1, &amp; x&gt;1.
+\end{cases}
+\]</span></p>
+<p>També es pot comprovar directament que les derivades laterals coincideixen als punts <span class="math inline">\(x=0\)</span> i <span class="math inline">\(x=1\)</span>.</p>
 </div>
 </div>
 </div>
@@ -1853,7 +1886,10 @@ Solució
 </div>
 <div id="callout-48" class="callout-48-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>Pel teorema fonamental del càlcul i la regla de la cadena, si <span class="math inline">\(G(u)=\int_0^u(1+t^3)^{-1}\,dt\)</span>, llavors <span class="math inline">\(G'(u)=(1+u^3)^{-1}\)</span>. Com que <span class="math inline">\(F(x)=G(x^2)\)</span>,</p>
+<p><span class="math display">\[
+F'(x)=\frac{1}{1+(x^2)^3}\,2x=\frac{2x}{1+x^6}.
+\]</span></p>
 </div>
 </div>
 </div>
@@ -1873,7 +1909,13 @@ Solució
 </div>
 <div id="callout-49" class="callout-49-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>El factor <span class="math inline">\(x\)</span> que multiplica la integral no és la variable d’integració, sinó un factor exterior. Aplicam la regla del producte i, després, el teorema fonamental del càlcul:</p>
+<p><span class="math display">\[
+\begin{aligned}
+F'(x)&amp;=\frac{d}{dx}\left(x\int_0^xf(t)\,dt\right)\\
+&amp;=\int_0^xf(t)\,dt+xf(x).
+\end{aligned}
+\]</span></p>
 </div>
 </div>
 </div>
@@ -1893,7 +1935,17 @@ Solució
 </div>
 <div id="callout-50" class="callout-50-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>L’integrand és continu per a <span class="math inline">\(t\ge0\)</span>. Aplicam la fórmula del teorema fonamental del càlcul quan els dos extrems depenen de <span class="math inline">\(x\)</span>:</p>
+<p><span class="math display">\[
+\frac{d}{dx}\int_{g(x)}^{h(x)}k(t)\,dt
+=k(h(x))h'(x)-k(g(x))g'(x).
+\]</span></p>
+<p>En aquest cas, <span class="math inline">\(h(x)=x^2+x\)</span>, <span class="math inline">\(g(x)=\sqrt{x}\)</span> i <span class="math inline">\(k(t)=1/(2+\sqrt[3]{t^2})\)</span>. Per a <span class="math inline">\(x&gt;0\)</span> resulta</p>
+<p><span class="math display">\[
+F'(x)=\frac{2x+1}{2+\sqrt[3]{(x^2+x)^2}}
+-\frac{1}{2\sqrt{x}\left(2+\sqrt[3]{x}\right)}.
+\]</span></p>
+<p>La funció està definida per a <span class="math inline">\(x\ge0\)</span>, però <strong>no és derivable en <span class="math inline">\(x=0\)</span></strong>: el segon terme divergeix cap a <span class="math inline">\(-\infty\)</span> quan <span class="math inline">\(x\to0^+\)</span>.</p>
 </div>
 </div>
 </div>
@@ -1913,7 +1965,15 @@ Solució
 </div>
 <div id="callout-51" class="callout-51-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>Derivam primer la potència amb la regla de la cadena i després la integral amb el teorema fonamental del càlcul:</p>
+<p><span class="math display">\[
+\begin{aligned}
+F'(x)&amp;=3\left(\int_0^x\frac{dt}{1+\sin^2t}\right)^2
+\frac{d}{dx}\left(\int_0^x\frac{dt}{1+\sin^2t}\right)\\
+&amp;=\frac{3}{1+\sin^2x}
+\left(\int_0^x\frac{dt}{1+\sin^2t}\right)^2.
+\end{aligned}
+\]</span></p>
 </div>
 </div>
 </div>
@@ -1936,7 +1996,11 @@ Solució
 </div>
 <div id="callout-52" class="callout-52-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>Com que <span class="math inline">\(f\)</span> és contínua, podem derivar els dos membres de la igualtat aplicant el teorema fonamental del càlcul:</p>
+<p><span class="math display">\[
+f(x)=\frac{d}{dx}\bigl(x^2(1+x)\bigr)=2x+3x^2.
+\]</span></p>
+<p>Avaluant en <span class="math inline">\(x=2\)</span>, obtenim <span class="math inline">\(f(2)=4+12=16\)</span>.</p>
 </div>
 </div>
 </div>
@@ -1961,7 +2025,10 @@ Solució
 </div>
 <div id="callout-53" class="callout-53-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>Els dos extrems d’integració coincideixen; per tant, sense necessitat de calcular cap primitiva,</p>
+<p><span class="math display">\[
+F(0)=\int_0^0\ln(2+t)\,dt=0.
+\]</span></p>
 </div>
 </div>
 </div>
@@ -1979,7 +2046,11 @@ Solució
 </div>
 <div id="callout-54" class="callout-54-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>La funció <span class="math inline">\(t\mapsto\ln(2+t)\)</span> és contínua en <span class="math inline">\([0,+\infty)\)</span>; pel teorema fonamental del càlcul,</p>
+<p><span class="math display">\[
+F'(x)=\ln(2+x).
+\]</span></p>
+<p>Si <span class="math inline">\(x\ge0\)</span>, tenim <span class="math inline">\(2+x\ge2&gt;1\)</span>, de manera que <span class="math inline">\(\ln(2+x)&gt;0\)</span>. Així, <span class="math inline">\(F\)</span> és <strong>estrictament creixent</strong> en tot <span class="math inline">\([0,+\infty)\)</span>.</p>
 </div>
 </div>
 </div>
@@ -2004,7 +2075,11 @@ Solució
 </div>
 <div id="callout-55" class="callout-55-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>Aplicam la regla de Barrow després d’obtenir la primitiva de <span class="math inline">\(t^2-1\)</span>:</p>
+<p><span class="math display">\[
+F(3)=\int_0^3(t^2-1)\,dt
+=\left[\frac{t^3}{3}-t\right]_0^3=9-3=6.
+\]</span></p>
 </div>
 </div>
 </div>
@@ -2022,7 +2097,14 @@ Solució
 </div>
 <div id="callout-56" class="callout-56-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>Pel teorema fonamental del càlcul,</p>
+<p><span class="math display">\[
+F'(x)=x^2-1=(x-1)(x+1).
+\]</span></p>
+<p>La derivada és positiva en <span class="math inline">\((-\infty,-1)\cup(1,+\infty)\)</span> i negativa en <span class="math inline">\((-1,1)\)</span>. Per tant, <span class="math inline">\(F\)</span> té un <strong>màxim relatiu en <span class="math inline">\(x=-1\)</span></strong> i un <strong>mínim relatiu en <span class="math inline">\(x=1\)</span></strong>. Com que <span class="math inline">\(F(x)=x^3/3-x\)</span>, els valors corresponents són</p>
+<p><span class="math display">\[
+F(-1)=\frac23,\qquad F(1)=-\frac23.
+\]</span></p>
 </div>
 </div>
 </div>
@@ -2046,7 +2128,11 @@ Solució
 </div>
 <div id="callout-57" class="callout-57-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>El numerador i el denominador tendeixen a zero. Aplicam la regla de L’Hôpital i derivam la integral amb el teorema fonamental del càlcul:</p>
+<p><span class="math display">\[
+\lim_{x\to0}\frac{\int_0^xe^{t^2}\,dt}{x}
+=\lim_{x\to0}e^{x^2}=1.
+\]</span></p>
 </div>
 </div>
 </div>
@@ -2066,7 +2152,11 @@ Solució
 </div>
 <div id="callout-58" class="callout-58-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>Novament apareix una indeterminació <span class="math inline">\(0/0\)</span>. Pel teorema fonamental del càlcul,</p>
+<p><span class="math display">\[
+\lim_{x\to1}\frac{\int_1^x\sqrt{1+2t^2}\,dt}{x-1}
+=\lim_{x\to1}\sqrt{1+2x^2}=\sqrt3.
+\]</span></p>
 </div>
 </div>
 </div>
@@ -2086,7 +2176,22 @@ Solució
 </div>
 <div id="callout-59" class="callout-59-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>Es tracta d’una indeterminació <span class="math inline">\(0/0\)</span>. Escrivim el numerador com una diferència de funcions derivables i aplicam L’Hôpital:</p>
+<p><span class="math display">\[
+\begin{aligned}
+L&amp;=\lim_{x\to0}\frac{x-\int_0^x\frac{\sin t}{t}\,dt}{x^3}\\
+&amp;=\lim_{x\to0}\frac{1-\frac{\sin x}{x}}{3x^2}
+=\frac13\lim_{x\to0}\frac{x-\sin x}{x^3}.
+\end{aligned}
+\]</span></p>
+<p>Aplicam L’Hôpital successivament a la darrera expressió:</p>
+<p><span class="math display">\[
+\lim_{x\to0}\frac{x-\sin x}{x^3}
+=\lim_{x\to0}\frac{1-\cos x}{3x^2}
+=\lim_{x\to0}\frac{\sin x}{6x}
+=\frac16.
+\]</span></p>
+<p>En conseqüència, <span class="math inline">\(L=\frac1{18}\)</span>. Hem utilitzat la prolongació contínua de <span class="math inline">\(\sin t/t\)</span> en <span class="math inline">\(t=0\)</span>, que val <span class="math inline">\(1\)</span>.</p>
 </div>
 </div>
 </div>
@@ -2106,7 +2211,17 @@ Solució
 </div>
 <div id="callout-60" class="callout-60-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>Tant el numerador com el denominador tendeixen a zero. Derivam el numerador emprant el teorema fonamental del càlcul i la regla de la cadena:</p>
+<p><span class="math display">\[
+\begin{aligned}
+L&amp;=\lim_{x\to0}\frac{\int_0^{\sin x}(e^{t^2}-1)\,dt}{x^3}\\
+&amp;=\lim_{x\to0}\frac{(e^{\sin^2x}-1)\cos x}{3x^2}\\
+&amp;=\frac13\lim_{x\to0}\frac{e^{\sin^2x}-1}{\sin^2x}
+\left(\frac{\sin x}{x}\right)^2\cos x
+=\frac13.
+\end{aligned}
+\]</span></p>
+<p>En el darrer pas hem emprat els límits immediats <span class="math inline">\(\lim_{u\to0}(e^u-1)/u=1\)</span> i <span class="math inline">\(\lim_{x\to0}\sin x/x=1\)</span>.</p>
 </div>
 </div>
 </div>
@@ -2129,7 +2244,23 @@ Solució
 </div>
 <div id="callout-61" class="callout-61-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>Com que <span class="math inline">\(\alpha&gt;0\)</span>, el denominador és positiu. Per trobar el mínim, primer calculam la integral com a funció de <span class="math inline">\(\alpha\)</span>. Amb el canvi <span class="math inline">\(t=\sqrt{x}\)</span>, tenim <span class="math inline">\(dx=2t\,dt\)</span> i els extrems passen de <span class="math inline">\(x=\alpha,\alpha^2\)</span> a <span class="math inline">\(t=\sqrt\alpha,\alpha\)</span>. Per tant,</p>
+<p><span class="math display">\[
+\begin{aligned}
+I(\alpha)&amp;=\int_\alpha^{\alpha^2}\frac{dx}{x+\sqrt{x}}\\
+&amp;=2\int_{\sqrt\alpha}^{\alpha}\frac{dt}{t+1}
+=2\ln\frac{1+\alpha}{1+\sqrt\alpha}.
+\end{aligned}
+\]</span></p>
+<p>Per simplificar la derivació, posam <span class="math inline">\(u=\sqrt\alpha&gt;0\)</span>. Minimitzar <span class="math inline">\(I(\alpha)\)</span> equival a minimitzar <span class="math inline">\(J(u)=2\ln\bigl((1+u^2)/(1+u)\bigr)\)</span>. Derivant,</p>
+<p><span class="math display">\[
+J'(u)=2\left(\frac{2u}{1+u^2}-\frac1{1+u}\right)
+=\frac{2(u^2+2u-1)}{(1+u^2)(1+u)}.
+\]</span></p>
+<p>L’única arrel positiva és <span class="math inline">\(u=\sqrt2-1\)</span>. La derivada passa de negativa a positiva en aquest punt, de manera que és el mínim global (també tenim <span class="math inline">\(J(u)\to0\)</span> quan <span class="math inline">\(u\to0^+\)</span> i <span class="math inline">\(J(u)\to+\infty\)</span> quan <span class="math inline">\(u\to+\infty\)</span>). En conseqüència,</p>
+<p><span class="math display">\[
+\alpha=(\sqrt2-1)^2=3-2\sqrt2.
+\]</span></p>
 </div>
 </div>
 </div>
@@ -2153,7 +2284,15 @@ Solució
 </div>
 <div id="callout-62" class="callout-62-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>El radical suggereix el canvi <span class="math inline">\(t=\sqrt{x}\)</span>, amb <span class="math inline">\(x=t^2\)</span> i <span class="math inline">\(dx=2t\,dt\)</span>. Els nous extrems són <span class="math inline">\(0\)</span> i <span class="math inline">\(2\)</span>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\int_0^4\frac{dx}{1+\sqrt{x}}
+&amp;=2\int_0^2\frac{t}{1+t}\,dt\\
+&amp;=2\int_0^2\left(1-\frac1{t+1}\right)dt\\
+&amp;=2[t-\ln(1+t)]_0^2=4-2\ln3.
+\end{aligned}
+\]</span></p>
 </div>
 </div>
 </div>
@@ -2173,7 +2312,10 @@ Solució
 </div>
 <div id="callout-63" class="callout-63-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>Integram per parts, prenent <span class="math inline">\(u=\ln x\)</span> i <span class="math inline">\(dv=dx\)</span>. Així <span class="math inline">\(du=dx/x\)</span> i <span class="math inline">\(v=x\)</span>, d’on la primitiva <span class="math inline">\(x\ln x-x\)</span>. Aplicant Barrow,</p>
+<p><span class="math display">\[
+\int_2^4\ln x\,dx=[x\ln x-x]_2^4=6\ln2-2.
+\]</span></p>
 </div>
 </div>
 </div>
@@ -2193,7 +2335,11 @@ Solució
 </div>
 <div id="callout-64" class="callout-64-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>Reconeixem una integral semiimmediata: la derivada de <span class="math inline">\(\ln x\)</span> és <span class="math inline">\(1/x\)</span>. També podem explicitar <span class="math inline">\(t=\ln x\)</span>, que transforma els extrems <span class="math inline">\(e\)</span> i <span class="math inline">\(e^2\)</span> en <span class="math inline">\(1\)</span> i <span class="math inline">\(2\)</span>:</p>
+<p><span class="math display">\[
+\int_e^{e^2}\frac{dx}{x\ln x}
+=\int_1^2\frac{dt}{t}=[\ln t]_1^2=\ln2.
+\]</span></p>
 </div>
 </div>
 </div>
@@ -2213,7 +2359,11 @@ Solució
 </div>
 <div id="callout-65" class="callout-65-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>Amb la identitat <span class="math inline">\(\tan^2x=1/\cos^2x-1\)</span> obtenim una integral immediata:</p>
+<p><span class="math display">\[
+\int_0^{\pi/4}\tan^2x\,dx
+=[\tan x-x]_0^{\pi/4}=1-\frac\pi4.
+\]</span></p>
 </div>
 </div>
 </div>
@@ -2233,7 +2383,12 @@ Solució
 </div>
 <div id="callout-66" class="callout-66-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>La corba <span class="math inline">\(y=\sqrt{16-x^2}\)</span> és la semicircumferència superior de radi <span class="math inline">\(4\)</span>. La integral representa la seva àrea, que és la meitat de l’àrea del cercle:</p>
+<p><span class="math display">\[
+\int_{-4}^4\sqrt{16-x^2}\,dx
+=\frac12\pi\cdot4^2=8\pi.
+\]</span></p>
+<p>També es pot obtenir aplicant la regla de Barrow amb una primitiva calculada mitjançant <span class="math inline">\(x=4\sin t\)</span>, com als apunts.</p>
 </div>
 </div>
 </div>
@@ -2253,7 +2408,11 @@ Solució
 </div>
 <div id="callout-67" class="callout-67-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>És una integral semiimmediata de potència. Per la regla de Barrow,</p>
+<p><span class="math display">\[
+\int_0^3\frac{dx}{\sqrt{1+x}}
+=\left[2\sqrt{1+x}\right]_0^3=2(2-1)=2.
+\]</span></p>
 </div>
 </div>
 </div>
@@ -2273,7 +2432,19 @@ Solució
 </div>
 <div id="callout-68" class="callout-68-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>Factoritzam el denominador i descomponem en fraccions simples:</p>
+<p><span class="math display">\[
+\frac1{x^2+x-2}=\frac1{(x-1)(x+2)}
+=\frac13\left(\frac1{x-1}-\frac1{x+2}\right).
+\]</span></p>
+<p>Aleshores,</p>
+<p><span class="math display">\[
+\begin{aligned}
+\int_2^5\frac{dx}{x^2+x-2}
+&amp;=\frac13\left[\ln\left|\frac{x-1}{x+2}\right|\right]_2^5\\
+&amp;=\frac13\ln\frac{16}{7}.
+\end{aligned}
+\]</span></p>
 </div>
 </div>
 </div>
@@ -2293,7 +2464,19 @@ Solució
 </div>
 <div id="callout-69" class="callout-69-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>Com que l’interval és negatiu, interpretam les potències fraccionàries amb arrels cúbiques reals. Simplificam:</p>
+<p><span class="math display">\[
+\frac{x-x^2}{2\sqrt[3]x}
+=\frac12\left(x^{2/3}-x^{5/3}\right).
+\]</span></p>
+<p>Una primitiva és <span class="math inline">\(\frac3{10}x^{5/3}-\frac3{16}x^{8/3}\)</span>, d’on</p>
+<p><span class="math display">\[
+\begin{aligned}
+\int_{-8}^{-1}\frac{x-x^2}{2\sqrt[3]x}\,dx
+&amp;=\left[\frac3{10}x^{5/3}-\frac3{16}x^{8/3}\right]_{-8}^{-1}\\
+&amp;=\frac{4569}{80}.
+\end{aligned}
+\]</span></p>
 </div>
 </div>
 </div>
@@ -2313,7 +2496,16 @@ Solució
 </div>
 <div id="callout-70" class="callout-70-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>El polinomi <span class="math inline">\(q(x)=x^2-4x+3=(x-1)(x-3)\)</span> canvia de signe en <span class="math inline">\(x=1\)</span> i <span class="math inline">\(x=3\)</span>. És positiu en <span class="math inline">\([0,1]\)</span> i <span class="math inline">\([3,4]\)</span>, i negatiu en <span class="math inline">\((1,3)\)</span>. Per això, dividim la integral:</p>
+<p><span class="math display">\[
+\begin{aligned}
+I&amp;=\int_0^1q(x)\,dx-\int_1^3q(x)\,dx+\int_3^4q(x)\,dx\\
+&amp;=\left[\frac{x^3}{3}-2x^2+3x\right]_0^1
+-\left[\frac{x^3}{3}-2x^2+3x\right]_1^3
++\left[\frac{x^3}{3}-2x^2+3x\right]_3^4\\
+&amp;=\frac43+\frac43+\frac43=4.
+\end{aligned}
+\]</span></p>
 </div>
 </div>
 </div>
@@ -2333,7 +2525,11 @@ Solució
 </div>
 <div id="callout-71" class="callout-71-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>Podem reconèixer directament una integral semiimmediata, perquè <span class="math inline">\((4+\cos x)'=-\sin x\)</span>. Equivalentment, el canvi <span class="math inline">\(t=4+\cos x\)</span> porta els extrems <span class="math inline">\(0\)</span> i <span class="math inline">\(\pi\)</span> a <span class="math inline">\(5\)</span> i <span class="math inline">\(3\)</span>:</p>
+<p><span class="math display">\[
+\int_0^\pi\frac{\sin x}{4+\cos x}\,dx
+=-\int_5^3\frac{dt}{t}=\ln\frac53.
+\]</span></p>
 </div>
 </div>
 </div>
@@ -2353,7 +2549,11 @@ Solució
 </div>
 <div id="callout-72" class="callout-72-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>Basta emprar la identitat <span class="math inline">\(1-\sin^2x=\cos^2x\)</span>. Com que <span class="math inline">\(\cos x\ne0\)</span> a <span class="math inline">\([0,\pi/4]\)</span>,</p>
+<p><span class="math display">\[
+\int_0^{\pi/4}\frac{1-\sin^2x}{\cos^2x}\,dx
+=\int_0^{\pi/4}1\,dx=\frac\pi4.
+\]</span></p>
 </div>
 </div>
 </div>
@@ -2373,7 +2573,14 @@ Solució
 </div>
 <div id="callout-73" class="callout-73-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>La funció <span class="math inline">\(|x\cos x|\)</span> és parella. En <span class="math inline">\([0,\pi/2]\)</span> el cosinus és positiu i en <span class="math inline">\([\pi/2,\pi]\)</span> és negatiu. Per tant,</p>
+<p><span class="math display">\[
+I=2\left(\int_0^{\pi/2}x\cos x\,dx-\int_{\pi/2}^{\pi}x\cos x\,dx\right).
+\]</span></p>
+<p>Integrant per parts obtenim <span class="math inline">\(\int x\cos x\,dx=x\sin x+\cos x\)</span>. Aplicant Barrow als dos intervals,</p>
+<p><span class="math display">\[
+I=2\left[\left(\frac\pi2-1\right)-\left(-1-\frac\pi2\right)\right]=2\pi.
+\]</span></p>
 </div>
 </div>
 </div>
@@ -2393,7 +2600,22 @@ Solució
 </div>
 <div id="callout-74" class="callout-74-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>Consideram l’el·lipse centrada a l’origen,</p>
+<p><span class="math display">\[
+\frac{x^2}{a^2}+\frac{y^2}{b^2}=1,\qquad a&gt;b&gt;0.
+\]</span></p>
+<p>A la meitat superior, <span class="math inline">\(y=b\sqrt{1-x^2/a^2}\)</span>. Per simetria, basta calcular quatre vegades l’àrea del primer quadrant:</p>
+<p><span class="math display">\[
+S=4b\int_0^a\sqrt{1-\frac{x^2}{a^2}}\,dx.
+\]</span></p>
+<p>Amb el canvi <span class="math inline">\(x=a\sin t\)</span>, els extrems passen a <span class="math inline">\(0\)</span> i <span class="math inline">\(\pi/2\)</span>, i <span class="math inline">\(dx=a\cos t\,dt\)</span>. En conseqüència,</p>
+<p><span class="math display">\[
+\begin{aligned}
+S&amp;=4ab\int_0^{\pi/2}\cos^2t\,dt\\
+&amp;=2ab\int_0^{\pi/2}(1+\cos2t)\,dt
+=\pi ab.
+\end{aligned}
+\]</span></p>
 </div>
 </div>
 </div>
@@ -2413,7 +2635,17 @@ Solució
 </div>
 <div id="callout-75" class="callout-75-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>Prenem un punt qualsevol de la hipèrbola, <span class="math inline">\((a,1/a)\)</span>, amb <span class="math inline">\(a\ne0\)</span>. Com que <span class="math inline">\(y=1/x\)</span>, la derivada és <span class="math inline">\(y'=-1/x^2\)</span> i la recta tangent en aquest punt té equació</p>
+<p><span class="math display">\[
+y-\frac1a=-\frac1{a^2}(x-a),
+\quad\text{és a dir,}\quad
+\frac{x}{a^2}+y\,=\frac2a.
+\]</span></p>
+<p>La tangent talla l’eix d’abscisses en <span class="math inline">\((2a,0)\)</span> i l’eix d’ordenades en <span class="math inline">\((0,2/a)\)</span>. L’àrea del triangle és la meitat del producte de les longituds dels catets:</p>
+<p><span class="math display">\[
+S=\frac12|2a|\left|\frac2a\right|=2.
+\]</span></p>
+<p>Per tant, <strong>l’àrea és sempre <span class="math inline">\(2\)</span></strong>, independentment del punt de tangència.</p>
 </div>
 </div>
 </div>
@@ -2435,7 +2667,11 @@ Solució
 </div>
 <div id="callout-76" class="callout-76-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>La funció <span class="math inline">\(1/x^2\)</span> és positiva en <span class="math inline">\([1,5]\)</span>. L’àrea cercada es calcula directament amb la regla de Barrow:</p>
+<p><span class="math display">\[
+S=\int_1^5\frac{dx}{x^2}
+=\left[-\frac1x\right]_1^5=\frac45.
+\]</span></p>
 </div>
 </div>
 </div>
@@ -2453,7 +2689,25 @@ Solució
 </div>
 <div id="callout-77" class="callout-77-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>Els punts de tall satisfan</p>
+<p><span class="math display">\[
+3x-x^2=-x-3
+\quad\Longleftrightarrow\quad
+x^2-4x-3=0,
+\]</span></p>
+<p>i, per tant, són <span class="math inline">\(x=2-\sqrt7\)</span> i <span class="math inline">\(x=2+\sqrt7\)</span>. Entre aquests punts la paràbola <span class="math inline">\(3x-x^2\)</span> es troba per damunt de la recta, perquè la diferència és</p>
+<p><span class="math display">\[
+(3x-x^2)-(-x-3)=7-(x-2)^2.
+\]</span></p>
+<p>Calculam l’àrea amb el canvi <span class="math inline">\(u=x-2\)</span>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+S&amp;=\int_{2-\sqrt7}^{2+\sqrt7}\bigl(7-(x-2)^2\bigr)\,dx\\
+&amp;=\int_{-\sqrt7}^{\sqrt7}(7-u^2)\,du
+=\left[7u-\frac{u^3}{3}\right]_{-\sqrt7}^{\sqrt7}
+=\frac{28\sqrt7}{3}.
+\end{aligned}
+\]</span></p>
 </div>
 </div>
 </div>
@@ -2471,7 +2725,15 @@ Solució
 </div>
 <div id="callout-78" class="callout-78-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>Les dues corbes es tallen quan <span class="math inline">\(x^3=x\)</span>, és a dir, en <span class="math inline">\(x=-1,0,1\)</span>. Hem de separar els dos recintes perquè les funcions intercanvien l’ordre en <span class="math inline">\(x=0\)</span>. Per simetria,</p>
+<p><span class="math display">\[
+\begin{aligned}
+S&amp;=\int_{-1}^0(x^3-x)\,dx+\int_0^1(x-x^3)\,dx\\
+&amp;=2\int_0^1(x-x^3)\,dx
+=2\left[\frac{x^2}{2}-\frac{x^4}{4}\right]_0^1
+=\frac12.
+\end{aligned}
+\]</span></p>
 </div>
 </div>
 </div>
@@ -2489,7 +2751,21 @@ Solució
 </div>
 <div id="callout-79" class="callout-79-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>Igualant les dues expressions de <span class="math inline">\(y\)</span>,</p>
+<p><span class="math display">\[
+x^2-2x=6x-x^2
+\quad\Longleftrightarrow\quad
+2x(x-4)=0.
+\]</span></p>
+<p>Els punts de tall tenen abscisses <span class="math inline">\(0\)</span> i <span class="math inline">\(4\)</span>. En aquest interval, <span class="math inline">\(6x-x^2\)</span> és la funció superior. Així,</p>
+<p><span class="math display">\[
+\begin{aligned}
+S&amp;=\int_0^4\bigl((6x-x^2)-(x^2-2x)\bigr)\,dx\\
+&amp;=\int_0^4(8x-2x^2)\,dx
+=\left[4x^2-\frac{2x^3}{3}\right]_0^4
+=\frac{64}{3}.
+\end{aligned}
+\]</span></p>
 </div>
 </div>
 </div>
@@ -2507,7 +2783,14 @@ Solució
 </div>
 <div id="callout-80" class="callout-80-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>La diferència de les funcions és</p>
+<p><span class="math display">\[
+(3+4x-x^2)-(x^2-4x+3)=8x-2x^2.
+\]</span></p>
+<p>Per tant, es tallen en <span class="math inline">\(x=0\)</span> i <span class="math inline">\(x=4\)</span>, i la segona corba del text és la superior dins aquest interval. L’àrea coincideix amb la de l’apartat anterior:</p>
+<p><span class="math display">\[
+S=\int_0^4(8x-2x^2)\,dx=\frac{64}{3}.
+\]</span></p>
 </div>
 </div>
 </div>
@@ -2525,7 +2808,17 @@ Solució
 </div>
 <div id="callout-81" class="callout-81-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>Aquí és més senzill integrar respecte de <span class="math inline">\(y\)</span>. La corba <span class="math inline">\(x=\sqrt y\)</span> està definida per a <span class="math inline">\(y\ge0\)</span>, i el punt de tall amb <span class="math inline">\(x=2-y\)</span> es troba resolent</p>
+<p><span class="math display">\[
+\sqrt y=2-y
+\quad\Longleftrightarrow\quad y=1,
+\]</span></p>
+<p>ja que <span class="math inline">\(y=1\)</span> és l’única solució compatible amb <span class="math inline">\(y\ge0\)</span> i <span class="math inline">\(2-y\ge0\)</span>. La regió està compresa entre <span class="math inline">\(y=0\)</span> i <span class="math inline">\(y=1\)</span>; la frontera de la dreta és <span class="math inline">\(x=2-y\)</span> i la de l’esquerra és <span class="math inline">\(x=\sqrt y\)</span>. Així,</p>
+<p><span class="math display">\[
+S=\int_0^1\bigl(2-y-\sqrt y\bigr)\,dy
+=\left[2y-\frac{y^2}{2}-\frac23y^{3/2}\right]_0^1
+=\frac56.
+\]</span></p>
 </div>
 </div>
 </div>
@@ -2545,7 +2838,20 @@ Solució
 </div>
 <div id="callout-82" class="callout-82-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>La regió està limitada per <span class="math inline">\(y=x^2\)</span> i <span class="math inline">\(y=1\)</span>. Si integrem respecte de <span class="math inline">\(y\)</span>, la seva amplada a una altura <span class="math inline">\(y\in[0,1]\)</span> és <span class="math inline">\(\sqrt y-(-\sqrt y)=2\sqrt y\)</span>. L’àrea total és</p>
+<p><span class="math display">\[
+S=\int_0^1 2\sqrt y\,dy=\frac43.
+\]</span></p>
+<p>La recta <span class="math inline">\(y=a\)</span> ha de deixar <span class="math inline">\(S/2=2/3\)</span> unitats d’àrea per davall. Per tant,</p>
+<p><span class="math display">\[
+\int_0^a2\sqrt y\,dy=\frac23
+\quad\Longleftrightarrow\quad
+\frac43a^{3/2}=\frac23.
+\]</span></p>
+<p>D’aquí resulta <span class="math inline">\(a^{3/2}=1/2\)</span>, i la recta cercada és</p>
+<p><span class="math display">\[
+a=\left(\frac12\right)^{2/3}=\frac1{\sqrt[3]{4}}.
+\]</span></p>
 </div>
 </div>
 </div>
@@ -2565,7 +2871,19 @@ Solució
 </div>
 <div id="callout-83" class="callout-83-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>Els punts de tall compleixen <span class="math inline">\(x^2=\alpha x\)</span>, d’on <span class="math inline">\(x=0\)</span> o <span class="math inline">\(x=\alpha\)</span>. Si <span class="math inline">\(\alpha&gt;0\)</span>, la recta és superior a la paràbola entre <span class="math inline">\(0\)</span> i <span class="math inline">\(\alpha\)</span>, i</p>
+<p><span class="math display">\[
+S=\int_0^\alpha(\alpha x-x^2)\,dx
+=\left[\frac{\alpha x^2}{2}-\frac{x^3}{3}\right]_0^\alpha
+=\frac{\alpha^3}{6}.
+\]</span></p>
+<p>Per a <span class="math inline">\(\alpha&lt;0\)</span> s’inverteix l’interval i l’àrea continua essent positiva. En conjunt, <span class="math inline">\(S=|\alpha|^3/6\)</span>. Imposant la condició de l’enunciat,</p>
+<p><span class="math display">\[
+\frac{|\alpha|^3}{6}=\frac92
+\quad\Longleftrightarrow\quad
+|\alpha|^3=27.
+\]</span></p>
+<p>Hi ha <strong>dues solucions</strong>, <span class="math inline">\(\alpha=3\)</span> i <span class="math inline">\(\alpha=-3\)</span>.</p>
 </div>
 </div>
 </div>
@@ -2585,7 +2903,23 @@ Solució
 </div>
 <div id="callout-84" class="callout-84-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>La paràbola talla l’eix d’abscisses en <span class="math inline">\(x=-3\)</span> i <span class="math inline">\(x=3\)</span>. L’àrea total és</p>
+<p><span class="math display">\[
+S=\int_{-3}^3(9-x^2)\,dx=36.
+\]</span></p>
+<p>Perquè la recta horitzontal <span class="math inline">\(y=\lambda\)</span> divideixi el recinte en dues parts iguals, l’àrea situada per davall de la recta ha de valer <span class="math inline">\(18\)</span>. És més còmode integrar respecte de <span class="math inline">\(y\)</span>: a cada altura <span class="math inline">\(y\in[0,9]\)</span>, els límits horitzontals són <span class="math inline">\(x=\pm\sqrt{9-y}\)</span> i l’amplada és <span class="math inline">\(2\sqrt{9-y}\)</span>.</p>
+<p><span class="math display">\[
+\begin{aligned}
+18&amp;=\int_0^\lambda2\sqrt{9-y}\,dy\\
+&amp;=\frac43\left(27-(9-\lambda)^{3/2}\right).
+\end{aligned}
+\]</span></p>
+<p>Així, <span class="math inline">\((9-\lambda)^{3/2}=27/2\)</span> i obtenim</p>
+<p><span class="math display">\[
+\lambda=9-\left(\frac{27}{2}\right)^{2/3}
+=9\left(1-\frac1{\sqrt[3]{4}}\right).
+\]</span></p>
+<p>Aquest valor pertany a <span class="math inline">\((0,9)\)</span>, com correspon a una recta que travessa l’interior del recinte.</p>
 </div>
 </div>
 </div>
@@ -2607,7 +2941,15 @@ Solució
 </div>
 <div id="callout-85" class="callout-85-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>Les corbes es tallen quan <span class="math inline">\(x^2=\sqrt{x}\)</span>, és a dir, en <span class="math inline">\(x=0\)</span> i <span class="math inline">\(x=1\)</span>. En aquest interval, <span class="math inline">\(\sqrt{x}\)</span> és la corba superior. Girant el recinte al voltant d’OX, empram el mètode de les volanderes (disc exterior menys disc interior):</p>
+<p><span class="math display">\[
+\begin{aligned}
+V&amp;=\pi\int_0^1\left[(\sqrt{x})^2-(x^2)^2\right]dx\\
+&amp;=\pi\int_0^1(x-x^4)\,dx
+=\pi\left[\frac{x^2}{2}-\frac{x^5}{5}\right]_0^1
+=\frac{3\pi}{10}.
+\end{aligned}
+\]</span></p>
 </div>
 </div>
 </div>
@@ -2625,7 +2967,16 @@ Solució
 </div>
 <div id="callout-86" class="callout-86-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>Les tres fronteres es tallen en <span class="math inline">\((0,0)\)</span>, <span class="math inline">\((1,1)\)</span> i <span class="math inline">\((2,0)\)</span>. La regió està per damunt de l’eix d’abscisses i té com a frontera superior <span class="math inline">\(y=x^3\)</span> entre <span class="math inline">\(x=0\)</span> i <span class="math inline">\(x=1\)</span>, i <span class="math inline">\(y=2-x\)</span> entre <span class="math inline">\(x=1\)</span> i <span class="math inline">\(x=2\)</span>.</p>
+<p>En girar al voltant d’OX, cada tram genera discs, i el volum total és la suma de les dues integrals:</p>
+<p><span class="math display">\[
+\begin{aligned}
+V&amp;=\pi\int_0^1(x^3)^2\,dx
++\pi\int_1^2(2-x)^2\,dx\\
+&amp;=\pi\left(\frac17+\frac13\right)
+=\frac{10\pi}{21}.
+\end{aligned}
+\]</span></p>
 </div>
 </div>
 </div>
@@ -2643,7 +2994,18 @@ Solució
 </div>
 <div id="callout-87" class="callout-87-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>Els punts de tall de <span class="math inline">\(x=(y-1)^2\)</span> amb <span class="math inline">\(x=1\)</span> tenen ordenades <span class="math inline">\(y=0\)</span> i <span class="math inline">\(y=2\)</span>. Per calcular el volum respecte de l’eix OX, podem escriure les dues branques de la paràbola com</p>
+<p><span class="math display">\[
+y=1-\sqrt{x}\quad\text{i}\quad y=1+\sqrt{x},\qquad 0\le x\le1.
+\]</span></p>
+<p>Totes dues són no negatives. Per tant, emprant el mètode de les volanderes,</p>
+<p><span class="math display">\[
+\begin{aligned}
+V&amp;=\pi\int_0^1\left[(1+\sqrt{x})^2-(1-\sqrt{x})^2\right]dx\\
+&amp;=4\pi\int_0^1\sqrt{x}\,dx
+=\frac{8\pi}{3}.
+\end{aligned}
+\]</span></p>
 </div>
 </div>
 </div>
@@ -2665,7 +3027,15 @@ Solució
 </div>
 <div id="callout-88" class="callout-88-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>Interpretam el segment de paràbola com <strong>la regió situada sota <span class="math inline">\(y=x^2\)</span></strong>, sobre l’eix d’abscisses i entre <span class="math inline">\(x=0\)</span> i <span class="math inline">\(x=2\)</span>. En girar aquesta regió al voltant de l’eix OY, el mètode dels tubs cilíndrics dona</p>
+<p><span class="math display">\[
+\begin{aligned}
+V&amp;=2\pi\int_0^2x\,x^2\,dx
+=2\pi\int_0^2x^3\,dx\\
+&amp;=2\pi\left[\frac{x^4}{4}\right]_0^2=8\pi.
+\end{aligned}
+\]</span></p>
+<p>Aquesta interpretació pressuposa que es gira el <strong>recinte</strong> sota la paràbola, no només la línia de la corba.</p>
 </div>
 </div>
 </div>
@@ -2683,7 +3053,15 @@ Solució
 </div>
 <div id="callout-89" class="callout-89-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>Reescrivim la paràbola com <span class="math inline">\(x=9-y^2\)</span>. Talla l’eix OY quan <span class="math inline">\(y=\pm3\)</span>. La regió queda a la dreta de l’eix i, en girar-la al voltant d’OY, cada secció horitzontal genera un disc de radi <span class="math inline">\(9-y^2\)</span>.</p>
+<p><span class="math display">\[
+\begin{aligned}
+V&amp;=\pi\int_{-3}^3(9-y^2)^2\,dy\\
+&amp;=2\pi\int_0^3(81-18y^2+y^4)\,dy\\
+&amp;=2\pi\left[81y-6y^3+\frac{y^5}{5}\right]_0^3
+=\frac{1296\pi}{5}.
+\end{aligned}
+\]</span></p>
 </div>
 </div>
 </div>
@@ -2701,7 +3079,28 @@ Solució
 </div>
 <div id="callout-90" class="callout-90-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p><strong>Cal precisar quina regió es vol fer girar.</strong> Les quatre corbes de l’enunciat dibuixen més d’un recinte tancat. En particular, a la part superior de l’eix d’abscisses apareixen dos recintes:</p>
+<ul>
+<li>El limitat per <span class="math inline">\(x=y^2\)</span>, <span class="math inline">\(x=2-y\)</span> i <span class="math inline">\(y=0\)</span>, amb <span class="math inline">\(0\le y\le1\)</span>.</li>
+<li>El limitat per <span class="math inline">\(x=2-y\)</span>, <span class="math inline">\(x=2+y\)</span> i <span class="math inline">\(x=y^2\)</span>, amb <span class="math inline">\(0\le y\le2\)</span> (canvia de frontera esquerra a <span class="math inline">\(y=1\)</span>).</li>
+</ul>
+<p>Si es demana el <strong>primer recinte</strong>, el mètode de les volanderes al voltant d’OY dona</p>
+<p><span class="math display">\[
+\begin{aligned}
+V_1&amp;=\pi\int_0^1\left[(2-y)^2-y^4\right]dy\\
+&amp;=\pi\left[4y-2y^2+\frac{y^3}{3}-\frac{y^5}{5}\right]_0^1
+=\frac{32\pi}{15}.
+\end{aligned}
+\]</span></p>
+<p>Si es consideren <strong>tots dos recintes superiors</strong> conjuntament, la frontera exterior és <span class="math inline">\(x=2+y\)</span> i la interior és <span class="math inline">\(x=y^2\)</span>, amb <span class="math inline">\(0\le y\le2\)</span>. Per tant,</p>
+<p><span class="math display">\[
+\begin{aligned}
+V_{\mathrm{total}}&amp;=\pi\int_0^2\left[(2+y)^2-y^4\right]dy\\
+&amp;=\pi\left[4y+2y^2+\frac{y^3}{3}-\frac{y^5}{5}\right]_0^2
+=\frac{184\pi}{15}.
+\end{aligned}
+\]</span></p>
+<p>Abans de donar un resultat únic a l’alumnat, convindria acompanyar l’enunciat amb una figura que assenyali el recinte desitjat.</p>
 </div>
 </div>
 </div>
@@ -2721,7 +3120,24 @@ Solució
 </div>
 <div id="callout-91" class="callout-91-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>Per obtenir un <strong>volum</strong>, entenem que gira el disc interior a la circumferència, no només la seva frontera. Suposam el cas habitual del tor, <span class="math inline">\(a&gt;r&gt;0\)</span>, de manera que el disc no talla l’eix de revolució.</p>
+<p>El disc té equació <span class="math inline">\((x-a)^2+y^2\le r^2\)</span>. A una altura <span class="math inline">\(y\in[-r,r]\)</span>, els radis de les dues circumferències generades són</p>
+<p><span class="math display">\[
+R(y)=a+\sqrt{r^2-y^2},\qquad
+r_{\mathrm{int}}(y)=a-\sqrt{r^2-y^2}.
+\]</span></p>
+<p>Pel mètode de les volanderes,</p>
+<p><span class="math display">\[
+\begin{aligned}
+V&amp;=\pi\int_{-r}^r\left(R(y)^2-r_{\mathrm{int}}(y)^2\right)dy\\
+&amp;=4\pi a\int_{-r}^r\sqrt{r^2-y^2}\,dy.
+\end{aligned}
+\]</span></p>
+<p>La integral és l’àrea d’un semicercle de radi <span class="math inline">\(r\)</span>, que val <span class="math inline">\(\pi r^2/2\)</span>. Per tant,</p>
+<p><span class="math display">\[
+V=2\pi^2ar^2.
+\]</span></p>
+<p>Si <span class="math inline">\(a&lt;r\)</span>, el disc travessa l’eix i la figura resultant ja no és el tor ordinari; aquest cas exigeix tractar separadament la geometria.</p>
 </div>
 </div>
 </div>
@@ -2741,7 +3157,23 @@ Solució
 </div>
 <div id="callout-92" class="callout-92-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>Per calcular la longitud d’arc empram la fórmula dels apunts</p>
+<p><span class="math display">\[
+L=\int_a^b\sqrt{1+(f'(x))^2}\,dx.
+\]</span></p>
+<p>Com que <span class="math inline">\(f(x)=\ln(1-x^2)\)</span>, la derivada és <span class="math inline">\(f'(x)=-2x/(1-x^2)\)</span>. Així,</p>
+<p><span class="math display">\[
+\begin{aligned}
+L&amp;=\int_{1/4}^{3/4}\sqrt{1+\frac{4x^2}{(1-x^2)^2}}\,dx\\
+&amp;=\int_{1/4}^{3/4}\frac{1+x^2}{1-x^2}\,dx
+=\int_{1/4}^{3/4}\left(-1+\frac2{1-x^2}\right)dx.
+\end{aligned}
+\]</span></p>
+<p>Aquí <span class="math inline">\(1-x^2&gt;0\)</span>. Amb fraccions simples, <span class="math inline">\(2/(1-x^2)=1/(1-x)+1/(1+x)\)</span>, i una primitiva és <span class="math inline">\(-x+\ln((1+x)/(1-x))\)</span>. Aplicant Barrow,</p>
+<p><span class="math display">\[
+L=\left[-x+\ln\frac{1+x}{1-x}\right]_{1/4}^{3/4}
+=\ln\frac{21}{5}-\frac12.
+\]</span></p>
 </div>
 </div>
 </div>
@@ -2761,7 +3193,20 @@ Solució
 </div>
 <div id="callout-93" class="callout-93-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>L’equació <span class="math inline">\(y^2=x^3\)</span> té dues branques per a <span class="math inline">\(x\ge0\)</span>: <span class="math inline">\(y=x^{3/2}\)</span> i <span class="math inline">\(y=-x^{3/2}\)</span>. Són simètriques respecte de l’eix d’abscisses i tenen la mateixa longitud.</p>
+<p>Per a la branca superior, <span class="math inline">\(f'(x)=\frac32\sqrt{x}\)</span>. La longitud entre <span class="math inline">\(x=0\)</span> i <span class="math inline">\(x=1\)</span> és</p>
+<p><span class="math display">\[
+\begin{aligned}
+L_+&amp;=\int_0^1\sqrt{1+\frac94x}\,dx\\
+&amp;=\left[\frac8{27}\left(1+\frac94x\right)^{3/2}\right]_0^1
+=\frac{13\sqrt{13}-8}{27}.
+\end{aligned}
+\]</span></p>
+<p>Si per «l’arc de la paràbola semicúbica» entenem <strong>les dues branques</strong> en <span class="math inline">\(0\le x\le1\)</span>, la longitud total és</p>
+<p><span class="math display">\[
+L=2L_+=\frac{2(13\sqrt{13}-8)}{27}.
+\]</span></p>
+<p>Si l’enunciat es refereix només a l’arc superior, el resultat és <span class="math inline">\(L_+\)</span>.</p>
 </div>
 </div>
 </div>
@@ -2785,7 +3230,20 @@ Solució
 </div>
 <div id="callout-94" class="callout-94-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>L’integrand és continu a <span class="math inline">\([4,+\infty)\)</span>, però l’interval no està fitat. Descomponem en fraccions simples:</p>
+<p><span class="math display">\[
+\frac1{x^2-4}=\frac14\left(\frac1{x-2}-\frac1{x+2}\right).
+\]</span></p>
+<p>Així, per definició d’integral impròpia,</p>
+<p><span class="math display">\[
+\begin{aligned}
+I&amp;=\lim_{b\to+\infty}\int_4^b\frac{dx}{x^2-4}\\
+&amp;=\frac14\lim_{b\to+\infty}
+\left[\ln\left|\frac{x-2}{x+2}\right|\right]_4^b
+=\frac14\ln3.
+\end{aligned}
+\]</span></p>
+<p>La integral és <strong>convergent</strong>.</p>
 </div>
 </div>
 </div>
@@ -2805,7 +3263,15 @@ Solució
 </div>
 <div id="callout-95" class="callout-95-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>Integram per parts amb <span class="math inline">\(u=x\)</span>, <span class="math inline">\(dv=e^x\,dx\)</span>, de manera que una primitiva és <span class="math inline">\((x-1)e^x\)</span>. L’extrem inferior es tracta mitjançant un límit:</p>
+<p><span class="math display">\[
+\begin{aligned}
+I&amp;=\lim_{a\to-\infty}\int_a^1xe^x\,dx\\
+&amp;=\lim_{a\to-\infty}\bigl[(x-1)e^x\bigr]_a^1\\
+&amp;=-\lim_{a\to-\infty}(a-1)e^a=0.
+\end{aligned}
+\]</span></p>
+<p>Com que el límit existeix i és finit, la integral <strong>convergeix i val <span class="math inline">\(0\)</span></strong>; això no significa que l’integrand sigui nul, sinó que les aportacions negativa i positiva es compensen.</p>
 </div>
 </div>
 </div>
@@ -2825,7 +3291,20 @@ Solució
 </div>
 <div id="callout-96" class="callout-96-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>És una integral impròpia als dos extrems. Dividim l’interval, per exemple en <span class="math inline">\(x=0\)</span>, i estudiam les dues parts per separat. Amb el canvi <span class="math inline">\(t=e^x&gt;0\)</span>, tenim <span class="math inline">\(dx=dt/t\)</span> i</p>
+<p><span class="math display">\[
+\frac{dx}{e^x+e^{-x}}=\frac{dt}{1+t^2}.
+\]</span></p>
+<p>El canvi porta <span class="math inline">\(x\to-\infty\)</span> a <span class="math inline">\(t\to0^+\)</span> i <span class="math inline">\(x\to+\infty\)</span> a <span class="math inline">\(t\to+\infty\)</span>. Les dues parts són convergents, i</p>
+<p><span class="math display">\[
+\begin{aligned}
+I&amp;=\int_0^1\frac{dt}{1+t^2}
++\int_1^{+\infty}\frac{dt}{1+t^2}\\
+&amp;=[\arctan t]_0^1
++\lim_{b\to+\infty}[\arctan t]_1^b
+=\frac\pi4+\frac\pi4=\frac\pi2.
+\end{aligned}
+\]</span></p>
 </div>
 </div>
 </div>
@@ -2845,7 +3324,13 @@ Solució
 </div>
 <div id="callout-97" class="callout-97-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>La funció és no fitada quan <span class="math inline">\(x\to0^+\)</span> i l’interval d’integració també és no fitat. El canvi <span class="math inline">\(t=\sqrt{x}\)</span>, amb <span class="math inline">\(x=t^2\)</span> i <span class="math inline">\(dx=2t\,dt\)</span>, transforma la integral en</p>
+<p><span class="math display">\[
+I=2\int_0^{+\infty}\frac{dt}{t^2+4}
+=\left[\arctan\frac t2\right]_0^{+\infty}
+=\frac\pi2.
+\]</span></p>
+<p>Els límits en <span class="math inline">\(t=0\)</span> i <span class="math inline">\(t\to+\infty\)</span> són finits; per tant, <strong>la integral és convergent</strong>.</p>
 </div>
 </div>
 </div>
@@ -2865,7 +3350,15 @@ Solució
 </div>
 <div id="callout-98" class="callout-98-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>L’integrand no està fitat en l’extrem <span class="math inline">\(x=3\)</span>, i hem de considerar el límit per l’esquerra. Reconeixem una primitiva semiimmediata de l’arcsinus:</p>
+<p><span class="math display">\[
+\begin{aligned}
+I&amp;=\lim_{b\to3^-}\int_0^b\frac{dx}{\sqrt{9-x^2}}\\
+&amp;=\lim_{b\to3^-}\left[\arcsin\frac x3\right]_0^b
+=\frac\pi2.
+\end{aligned}
+\]</span></p>
+<p>La integral és <strong>convergent</strong>.</p>
 </div>
 </div>
 </div>
@@ -2885,7 +3378,16 @@ Solució
 </div>
 <div id="callout-99" class="callout-99-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>L’integrand es fa no fitat quan <span class="math inline">\(x\to\pi/2^-\)</span>, perquè <span class="math inline">\(1-\sin x\to0\)</span>. Per estudiar el límit, feim <span class="math inline">\(t=1-\sin x\)</span>, amb <span class="math inline">\(dt=-\cos x\,dx\)</span>. Els extrems es transformen en <span class="math inline">\(1\)</span> i <span class="math inline">\(0\)</span>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+I&amp;=\lim_{\varepsilon\to0^+}
+\int_0^{\pi/2-\varepsilon}\frac{\cos x}{\sqrt{1-\sin x}}\,dx\\
+&amp;=\int_0^1 t^{-1/2}\,dt
+=\lim_{a\to0^+}[2\sqrt t]_a^1=2.
+\end{aligned}
+\]</span></p>
+<p>Per tant, <strong>convergeix</strong>.</p>
 </div>
 </div>
 </div>
@@ -2905,7 +3407,20 @@ Solució
 </div>
 <div id="callout-100" class="callout-100-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>La funció no està fitada en <span class="math inline">\(x=1\)</span>. Observam que</p>
+<p><span class="math display">\[
+\frac{d}{dx}(\arcsin x)=\frac1{\sqrt{1-x^2}}.
+\]</span></p>
+<p>Així, podem integrar directament com a semiimmediata, o bé fer el canvi <span class="math inline">\(t=\arcsin x\)</span>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+I&amp;=\lim_{b\to1^-}\int_0^b\frac{\arcsin x}{\sqrt{1-x^2}}\,dx\\
+&amp;=\lim_{b\to1^-}\left[\frac{(\arcsin x)^2}{2}\right]_0^b
+=\frac12\left(\frac\pi2\right)^2
+=\frac{\pi^2}{8}.
+\end{aligned}
+\]</span></p>
+<p>La integral és <strong>convergent</strong>.</p>
 </div>
 </div>
 </div>
@@ -2925,7 +3440,23 @@ Solució
 </div>
 <div id="callout-101" class="callout-101-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>La funció <span class="math inline">\(1/\sqrt[5]x\)</span> presenta una singularitat en <span class="math inline">\(x=0\)</span>, a l’interior de l’interval. <strong>No basta emprar la simetria d’una funció senar:</strong> hem de comprovar que les dues integrals laterals convergeixen.</p>
+<p>Per a <span class="math inline">\(x\ne0\)</span> una primitiva, interpretant les potències amb l’arrel cinquena real, és</p>
+<p><span class="math display">\[
+\int x^{-1/5}\,dx=\frac54x^{4/5}+C.
+\]</span></p>
+<p>Estudiam cada costat:</p>
+<p><span class="math display">\[
+\int_{-1}^0\frac{dx}{\sqrt[5]x}
+=\lim_{a\to0^-}\left[\frac54x^{4/5}\right]_{-1}^a
+=-\frac54,
+\]</span></p>
+<p><span class="math display">\[
+\int_0^1\frac{dx}{\sqrt[5]x}
+=\lim_{b\to0^+}\left[\frac54x^{4/5}\right]_b^1
+=\frac54.
+\]</span></p>
+<p>Com que ambdues integrals convergeixen, la integral total és <strong>convergent</strong> i val <span class="math inline">\(-5/4+5/4=0\)</span>.</p>
 </div>
 </div>
 </div>
@@ -2945,7 +3476,19 @@ Solució
 </div>
 <div id="callout-102" class="callout-102-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>Encara que <span class="math inline">\(\ln x\to-\infty\)</span> quan <span class="math inline">\(x\to0^+\)</span>, el producte <span class="math inline">\(x\ln x\to0\)</span>. Per això l’integrand admet una prolongació contínua en aquest extrem. També podem estudiar la integral com a impròpia i calcular-ne el límit.</p>
+<p>Per parts, amb <span class="math inline">\(u=\ln x\)</span> i <span class="math inline">\(dv=x\,dx\)</span>, tenim</p>
+<p><span class="math display">\[
+\int x\ln x\,dx=\frac{x^2}{2}\ln x-\frac{x^2}{4}+C.
+\]</span></p>
+<p>Per tant,</p>
+<p><span class="math display">\[
+\begin{aligned}
+I&amp;=\lim_{a\to0^+}\left[\frac{x^2}{2}\ln x-\frac{x^2}{4}\right]_a^1\\
+&amp;=-\frac14,
+\end{aligned}
+\]</span></p>
+<p>ja que <span class="math inline">\(\lim_{a\to0^+}a^2\ln a=0\)</span>. La integral <strong>convergeix</strong>.</p>
 </div>
 </div>
 </div>
@@ -2969,7 +3512,17 @@ Solució
 </div>
 <div id="callout-103" class="callout-103-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>El problema es redueix a estudiar què passa a l’extrem <span class="math inline">\(x=a\)</span>. Amb el canvi <span class="math inline">\(t=x-a\)</span>,</p>
+<p><span class="math display">\[
+I=\int_0^{b-a}t^{-\alpha}\,dt.
+\]</span></p>
+<p>Si <span class="math inline">\(\alpha\ne1\)</span>, una primitiva és <span class="math inline">\(t^{1-\alpha}/(1-\alpha)\)</span>, i el límit en <span class="math inline">\(t=0^+\)</span> és finit <strong>si, i només si, <span class="math inline">\(\alpha&lt;1\)</span></strong>. En aquest cas,</p>
+<p><span class="math display">\[
+I=\lim_{\varepsilon\to0^+}
+\left[\frac{t^{1-\alpha}}{1-\alpha}\right]_{\varepsilon}^{b-a}
+=\frac{(b-a)^{1-\alpha}}{1-\alpha}.
+\]</span></p>
+<p>Per a <span class="math inline">\(\alpha=1\)</span> apareix <span class="math inline">\(\ln t\)</span>, que divergeix a <span class="math inline">\(0\)</span>, i per a <span class="math inline">\(\alpha&gt;1\)</span> també divergeix. Així, la integral <strong>convergeix exactament per a <span class="math inline">\(\alpha&lt;1\)</span></strong>.</p>
 </div>
 </div>
 </div>
@@ -2989,7 +3542,20 @@ Solució
 </div>
 <div id="callout-104" class="callout-104-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>El canvi <span class="math inline">\(t=\ln x\)</span> porta <span class="math inline">\(x=2\)</span> a <span class="math inline">\(t=\ln2\)</span> i <span class="math inline">\(x\to+\infty\)</span> a <span class="math inline">\(t\to+\infty\)</span>. Com que <span class="math inline">\(dt=dx/x\)</span>,</p>
+<p><span class="math display">\[
+I=\int_{\ln2}^{+\infty}t^{-\alpha}\,dt.
+\]</span></p>
+<p>És el mateix tipus d’integral que s’estudia als apunts per a un interval no fitat. Si <span class="math inline">\(\alpha\ne1\)</span>,</p>
+<p><span class="math display">\[
+\int_{\ln2}^b t^{-\alpha}\,dt
+=\left[\frac{t^{1-\alpha}}{1-\alpha}\right]_{\ln2}^b.
+\]</span></p>
+<p>El límit quan <span class="math inline">\(b\to+\infty\)</span> és finit <strong>si, i només si, <span class="math inline">\(\alpha&gt;1\)</span></strong>. Aleshores,</p>
+<p><span class="math display">\[
+I=\frac{(\ln2)^{1-\alpha}}{\alpha-1}.
+\]</span></p>
+<p>Quan <span class="math inline">\(\alpha=1\)</span> la primitiva és <span class="math inline">\(\ln t\)</span> i també divergeix. Per tant, la integral és divergent per a <span class="math inline">\(\alpha\le1\)</span>.</p>
 </div>
 </div>
 </div>
@@ -3009,7 +3575,17 @@ Solució
 </div>
 <div id="callout-105" class="callout-105-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>Tornam a fer <span class="math inline">\(t=\ln x\)</span>, però ara el problema és a l’extrem inferior <span class="math inline">\(x=1\)</span>, que correspon a <span class="math inline">\(t=0\)</span>:</p>
+<p><span class="math display">\[
+I=\int_0^{\ln2}t^{-\alpha}\,dt.
+\]</span></p>
+<p>Seguint l’estudi de les integrals de potència en un interval fitat, obtenim que <strong>convergeix si, i només si, <span class="math inline">\(\alpha&lt;1\)</span></strong>. En aquest cas,</p>
+<p><span class="math display">\[
+I=\lim_{\varepsilon\to0^+}
+\left[\frac{t^{1-\alpha}}{1-\alpha}\right]_{\varepsilon}^{\ln2}
+=\frac{(\ln2)^{1-\alpha}}{1-\alpha}.
+\]</span></p>
+<p>Per a <span class="math inline">\(\alpha=1\)</span> el límit logarítmic divergeix, i per a <span class="math inline">\(\alpha&gt;1\)</span> també.</p>
 </div>
 </div>
 </div>
@@ -3029,7 +3605,19 @@ Solució
 </div>
 <div id="callout-106" class="callout-106-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><em>Solució pendent.</em></p>
+<p>Com que l’interval és tota la recta, hem de separar les integrals a <span class="math inline">\(x=0\)</span>. A més, <span class="math inline">\(e^{-\alpha|x|}\)</span> és una funció parella:</p>
+<p><span class="math display">\[
+I=\int_{-\infty}^0e^{\alpha x}\,dx
++\int_0^{+\infty}e^{-\alpha x}\,dx
+=2\int_0^{+\infty}e^{-\alpha x}\,dx.
+\]</span></p>
+<p>Si <span class="math inline">\(\alpha&gt;0\)</span>, per definició d’integral impròpia,</p>
+<p><span class="math display">\[
+I=2\lim_{b\to+\infty}
+\left[-\frac{e^{-\alpha x}}{\alpha}\right]_0^b
+=\frac2\alpha.
+\]</span></p>
+<p>Per a <span class="math inline">\(\alpha=0\)</span> l’integrand és <span class="math inline">\(1\)</span>, i per a <span class="math inline">\(\alpha&lt;0\)</span> creix exponencialment quan <span class="math inline">\(|x|\to\infty\)</span>. En ambdós casos la integral divergeix. Per tant, <strong>convergeix exactament per a <span class="math inline">\(\alpha&gt;0\)</span></strong>.</p>
 </div>
 </div>
 </div>
