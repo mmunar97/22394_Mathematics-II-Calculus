@@ -1,0 +1,553 @@
+---
+title: "Tema 3. Càlcul integral d'una variable"
+---
+
+## Llista 1. Càlcul de primitives
+
+### Exercici 1
+
+Resoleu les integrals següents:
+
+**a)**
+
+$$
+\int (1-2x)\,dx
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+<!-- Substitueix la línia següent per la solució de l’apartat. -->
+
+*Solució pendent.*
+:::
+
+**b)**
+
+$$
+\int \left(\frac{1-x}{x}\right)^2\,dx
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+<!-- Substitueix la línia següent per la solució de l’apartat. -->
+
+*Solució pendent.*
+:::
+
+**c)**
+
+$$
+\int \frac{(1-x)^2}{x\sqrt{x}}\,dx
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+<!-- Substitueix la línia següent per la solució de l’apartat. -->
+
+*Solució pendent.*
+:::
+
+**d)**
+
+$$
+\int \frac{dx}{\sqrt{3-3x^2}}
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+<!-- Substitueix la línia següent per la solució de l’apartat. -->
+
+*Solució pendent.*
+:::
+
+**e)**
+
+$$
+\int \frac{dx}{4x^2+9}
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+<!-- Substitueix la línia següent per la solució de l’apartat. -->
+
+*Solució pendent.*
+:::
+
+**f)**
+
+$$
+\int \tan^2 x\,dx
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+<!-- Substitueix la línia següent per la solució de l’apartat. -->
+
+*Solució pendent.*
+:::
+
+**g)**
+
+$$
+\int \frac{x^2-1}{x^2+1}\,dx
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+<!-- Substitueix la línia següent per la solució de l’apartat. -->
+
+*Solució pendent.*
+:::
+
+**h)**
+
+$$
+\int \cos^3 x\,dx
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+<!-- Substitueix la línia següent per la solució de l’apartat. -->
+
+*Solució pendent.*
+:::
+
+**i)**
+
+$$
+\int \frac{\sqrt{x}+\ln x}{x}\,dx
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+<!-- Substitueix la línia següent per la solució de l’apartat. -->
+
+*Solució pendent.*
+:::
+
+**j)**
+
+$$
+\int \frac{1+2x^2}{x^2(1+x^2)}\,dx
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+<!-- Substitueix la línia següent per la solució de l’apartat. -->
+
+*Solució pendent.*
+:::
+
+### Exercici 2
+
+Resoleu les integrals següents (amb els canvis de variable indicats, quan n'hi hagi):
+
+**a)**
+
+$$
+\int \frac{dx}{x\sqrt{x^2-2}},\qquad x=\frac{1}{t}
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+<!-- Substitueix la línia següent per la solució de l’apartat. -->
+
+*Solució pendent.*
+:::
+
+**b)**
+
+$$
+\int x^{-1/2}\cot\sqrt{x}\,dx,\qquad t=\sqrt{x}
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+<!-- Substitueix la línia següent per la solució de l’apartat. -->
+
+*Solució pendent.*
+:::
+
+**c)**
+
+$$
+\int \frac{dx}{\sqrt{x+1}},\qquad t=\sqrt{x+1}
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+<!-- Substitueix la línia següent per la solució de l’apartat. -->
+
+*Solució pendent.*
+:::
+
+**d)**
+
+$$
+\int \frac{\sqrt{x}}{\sqrt{x}-\sqrt[3]{x}}\,dx,\qquad x=t^6
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+<!-- Substitueix la línia següent per la solució de l’apartat. -->
+
+*Solució pendent.*
+:::
+
+**e)**
+
+$$
+\int x\cos(2-x^2)\,dx
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+<!-- Substitueix la línia següent per la solució de l’apartat. -->
+
+*Solució pendent.*
+:::
+
+**f)**
+
+$$
+\int \frac{\arctan(x/2)}{x^2+4}\,dx
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+<!-- Substitueix la línia següent per la solució de l’apartat. -->
+
+*Solució pendent.*
+:::
+
+**g)**
+
+$$
+\int \frac{2x+3\arcsin x}{\sqrt{1-x^2}}\,dx
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+<!-- Substitueix la línia següent per la solució de l’apartat. -->
+
+*Solució pendent.*
+:::
+
+**h)**
+
+$$
+\int \frac{1+x}{1+\sqrt{x}}\,dx
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+<!-- Substitueix la línia següent per la solució de l’apartat. -->
+
+*Solució pendent.*
+:::
+
+**i)**
+
+$$
+\int \frac{dx}{\sqrt{e^x-1}}
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+<!-- Substitueix la línia següent per la solució de l’apartat. -->
+
+*Solució pendent.*
+:::
+
+**j)**
+
+$$
+\int x\sin x\,dx
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+<!-- Substitueix la línia següent per la solució de l’apartat. -->
+
+*Solució pendent.*
+:::
+
+### Exercici 3
+
+Resoleu les integrals següents:
+
+**a)**
+
+$$
+\int \ln\left(x+\sqrt{x^2+1}\right)\,dx
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+<!-- Substitueix la línia següent per la solució de l’apartat. -->
+
+*Solució pendent.*
+:::
+
+**b)**
+
+$$
+\int \frac{x}{\sin^2 x}\,dx
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+<!-- Substitueix la línia següent per la solució de l’apartat. -->
+
+*Solució pendent.*
+:::
+
+**c)**
+
+$$
+\int \ln^2 x\,dx
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+<!-- Substitueix la línia següent per la solució de l’apartat. -->
+
+*Solució pendent.*
+:::
+
+**d)**
+
+$$
+\int \arcsin x\,dx
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+<!-- Substitueix la línia següent per la solució de l’apartat. -->
+
+*Solució pendent.*
+:::
+
+**e)**
+
+$$
+\int x^2 e^{3x}\,dx
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+<!-- Substitueix la línia següent per la solució de l’apartat. -->
+
+*Solució pendent.*
+:::
+
+**f)**
+
+$$
+\int x^2\ln x\,dx
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+<!-- Substitueix la línia següent per la solució de l’apartat. -->
+
+*Solució pendent.*
+:::
+
+### Exercici 4
+
+Resoleu les integrals següents:
+
+**a)**
+
+$$
+\int \frac{2x^2-5}{x^4-5x^2+6}\,dx
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+<!-- Substitueix la línia següent per la solució de l’apartat. -->
+
+*Solució pendent.*
+:::
+
+**b)**
+
+$$
+\int \frac{dx}{x(x+1)^2}
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+<!-- Substitueix la línia següent per la solució de l’apartat. -->
+
+*Solució pendent.*
+:::
+
+**c)**
+
+$$
+\int \frac{dx}{x^3+1}
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+<!-- Substitueix la línia següent per la solució de l’apartat. -->
+
+*Solució pendent.*
+:::
+
+**d)**
+
+$$
+\int \frac{x^4-2x^2+2}{x^2-2x+2}\,dx
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+<!-- Substitueix la línia següent per la solució de l’apartat. -->
+
+*Solució pendent.*
+:::
+
+**e)**
+
+$$
+\int \frac{dx}{x^3+1}
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+<!-- Substitueix la línia següent per la solució de l’apartat. -->
+
+*Solució pendent.*
+:::
+
+**f)**
+
+$$
+\int \frac{\sin^3 x}{\cos^2 x}\,dx
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+<!-- Substitueix la línia següent per la solució de l’apartat. -->
+
+*Solució pendent.*
+:::
+
+**g)**
+
+$$
+\int \frac{\cos^3 x}{\sin^2 x+\sin x}\,dx
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+<!-- Substitueix la línia següent per la solució de l’apartat. -->
+
+*Solució pendent.*
+:::
+
+**h)**
+
+$$
+\int \sin^2\left(\frac{x}{4}\right)\cos^2\left(\frac{x}{4}\right)\,dx
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+<!-- Substitueix la línia següent per la solució de l’apartat. -->
+
+*Solució pendent.*
+:::
+
+**i)**
+
+$$
+\int \frac{\cos^3 x}{\sin^2 x}\,dx
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+<!-- Substitueix la línia següent per la solució de l’apartat. -->
+
+*Solució pendent.*
+:::
+
+**j)**
+
+$$
+\int x^2\sqrt{4-x^2}\,dx
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+<!-- Substitueix la línia següent per la solució de l’apartat. -->
+
+*Solució pendent.*
+:::
+
+### Exercici 5
+
+Resoleu les integrals següents, fent servir en cada cas el mètode més adequat:
+
+**a)**
+
+$$
+\int \frac{\ln x}{\sqrt{x}}\,dx
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+<!-- Substitueix la línia següent per la solució de l’apartat. -->
+
+*Solució pendent.*
+:::
+
+**b)**
+
+$$
+\int \sin(\ln x)\,dx
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+<!-- Substitueix la línia següent per la solució de l’apartat. -->
+
+*Solució pendent.*
+:::
+
+**c)**
+
+$$
+\int \frac{x^2}{(x-1)^5}\,dx
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+<!-- Substitueix la línia següent per la solució de l’apartat. -->
+
+*Solució pendent.*
+:::
+
+**d)**
+
+$$
+\int \frac{\ln(\ln x)}{x}\,dx
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+<!-- Substitueix la línia següent per la solució de l’apartat. -->
+
+*Solució pendent.*
+:::
+
+**e)**
+
+$$
+\int \frac{x^2-5x+9}{x^2-5x+6}\,dx
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+<!-- Substitueix la línia següent per la solució de l’apartat. -->
+
+*Solució pendent.*
+:::
+
+**f)**
+
+$$
+\int \cos^5 x\,dx
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+<!-- Substitueix la línia següent per la solució de l’apartat. -->
+
+*Solució pendent.*
+:::
+
+**g)**
+
+$$
+\int \frac{dx}{\sqrt{x^2-1}}
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+<!-- Substitueix la línia següent per la solució de l’apartat. -->
+
+*Solució pendent.*
+:::
+
+**h)**
+
+$$
+\int \frac{dx}{x^2\sqrt{1+x^2}}
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+<!-- Substitueix la línia següent per la solució de l’apartat. -->
+
+*Solució pendent.*
+:::

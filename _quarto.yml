@@ -1,0 +1,25 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "22394 - Matemàtiques II - Càlcul. Llibre de solucions"
+  page-navigation: true
+  sidebar:
+    style: docked
+    search: true
+    contents:
+      - index.qmd
+      - section: "Fulls d'exercicis"
+        contents:
+          - tema3.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    html-math-method: mathjax
+
+editor: visual
+
