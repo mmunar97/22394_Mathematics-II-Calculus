@@ -1391,3 +1391,760 @@ I=-\frac{\sqrt{1+x^2}}{x}+C.
 $$
 
 :::
+
+
+## Llista 2. Aplicacions de la integral i integració impròpia
+
+### Exercici 1
+
+Sigui $f:\mathbb{R}\to\mathbb{R}$ la funció definida com
+
+$$
+f(x)=\begin{cases}
+0, & \text{si }x<0,\\
+x, & \text{si }0\leq x\leq 1,\\
+1, & \text{si }x>1.
+\end{cases}
+$$
+
+**a)**
+
+Determinau la funció àrea $F(x)=\int_0^x f(t)\,dt$.
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+**b)**
+
+Representau $F$ gràficament i estudiau la seva continuïtat.
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+**c)**
+
+On és $F$ derivable? Calculau $F'$ en els punts on sigui derivable.
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+### Exercici 2
+
+Calculau les derivades de les següents funcions:
+
+**a)**
+
+$$
+F(x)=\int_0^{x^2}\frac{dt}{1+t^3}
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+**b)**
+
+$$
+F(x)=\int_0^x x f(t)\,dt,\qquad f\text{ contínua en }\mathbb{R}.
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+**c)**
+
+$$
+F(x)=\int_{\sqrt{x}}^{x^2+x}\frac{dt}{2+\sqrt[3]{t^2}}
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+**d)**
+
+$$
+F(x)=\left(\int_0^x\frac{dt}{1+\sin^2 t}\right)^3
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+### Exercici 3
+
+Sigui $f:\mathbb{R}\to\mathbb{R}$ una funció contínua. Calculau $f(2)$ sabent que
+
+$$
+\int_0^x f(t)\,dt=x^2(1+x).
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+### Exercici 4
+
+Sigui $F:[0,+\infty)\to\mathbb{R}$ definida com
+
+$$
+F(x)=\int_0^x\ln(2+t)\,dt.
+$$
+
+**a)**
+
+Calculau $F(0)$.
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+**b)**
+
+Calculau $F'(x)$ i provau que $F$ és estrictament creixent en el seu domini.
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+### Exercici 5
+
+Considereu $F:\mathbb{R}\to\mathbb{R}$ donada per
+
+$$
+F(x)=\int_0^x(t^2-1)\,dt.
+$$
+
+**a)**
+
+Calculau $F(3)$.
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+**b)**
+
+Determinau els extrems relatius de $F$.
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+### Exercici 6
+
+Calculau els següents límits:
+
+**a)**
+
+$$
+\lim_{x\to 0}\frac{1}{x}\int_0^x e^{t^2}\,dt
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+**b)**
+
+$$
+\lim_{x\to 1}\frac{1}{x-1}\int_1^x\sqrt{1+2t^2}\,dt
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+**c)**
+
+$$
+\lim_{x\to 0}\frac{1}{x^3}\left(x-\int_0^x\frac{\sin t}{t}\,dt\right)
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+**d)**
+
+$$
+\lim_{x\to 0}\frac{1}{x^3}\int_0^{\sin x}(e^{t^2}-1)\,dt
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+### Exercici 7
+
+Trobau el valor de $\alpha>0$ que minimitza el valor de la integral
+
+$$
+\int_{\alpha}^{\alpha^2}\frac{dx}{x+\sqrt{x}}.
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+### Exercici 8
+
+Calculau les següents integrals:
+
+**a)**
+
+$$
+\int_0^4\frac{dx}{1+\sqrt{x}}
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+**b)**
+
+$$
+\int_2^4\ln x\,dx
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+**c)**
+
+$$
+\int_e^{e^2}\frac{dx}{x\ln x}
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+**d)**
+
+$$
+\int_0^{\pi/4}\tan^2x\,dx
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+**e)**
+
+$$
+\int_{-4}^4\sqrt{16-x^2}\,dx
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+**f)**
+
+$$
+\int_0^3\frac{dx}{\sqrt{1+x}}
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+**g)**
+
+$$
+\int_2^5\frac{dx}{x^2+x-2}
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+**h)**
+
+$$
+\int_{-8}^{-1}\frac{x-x^2}{2\sqrt[3]{x}}\,dx
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+**i)**
+
+$$
+\int_0^4\left|x^2-4x+3\right|\,dx
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+**j)**
+
+$$
+\int_0^\pi\frac{\sin x}{\cos x+4}\,dx
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+**k)**
+
+$$
+\int_0^{\pi/4}\frac{1-\sin^2x}{\cos^2x}\,dx
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+**l)**
+
+$$
+\int_{-\pi}^\pi\left|x\cos x\right|\,dx
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+### Exercici 9
+
+Determinau l'àrea de l'el·lipse de semieixos $a>b>0$.
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+### Exercici 10
+
+Determinau l'àrea del triangle format pels eixos de coordenades i la recta tangent en un punt qualsevol de la hipèrbola $xy=1$.
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+### Exercici 11
+
+Calculau l'àrea de la regió limitada per les gràfiques de les corbes següents:
+
+**a)**
+
+$y=\frac{1}{x^2}$ i l'eix d'abscisses per a $1\leq x\leq 5$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+**b)**
+
+$y=3x-x^2$ i $y=-x-3$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+**c)**
+
+$y=x^3$ i $y=x$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+**d)**
+
+$y=x^2-2x$ i $y=6x-x^2$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+**e)**
+
+$y=x^2-4x+3$ i $y=3+4x-x^2$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+**f)**
+
+$x=\sqrt{y}$, $x=2-y$ i $y=0$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+### Exercici 12
+
+Dos germans s'han de repartir, a parts iguals, una parcel·la tancada entre dues valles, una de les quals descriu la corba $y=x^2$ i l'altra, $y=1$. Decideixen dividir-la amb una recta $y=a$ paral·lela a $y=1$. Trobau el valor de $a\in\mathbb{R}$.
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+### Exercici 13
+
+Sabent que l'àrea de la regió compresa entre $y=x^2$ i $y=\alpha x$ és $\frac92$, calculau $\alpha\in\mathbb{R}$.
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+### Exercici 14
+
+Determinau per a quin valor de $\lambda\in\mathbb{R}$ la recta $y=\lambda$ divideix la regió limitada per la corba $y=9-x^2$ i l'eix d'abscisses en dues parts d'igual àrea.
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+### Exercici 15
+
+Calculau el volum del cos generat en fer girar al voltant de l'eix d'abscisses la regió limitada per les corbes següents:
+
+**a)**
+
+$y=x^2$ i $y=\sqrt{x}$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+**b)**
+
+$y=x^3$, $y=2-x$ i $y=0$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+**c)**
+
+$x=(y-1)^2$ i $x=1$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+### Exercici 16
+
+Calculau el volum del cos generat en fer girar al voltant de l'eix d'ordenades la regió limitada per les corbes següents:
+
+**a)**
+
+El segment de la paràbola $y=x^2$ comprès en l'interval $[0,2]$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+**b)**
+
+$x+y^2=9$ i $x=0$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+**c)**
+
+$y=2-x$, $y=x-2$, $x=y^2$ i $y=0$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+### Exercici 17
+
+Calculau el volum del tor (*donut*) com el volum del cos generat en fer girar al voltant de l'eix OY la circumferència centrada en el punt $(a,0)$ i de radi $r$.
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+### Exercici 18
+
+Calculau la longitud de la corba $y=\ln(1-x^2)$ compresa entre $x=\frac14$ i $x=\frac34$.
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+### Exercici 19
+
+Calculau la longitud de l'arc de la paràbola semicúbica $y^2=x^3$ en l'interval $[0,1]$.
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+### Exercici 20
+
+Calculau les següents integrals:
+
+**a)**
+
+$$
+\int_4^{+\infty}\frac{dx}{x^2-4}
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+**b)**
+
+$$
+\int_{-\infty}^1 xe^x\,dx
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+**c)**
+
+$$
+\int_{-\infty}^{+\infty}\frac{dx}{e^x+e^{-x}}
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+**d)**
+
+$$
+\int_0^{+\infty}\frac{dx}{\sqrt{x}(x+4)}
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+**e)**
+
+$$
+\int_0^3\frac{dx}{\sqrt{9-x^2}}
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+**f)**
+
+$$
+\int_0^{\pi/2}\frac{\cos x}{\sqrt{1-\sin x}}\,dx
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+**g)**
+
+$$
+\int_0^1\frac{\arcsin x}{\sqrt{1-x^2}}\,dx
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+**h)**
+
+$$
+\int_{-1}^1\frac{dx}{\sqrt[5]{x}}
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+**i)**
+
+$$
+\int_0^1x\ln x\,dx
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+### Exercici 21
+
+Estudiau el caràcter de les següents integrals segons els valors del paràmetre $\alpha\in\mathbb{R}$ i calculau el seu valor quan sigui convergent:
+
+**a)**
+
+$$
+\int_a^b\frac{dx}{(x-a)^\alpha},\qquad -\infty<a<b<+\infty
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+**b)**
+
+$$
+\int_2^{+\infty}\frac{dx}{x(\ln x)^\alpha}
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+**c)**
+
+$$
+\int_1^2\frac{dx}{x(\ln x)^\alpha}
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
+
+**d)**
+
+$$
+\int_{-\infty}^{+\infty}e^{-\alpha|x|}\,dx
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+
+*Solució pendent.*
+
+:::
