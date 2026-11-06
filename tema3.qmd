@@ -15,9 +15,10 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-<!-- Substitueix la línia següent per la solució de l’apartat. -->
-
-*Solució pendent.*
+$$
+\int(1-2x)\,dx=\int 1\,dx-2\int x\,dx
+=x-x^2+C.
+$$
 :::
 
 **b)**
