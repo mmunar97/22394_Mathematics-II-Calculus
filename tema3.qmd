@@ -1,5 +1,9 @@
 ---
 title: "Tema 3. Càlcul integral d'una variable"
+format:
+  html:
+    toc: true
+    toc-depth: 3
 ---
 
 ## Llista 1. Càlcul de primitives
@@ -15,10 +19,14 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
+
+És una integral immediata; basta aplicar la linealitat i calcular cada terme per separat:
+
 $$
 \int(1-2x)\,dx=\int 1\,dx-2\int x\,dx
 =x-x^2+C.
 $$
+
 :::
 
 **b)**
@@ -28,9 +36,24 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-<!-- Substitueix la línia següent per la solució de l’apartat. -->
 
-*Solució pendent.*
+Desenvolupam el quadrat i simplificam la fracció per obtenir una suma d'integrals immediates:
+
+$$
+\left(\frac{1-x}{x}\right)^2
+=\frac{1}{x^2}-\frac2x+1.
+$$
+
+Per tant,
+
+$$
+\begin{aligned}
+\int\left(\frac{1-x}{x}\right)^2\,dx
+&=\int(x^{-2}-2x^{-1}+1)\,dx\\
+&=-\frac1x-2\ln|x|+x+C.
+\end{aligned}
+$$
+
 :::
 
 **c)**
@@ -40,9 +63,24 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-<!-- Substitueix la línia següent per la solució de l’apartat. -->
 
-*Solució pendent.*
+Primer desenvolupam el quadrat i escrivim les arrels com a potències de $x$:
+
+$$
+\frac{(1-x)^2}{x\sqrt{x}}
+=x^{-3/2}-2x^{-1/2}+x^{1/2}.
+$$
+
+Així,
+
+$$
+\begin{aligned}
+\int\frac{(1-x)^2}{x\sqrt{x}}\,dx
+&=\int(x^{-3/2}-2x^{-1/2}+x^{1/2})\,dx\\
+&=-\frac2{\sqrt{x}}-4\sqrt{x}+\frac23x^{3/2}+C.
+\end{aligned}
+$$
+
 :::
 
 **d)**
@@ -52,9 +90,17 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-<!-- Substitueix la línia següent per la solució de l’apartat. -->
 
-*Solució pendent.*
+Traient el factor $\sqrt3$ del denominador, reconeixem una integral immediata de l'arcsinus:
+
+$$
+\begin{aligned}
+\int\frac{dx}{\sqrt{3-3x^2}}
+&=\frac1{\sqrt3}\int\frac{dx}{\sqrt{1-x^2}}\\
+&=\frac1{\sqrt3}\arcsin x+C.
+\end{aligned}
+$$
+
 :::
 
 **e)**
@@ -64,9 +110,29 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-<!-- Substitueix la línia següent per la solució de l’apartat. -->
+El denominador es pot escriure com $9\left(1+(2x/3)^2\right)$. Podem reconèixer directament una integral semiimmediata de l'arctangent, sense fer cap canvi de variable, ja que
 
-*Solució pendent.*
+$$
+\left(\arctan\frac{2x}{3}\right)'=\frac{6}{4x^2+9}.
+$$
+
+Per tant,
+
+$$
+\int\frac{dx}{4x^2+9}=\frac16\arctan\left(\frac{2x}{3}\right)+C.
+$$
+
+També podem arribar al mateix resultat amb el canvi $t=2x/3$. Com que $dx=\tfrac32\,dt$,
+
+$$
+\begin{aligned}
+\int\frac{dx}{4x^2+9}
+&=\frac19\int\frac{dx}{1+(2x/3)^2}\\
+&=\frac16\int\frac{dt}{1+t^2}\\
+&=\frac16\arctan\left(\frac{2x}{3}\right)+C.
+\end{aligned}
+$$
+
 :::
 
 **f)**
@@ -76,9 +142,17 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-<!-- Substitueix la línia següent per la solució de l’apartat. -->
 
-*Solució pendent.*
+Empram la identitat $\tan^2x=\frac1{\cos^2x}-1$ i integram terme a terme:
+
+$$
+\begin{aligned}
+\int\tan^2x\,dx
+&=\int\left(\frac1{\cos^2x}-1\right)\,dx\\
+&=\tan x-x+C.
+\end{aligned}
+$$
+
 :::
 
 **g)**
@@ -88,9 +162,20 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-<!-- Substitueix la línia següent per la solució de l’apartat. -->
 
-*Solució pendent.*
+Dividint el numerador pel denominador, separam una constant i un terme que dona lloc a l'arctangent:
+
+$$
+\frac{x^2-1}{x^2+1}=1-\frac2{x^2+1}.
+$$
+
+Aleshores,
+
+$$
+\int\frac{x^2-1}{x^2+1}\,dx
+=x-2\arctan x+C.
+$$
+
 :::
 
 **h)**
@@ -100,9 +185,27 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-<!-- Substitueix la línia següent per la solució de l’apartat. -->
+Com que la potència del cosinus és senar, separam un factor $\cos x$ i empram $\cos^2x=1-\sin^2x$. Això ens permet integrar directament, reconeixent la derivada de les potències de $\sin x$:
 
-*Solució pendent.*
+$$
+\begin{aligned}
+\int\cos^3x\,dx
+&=\int\cos x(1-\sin^2x)\,dx\\
+&=\sin x-\frac{\sin^3x}{3}+C.
+\end{aligned}
+$$
+
+Si preferim fer el canvi $t=\sin x$, obtenim el mateix resultat. En efecte, $dt=\cos x\,dx$ i
+
+$$
+\begin{aligned}
+\int\cos^3x\,dx
+&=\int(1-t^2)\,dt\\
+&=t-\frac{t^3}{3}+C\\
+&=\sin x-\frac{\sin^3x}{3}+C.
+\end{aligned}
+$$
+
 :::
 
 **i)**
@@ -112,9 +215,24 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-<!-- Substitueix la línia següent per la solució de l’apartat. -->
+Aplicam la linealitat. El primer sumand és immediat; el segon també es pot integrar directament si reconeixem que la derivada de $(\ln x)^2$ és $2\ln x/x$:
 
-*Solució pendent.*
+$$
+\begin{aligned}
+\int\frac{\sqrt{x}+\ln x}{x}\,dx
+&=\int x^{-1/2}\,dx+\int\frac{\ln x}{x}\,dx\\
+&=2\sqrt{x}+\frac{(\ln x)^2}{2}+C.
+\end{aligned}
+$$
+
+Per calcular la segona integral també podem fer $t=\ln x$. Com que $dt=dx/x$,
+
+$$
+\int\frac{\ln x}{x}\,dx
+=\int t\,dt=\frac{t^2}{2}+C
+=\frac{(\ln x)^2}{2}+C.
+$$
+
 :::
 
 **j)**
@@ -124,10 +242,23 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-<!-- Substitueix la línia següent per la solució de l’apartat. -->
 
-*Solució pendent.*
+La fracció es pot separar en dos termes molt senzills:
+
+$$
+\frac{1+2x^2}{x^2(1+x^2)}
+=\frac1{x^2}+\frac1{1+x^2}.
+$$
+
+Per tant,
+
+$$
+\int\frac{1+2x^2}{x^2(1+x^2)}\,dx
+=-\frac1x+\arctan x+C.
+$$
+
 :::
+
 
 ### Exercici 2
 
@@ -140,9 +271,33 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-<!-- Substitueix la línia següent per la solució de l’apartat. -->
 
-*Solució pendent.*
+Seguim el canvi proposat a l'enunciat, $x=1/t$.
+
+Tenim $dx=-t^{-2}\,dt$ i
+
+$$
+\sqrt{x^2-2}=\frac{\sqrt{1-2t^2}}{|t|}.
+$$
+
+En l'interval $x>\sqrt2$ (per tant, $t>0$),
+
+$$
+\begin{aligned}
+I&=\int\frac{-t^{-2}\,dt}{t^{-1}\sqrt{1-2t^2}/t}
+=-\int\frac{dt}{\sqrt{1-2t^2}}\\
+&=-\frac1{\sqrt2}\arcsin(\sqrt2\,t)+C.
+\end{aligned}
+$$
+
+Desfent el canvi, i escrivint el resultat perquè sigui vàlid en **tots dos intervals** del domini $|x|>\sqrt2$, obtenim
+
+$$
+I=-\frac1{\sqrt2}\arcsin\left(\frac{\sqrt2}{|x|}\right)+C.
+$$
+
+La constant $C$ pot ser diferent en cada component del domini.
+
 :::
 
 **b)**
@@ -152,9 +307,32 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-<!-- Substitueix la línia següent per la solució de l’apartat. -->
+La integral es pot reconèixer com a semiimmediata sense necessitat de canviar de variable. En efecte,
 
-*Solució pendent.*
+$$
+\left(\ln|\sin\sqrt{x}|\right)'
+=\frac{\cot\sqrt{x}}{2\sqrt{x}},
+$$
+
+i, per tant,
+
+$$
+\int x^{-1/2}\cot\sqrt{x}\,dx
+=2\ln|\sin\sqrt{x}|+C.
+$$
+
+El canvi indicat a l'enunciat, $t=\sqrt{x}$, ens porta al mateix resultat. Com que $x=t^2$ i $dx=2t\,dt$,
+
+$$
+\begin{aligned}
+\int x^{-1/2}\cot\sqrt{x}\,dx
+&=2\int\cot t\,dt\\
+&=2\int\frac{\cos t}{\sin t}\,dt\\
+&=2\ln|\sin t|+C\\
+&=2\ln|\sin\sqrt{x}|+C.
+\end{aligned}
+$$
+
 :::
 
 **c)**
@@ -164,9 +342,24 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-<!-- Substitueix la línia següent per la solució de l’apartat. -->
+Aquesta integral es pot calcular directament, ja que és una potència de $x+1$ i la seva derivada interior és $1$:
 
-*Solució pendent.*
+$$
+\int\frac{dx}{\sqrt{x+1}}
+=\int(x+1)^{-1/2}\,dx
+=2\sqrt{x+1}+C.
+$$
+
+Amb el canvi proposat, $t=\sqrt{x+1}$, també arribam al mateix resultat. Aleshores $x=t^2-1$ i $dx=2t\,dt$:
+
+$$
+\begin{aligned}
+\int\frac{dx}{\sqrt{x+1}}
+&=\int\frac{2t}{t}\,dt\\
+&=2t+C=2\sqrt{x+1}+C.
+\end{aligned}
+$$
+
 :::
 
 **d)**
@@ -176,9 +369,39 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-<!-- Substitueix la línia següent per la solució de l’apartat. -->
 
-*Solució pendent.*
+Com que apareixen arrels d'índex 2 i 3, és convenient emprar el canvi indicat $x=t^6$, igual que als apunts.
+
+Prenem $t=x^{1/6}>0$. Aleshores $\sqrt{x}=t^3$, $\sqrt[3]{x}=t^2$ i $dx=6t^5\,dt$. Per tant,
+
+$$
+\begin{aligned}
+I&=\int\frac{t^3}{t^3-t^2}\,6t^5\,dt
+=6\int\frac{t^6}{t-1}\,dt.
+\end{aligned}
+$$
+
+Dividim els polinomis:
+
+$$
+\frac{t^6}{t-1}=t^5+t^4+t^3+t^2+t+1+\frac1{t-1}.
+$$
+
+Integrant terme a terme,
+
+$$
+I=t^6+\frac65t^5+\frac32t^4+2t^3+3t^2+6t+6\ln|t-1|+C.
+$$
+
+Desfent el canvi,
+
+$$
+\begin{aligned}
+I={}&x+\frac65x^{5/6}+\frac32x^{2/3}+2\sqrt{x}\\
+&+3x^{1/3}+6x^{1/6}+6\ln|x^{1/6}-1|+C.
+\end{aligned}
+$$
+
 :::
 
 **e)**
@@ -188,9 +411,23 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-<!-- Substitueix la línia següent per la solució de l’apartat. -->
+No és necessari fer un canvi de variable si observam que la derivada de $\sin(2-x^2)$ és $-2x\cos(2-x^2)$. Per tant, la integral és semiimmediata:
 
-*Solució pendent.*
+$$
+\int x\cos(2-x^2)\,dx
+=-\frac12\sin(2-x^2)+C.
+$$
+
+També es pot resoldre fent $t=2-x^2$. Com que $dt=-2x\,dx$,
+
+$$
+\begin{aligned}
+\int x\cos(2-x^2)\,dx
+&=-\frac12\int\cos t\,dt\\
+&=-\frac12\sin(2-x^2)+C.
+\end{aligned}
+$$
+
 :::
 
 **f)**
@@ -200,9 +437,30 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-<!-- Substitueix la línia següent per la solució de l’apartat. -->
+Podem calcular-la directament perquè la derivada de $\arctan(x/2)$ és $2/(x^2+4)$. Així,
 
-*Solució pendent.*
+$$
+\left[\left(\arctan\frac{x}{2}\right)^2\right]'
+=\frac{4\arctan(x/2)}{x^2+4},
+$$
+
+i obtenim
+
+$$
+\int\frac{\arctan(x/2)}{x^2+4}\,dx
+=\frac14\left(\arctan\frac{x}{2}\right)^2+C.
+$$
+
+Si volem explicitar el canvi de variable, prenem $t=\arctan(x/2)$. Aleshores $dt=\frac{2}{x^2+4}\,dx$ i
+
+$$
+\begin{aligned}
+\int\frac{\arctan(x/2)}{x^2+4}\,dx
+&=\frac12\int t\,dt\\
+&=\frac14\left(\arctan\frac{x}{2}\right)^2+C.
+\end{aligned}
+$$
+
 :::
 
 **g)**
@@ -212,9 +470,33 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-<!-- Substitueix la línia següent per la solució de l’apartat. -->
+Per linealitat, separam els dos sumands:
 
-*Solució pendent.*
+$$
+I=2\int\frac{x}{\sqrt{1-x^2}}\,dx
++3\int\frac{\arcsin x}{\sqrt{1-x^2}}\,dx.
+$$
+
+Tots dos són semiimmediats. Per a la primera integral, observam que $(\sqrt{1-x^2})'=-x/\sqrt{1-x^2}$. Per a la segona, tenim
+
+$$
+\left((\arcsin x)^2\right)'=\frac{2\arcsin x}{\sqrt{1-x^2}}.
+$$
+
+Així, sense fer cap canvi explícit,
+
+$$
+I=-2\sqrt{1-x^2}+\frac32(\arcsin x)^2+C.
+$$
+
+En qualsevol cas, la segona integral també es pot resoldre amb $t=\arcsin x$, d'on $dt=dx/\sqrt{1-x^2}$:
+
+$$
+3\int\frac{\arcsin x}{\sqrt{1-x^2}}\,dx
+=3\int t\,dt
+=\frac32(\arcsin x)^2+C.
+$$
+
 :::
 
 **h)**
@@ -224,9 +506,37 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-<!-- Substitueix la línia següent per la solució de l’apartat. -->
 
-*Solució pendent.*
+La presència de $\sqrt{x}$ suggereix fer $t=\sqrt{x}$; després, només cal dividir polinomis.
+
+Com que $x=t^2$ i $dx=2t\,dt$,
+
+$$
+I=2\int\frac{t(1+t^2)}{1+t}\,dt.
+$$
+
+Efectuam la divisió:
+
+$$
+\frac{t(1+t^2)}{1+t}
+=t^2-t+2-\frac2{t+1}.
+$$
+
+Així,
+
+$$
+\begin{aligned}
+I&=2\int\left(t^2-t+2-\frac2{t+1}\right)dt\\
+&=\frac23t^3-t^2+4t-4\ln|t+1|+C.
+\end{aligned}
+$$
+
+Desfent el canvi (amb $t\ge0$),
+
+$$
+I=\frac23x^{3/2}-x+4\sqrt{x}-4\ln(1+\sqrt{x})+C.
+$$
+
 :::
 
 **i)**
@@ -236,9 +546,37 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-<!-- Substitueix la línia següent per la solució de l’apartat. -->
+També podem identificar una primitiva per derivació directa. Si tenim en compte que $1+(e^x-1)=e^x$, resulta
 
-*Solució pendent.*
+$$
+\left(\arctan\sqrt{e^x-1}\right)'
+=\frac{1}{1+(e^x-1)}\,\frac{e^x}{2\sqrt{e^x-1}}
+=\frac{1}{2\sqrt{e^x-1}}.
+$$
+
+Per tant,
+
+$$
+\int\frac{dx}{\sqrt{e^x-1}}
+=2\arctan\sqrt{e^x-1}+C.
+$$
+
+Una altra manera d'obtenir-ho és eliminar l'arrel amb el canvi $t=\sqrt{e^x-1}$. Tenim $e^x=1+t^2$ i $e^x\,dx=2t\,dt$, és a dir,
+
+$$
+dx=\frac{2t}{1+t^2}\,dt.
+$$
+
+Aleshores,
+
+$$
+\begin{aligned}
+I&=\int\frac{1}{t}\frac{2t}{1+t^2}\,dt
+=2\int\frac{dt}{1+t^2}\\
+&=2\arctan\sqrt{e^x-1}+C.
+\end{aligned}
+$$
+
 :::
 
 **j)**
@@ -248,10 +586,21 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-<!-- Substitueix la línia següent per la solució de l’apartat. -->
 
-*Solució pendent.*
+Com que tenim el producte d'una funció polinòmica i una trigonomètrica, integram per parts.
+
+Triam $u=x$ i $dv=\sin x\,dx$. Aleshores $du=dx$ i $v=-\cos x$. Aplicam $\int u\,dv=uv-\int v\,du$:
+
+$$
+\begin{aligned}
+\int x\sin x\,dx
+&=-x\cos x+\int\cos x\,dx\\
+&=-x\cos x+\sin x+C.
+\end{aligned}
+$$
+
 :::
+
 
 ### Exercici 3
 
@@ -264,9 +613,40 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-<!-- Substitueix la línia següent per la solució de l’apartat. -->
+La presència del logaritme fa convenient la integració per parts.
 
-*Solució pendent.*
+Prenem $u=\ln(x+\sqrt{x^2+1})$ i $dv=dx$. Aleshores $v=x$ i
+
+$$
+du=\frac{dx}{\sqrt{x^2+1}}.
+$$
+
+Per tant,
+
+$$
+I=x\ln(x+\sqrt{x^2+1})-\int\frac{x}{\sqrt{x^2+1}}\,dx.
+$$
+
+La integral que queda és semiimmediata, ja que
+
+$$
+\left(\sqrt{x^2+1}\right)'=\frac{x}{\sqrt{x^2+1}}.
+$$
+
+Així, sense necessitat d'un nou canvi de variable,
+
+$$
+I=x\ln(x+\sqrt{x^2+1})-\sqrt{x^2+1}+C.
+$$
+
+Si feim $t=x^2+1$, obtenim igualment
+
+$$
+\int\frac{x}{\sqrt{x^2+1}}\,dx
+=\frac12\int t^{-1/2}\,dt
+=\sqrt{x^2+1}+C.
+$$
+
 :::
 
 **b)**
@@ -276,9 +656,19 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-<!-- Substitueix la línia següent per la solució de l’apartat. -->
 
-*Solució pendent.*
+L'estratègia és integrar per parts, ja que la primitiva de $1/\sin^2x$ és $-\cot x$.
+
+Prenem $u=x$ i $dv=dx/\sin^2x$. Llavors $du=dx$ i $v=-\cot x$. Així,
+
+$$
+\begin{aligned}
+\int\frac{x}{\sin^2x}\,dx
+&=-x\cot x+\int\cot x\,dx\\
+&=-x\cot x+\ln|\sin x|+C.
+\end{aligned}
+$$
+
 :::
 
 **c)**
@@ -288,9 +678,27 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-<!-- Substitueix la línia següent per la solució de l’apartat. -->
 
-*Solució pendent.*
+Aplicarem la integració per parts dues vegades.
+
+Prenem $u=(\ln x)^2$ i $dv=dx$. Aleshores $du=2\ln x\,dx/x$ i $v=x$:
+
+$$
+\int(\ln x)^2\,dx=x(\ln x)^2-2\int\ln x\,dx.
+$$
+
+La integral restant també es resol per parts:
+
+$$
+\int\ln x\,dx=x\ln x-x+C.
+$$
+
+En conseqüència,
+
+$$
+\int(\ln x)^2\,dx=x\big((\ln x)^2-2\ln x+2\big)+C.
+$$
+
 :::
 
 **d)**
@@ -300,9 +708,36 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-<!-- Substitueix la línia següent per la solució de l’apartat. -->
+El més senzill és integrar per parts, derivant l'arcsinus.
 
-*Solució pendent.*
+Prenem $u=\arcsin x$ i $dv=dx$; per tant, $du=dx/\sqrt{1-x^2}$ i $v=x$. Aleshores,
+
+$$
+\int\arcsin x\,dx
+=x\arcsin x-\int\frac{x}{\sqrt{1-x^2}}\,dx.
+$$
+
+La integral que queda és semiimmediata perquè
+
+$$
+\left(\sqrt{1-x^2}\right)'=-\frac{x}{\sqrt{1-x^2}}.
+$$
+
+Per això, directament,
+
+$$
+\int\arcsin x\,dx
+=x\arcsin x+\sqrt{1-x^2}+C.
+$$
+
+També podríem fer $t=1-x^2$, amb $dt=-2x\,dx$, per resoldre la integral restant:
+
+$$
+\int\frac{x}{\sqrt{1-x^2}}\,dx
+=-\frac12\int t^{-1/2}\,dt
+=-\sqrt{1-x^2}+C.
+$$
+
 :::
 
 **e)**
@@ -312,9 +747,27 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-<!-- Substitueix la línia següent per la solució de l’apartat. -->
 
-*Solució pendent.*
+Combinam el polinomi i l'exponencial amb dues integracions per parts successives.
+
+Prenem $u=x^2$ i $dv=e^{3x}\,dx$; així, $du=2x\,dx$ i $v=e^{3x}/3$:
+
+$$
+I=\frac{x^2e^{3x}}3-\frac23\int xe^{3x}\,dx.
+$$
+
+Per a la segona integral tornam a aplicar parts amb $u=x$ i $dv=e^{3x}\,dx$:
+
+$$
+\int xe^{3x}\,dx=\frac{xe^{3x}}3-\frac{e^{3x}}9+C.
+$$
+
+Substituint,
+
+$$
+I=e^{3x}\left(\frac{x^2}{3}-\frac{2x}{9}+\frac{2}{27}\right)+C.
+$$
+
 :::
 
 **f)**
@@ -324,10 +777,21 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-<!-- Substitueix la línia següent per la solució de l’apartat. -->
 
-*Solució pendent.*
+Quan apareix un logaritme multiplicant un polinomi, convé derivar el logaritme en integrar per parts.
+
+Prenem $u=\ln x$ i $dv=x^2\,dx$. Aleshores $du=dx/x$ i $v=x^3/3$:
+
+$$
+\begin{aligned}
+\int x^2\ln x\,dx
+&=\frac{x^3}{3}\ln x-\frac13\int x^2\,dx\\
+&=\frac{x^3}{3}\ln x-\frac{x^3}{9}+C.
+\end{aligned}
+$$
+
 :::
+
 
 ### Exercici 4
 
@@ -340,9 +804,35 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-<!-- Substitueix la línia següent per la solució de l’apartat. -->
 
-*Solució pendent.*
+Començam factoritzant el denominador i després descomponem la fracció en termes més simples.
+
+$$
+x^4-5x^2+6=(x^2-2)(x^2-3).
+$$
+
+Cercam $A$ i $B$ tals que
+
+$$
+\frac{2x^2-5}{(x^2-2)(x^2-3)}
+=\frac{A}{x^2-2}+\frac{B}{x^2-3}.
+$$
+
+Igualant coeficients, $A+B=2$ i $3A+2B=5$, d'on $A=B=1$. Utilitzam, per a $a>0$, la descomposició
+
+$$
+\frac1{x^2-a^2}=\frac1{2a}\left(\frac1{x-a}-\frac1{x+a}\right).
+$$
+
+Aleshores,
+
+$$
+\begin{aligned}
+I={}&\frac1{2\sqrt2}\ln\left|\frac{x-\sqrt2}{x+\sqrt2}\right|\\
+&+\frac1{2\sqrt3}\ln\left|\frac{x-\sqrt3}{x+\sqrt3}\right|+C.
+\end{aligned}
+$$
+
 :::
 
 **b)**
@@ -352,9 +842,24 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-<!-- Substitueix la línia següent per la solució de l’apartat. -->
 
-*Solució pendent.*
+El denominador té el factor repetit $(x+1)^2$; per això, la descomposició en fraccions simples ha d'incloure les dues potències.
+
+Plantejam
+
+$$
+\frac1{x(x+1)^2}=\frac A x+\frac B{x+1}+\frac C{(x+1)^2}.
+$$
+
+Multiplicant per $x(x+1)^2$ i igualant coeficients, obtenim $A=1$, $B=-1$ i $C=-1$. Per tant,
+
+$$
+\begin{aligned}
+I&=\int\left(\frac1x-\frac1{x+1}-\frac1{(x+1)^2}\right)dx\\
+&=\ln|x|-\ln|x+1|+\frac1{x+1}+C.
+\end{aligned}
+$$
+
 :::
 
 **c)**
@@ -364,9 +869,38 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-<!-- Substitueix la línia següent per la solució de l’apartat. -->
 
-*Solució pendent.*
+Com que el denominador té un factor lineal i un factor quadràtic sense arrels reals, descomponem en fraccions simples i completam el quadrat.
+
+Factoritzam $x^3+1=(x+1)(x^2-x+1)$ i cercam
+
+$$
+\frac1{x^3+1}=\frac A{x+1}+\frac{Bx+D}{x^2-x+1}.
+$$
+
+Igualant coeficients, $A=\tfrac13$, $B=-\tfrac13$ i $D=\tfrac23$. Així,
+
+$$
+I=\frac13\int\frac{dx}{x+1}
+-\frac16\int\frac{2x-1}{x^2-x+1}\,dx
++\frac12\int\frac{dx}{x^2-x+1}.
+$$
+
+Com que
+
+$$
+x^2-x+1=\left(x-\frac12\right)^2+\frac34,
+$$
+
+la darrera integral és de tipus arctangent. Finalment,
+
+$$
+\begin{aligned}
+I={}&\frac13\ln|x+1|-\frac16\ln(x^2-x+1)\\
+&+\frac1{\sqrt3}\arctan\left(\frac{2x-1}{\sqrt3}\right)+C.
+\end{aligned}
+$$
+
 :::
 
 **d)**
@@ -376,9 +910,27 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-<!-- Substitueix la línia següent per la solució de l’apartat. -->
 
-*Solució pendent.*
+Com que el numerador té grau més gran que el denominador, començam dividint els polinomis.
+
+La divisió dóna
+
+$$
+\frac{x^4-2x^2+2}{x^2-2x+2}
+=x^2+2x+\frac{2-4x}{x^2-2x+2}.
+$$
+
+Si $q(x)=x^2-2x+2=(x-1)^2+1$, tenim $2-4x=-2q'(x)-2$. Per tant,
+
+$$
+\begin{aligned}
+I&=\int(x^2+2x)\,dx
+-2\int\frac{q'(x)}{q(x)}\,dx
+-2\int\frac{dx}{(x-1)^2+1}\\
+&=\frac{x^3}{3}+x^2-2\ln(x^2-2x+2)-2\arctan(x-1)+C.
+\end{aligned}
+$$
+
 :::
 
 **e)**
@@ -388,9 +940,38 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-<!-- Substitueix la línia següent per la solució de l’apartat. -->
 
-*Solució pendent.*
+És la mateixa integral de l'apartat **c)**. Tornam a emprar fraccions simples i completam el quadrat.
+
+Factoritzam $x^3+1=(x+1)(x^2-x+1)$ i cercam
+
+$$
+\frac1{x^3+1}=\frac A{x+1}+\frac{Bx+D}{x^2-x+1}.
+$$
+
+Igualant coeficients, $A=\tfrac13$, $B=-\tfrac13$ i $D=\tfrac23$. Així,
+
+$$
+I=\frac13\int\frac{dx}{x+1}
+-\frac16\int\frac{2x-1}{x^2-x+1}\,dx
++\frac12\int\frac{dx}{x^2-x+1}.
+$$
+
+Com que
+
+$$
+x^2-x+1=\left(x-\frac12\right)^2+\frac34,
+$$
+
+la darrera integral és de tipus arctangent. Finalment,
+
+$$
+\begin{aligned}
+I={}&\frac13\ln|x+1|-\frac16\ln(x^2-x+1)\\
+&+\frac1{\sqrt3}\arctan\left(\frac{2x-1}{\sqrt3}\right)+C.
+\end{aligned}
+$$
+
 :::
 
 **f)**
@@ -400,9 +981,27 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-<!-- Substitueix la línia següent per la solució de l’apartat. -->
+Escrivim $\sin^3x=\sin x(1-\cos^2x)$ i simplificam. Així podem integrar directament, perquè reconeixem les derivades de $1/\cos x$ i de $\cos x$:
 
-*Solució pendent.*
+$$
+\begin{aligned}
+I&=\int\frac{\sin x(1-\cos^2x)}{\cos^2x}\,dx\\
+&=\int\left(\frac{\sin x}{\cos^2x}-\sin x\right)dx\\
+&=\frac1{\cos x}+\cos x+C.
+\end{aligned}
+$$
+
+Aquest càlcul també es pot fer mitjançant el canvi $t=\cos x$. Com que $dt=-\sin x\,dx$,
+
+$$
+\begin{aligned}
+I&=-\int\frac{1-t^2}{t^2}\,dt
+=-\int(t^{-2}-1)\,dt\\
+&=\frac1t+t+C
+=\frac1{\cos x}+\cos x+C.
+\end{aligned}
+$$
+
 :::
 
 **g)**
@@ -412,9 +1011,27 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-<!-- Substitueix la línia següent per la solució de l’apartat. -->
+Separam un factor $\cos x$ i utilitzam $\cos^2x=1-\sin^2x$. Com que $1-\sin^2x=(1-\sin x)(1+\sin x)$, podem simplificar la fracció i reconèixer les primitives directament:
 
-*Solució pendent.*
+$$
+\begin{aligned}
+I&=\int\frac{\cos x(1-\sin^2x)}{\sin x(1+\sin x)}\,dx\\
+&=\int\left(\frac{\cos x}{\sin x}-\cos x\right)dx\\
+&=\ln|\sin x|-\sin x+C.
+\end{aligned}
+$$
+
+Una altra opció és fer $t=\sin x$, amb $dt=\cos x\,dx$. En aquest cas,
+
+$$
+\begin{aligned}
+I&=\int\frac{1-t^2}{t^2+t}\,dt
+=\int\frac{(1-t)(1+t)}{t(1+t)}\,dt\\
+&=\int\left(\frac1t-1\right)dt\\
+&=\ln|\sin x|-\sin x+C.
+\end{aligned}
+$$
+
 :::
 
 **h)**
@@ -424,9 +1041,24 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-<!-- Substitueix la línia següent per la solució de l’apartat. -->
 
-*Solució pendent.*
+Amb les identitats de l'angle doble podem transformar el producte en una suma de funcions immediates:
+
+$$
+\begin{aligned}
+\sin^2\frac x4\cos^2\frac x4
+&=\frac14\sin^2\frac x2\\
+&=\frac18(1-\cos x).
+\end{aligned}
+$$
+
+D'aquí,
+
+$$
+\int\sin^2\frac x4\cos^2\frac x4\,dx
+=\frac x8-\frac{\sin x}{8}+C.
+$$
+
 :::
 
 **i)**
@@ -436,9 +1068,27 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-<!-- Substitueix la línia següent per la solució de l’apartat. -->
+Podem separar un factor $\cos x$ i aplicar la identitat $\cos^2x=1-\sin^2x$. Així arribam a una suma d'integrals semiimmediates:
 
-*Solució pendent.*
+$$
+\begin{aligned}
+I&=\int\frac{\cos x(1-\sin^2x)}{\sin^2x}\,dx\\
+&=\int\left(\frac{\cos x}{\sin^2x}-\cos x\right)dx\\
+&=-\frac1{\sin x}-\sin x+C.
+\end{aligned}
+$$
+
+També podem prendre $t=\sin x$, amb $dt=\cos x\,dx$. Aleshores,
+
+$$
+\begin{aligned}
+I&=\int\frac{1-t^2}{t^2}\,dt
+=\int(t^{-2}-1)\,dt\\
+&=-\frac1t-t+C\\
+&=-\frac1{\sin x}-\sin x+C.
+\end{aligned}
+$$
+
 :::
 
 **j)**
@@ -448,10 +1098,32 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-<!-- Substitueix la línia següent per la solució de l’apartat. -->
 
-*Solució pendent.*
+Per a radicals de la forma $\sqrt{a^2-x^2}$, els apunts proposen una substitució trigonomètrica. En aquest cas, prenem $x=2\sin t$. Aleshores $dx=2\cos t\,dt$ i, escollint la branca adequada del canvi, $\sqrt{4-x^2}=2\cos t$. Així,
+
+$$
+\begin{aligned}
+I&=16\int\sin^2t\cos^2t\,dt\\
+&=2\int(1-\cos4t)\,dt\\
+&=2t-\frac12\sin4t+C.
+\end{aligned}
+$$
+
+Desfem el canvi mitjançant
+
+$$
+t=\arcsin(x/2),\qquad
+\sin4t=\frac{x(2-x^2)\sqrt{4-x^2}}{2}.
+$$
+
+Per tant,
+
+$$
+I=2\arcsin\frac x2+\frac{x(x^2-2)\sqrt{4-x^2}}4+C.
+$$
+
 :::
+
 
 ### Exercici 5
 
@@ -464,9 +1136,18 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-<!-- Substitueix la línia següent per la solució de l’apartat. -->
 
-*Solució pendent.*
+Per resoldre aquesta integral, integram per parts.
+
+Triam $u=\ln x$ i $dv=x^{-1/2}\,dx$, de manera que $du=dx/x$ i $v=2\sqrt{x}$. Aleshores,
+
+$$
+\begin{aligned}
+I&=2\sqrt{x}\ln x-2\int x^{-1/2}\,dx\\
+&=2\sqrt{x}\ln x-4\sqrt{x}+C.
+\end{aligned}
+$$
+
 :::
 
 **b)**
@@ -476,9 +1157,30 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-<!-- Substitueix la línia següent per la solució de l’apartat. -->
 
-*Solució pendent.*
+El canvi $t=\ln x$ transforma la integral en una d'exponencial per trigonomètrica, que resolrem per parts de manera cíclica.
+
+Prenem $t=\ln x$, de manera que $x=e^t$ i $dx=e^t\,dt$:
+
+$$
+I=\int e^t\sin t\,dt.
+$$
+
+Integrant per parts dos cops, com a les integrals cícliques dels apunts, obtenim
+
+$$
+\begin{aligned}
+I&=-e^t\cos t+\int e^t\cos t\,dt\\
+&=-e^t\cos t+e^t\sin t-I.
+\end{aligned}
+$$
+
+Per tant, $2I=e^t(\sin t-\cos t)$, i desfent el canvi,
+
+$$
+I=\frac x2\bigl(\sin(\ln x)-\cos(\ln x)\bigr)+C.
+$$
+
 :::
 
 **c)**
@@ -488,9 +1190,37 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-<!-- Substitueix la línia següent per la solució de l’apartat. -->
+Podem resoldre aquesta integral directament si escrivim el numerador en potències de $x-1$:
 
-*Solució pendent.*
+$$
+x^2=(x-1)^2+2(x-1)+1.
+$$
+
+D'aquesta manera obtenim una suma d'integrals semiimmediates, sense necessitat de canviar de variable:
+
+$$
+\begin{aligned}
+I&=\int\left((x-1)^{-3}+2(x-1)^{-4}+(x-1)^{-5}\right)dx\\
+&=-\frac1{2(x-1)^2}-\frac2{3(x-1)^3}-\frac1{4(x-1)^4}+C.
+\end{aligned}
+$$
+
+El canvi $t=x-1$ dona el mateix resultat. En efecte, $x=t+1$ i $dx=dt$, i per tant
+
+$$
+\begin{aligned}
+I&=\int\frac{(t+1)^2}{t^5}\,dt\\
+&=\int(t^{-3}+2t^{-4}+t^{-5})\,dt\\
+&=-\frac1{2t^2}-\frac2{3t^3}-\frac1{4t^4}+C.
+\end{aligned}
+$$
+
+Desfent el canvi,
+
+$$
+I=-\frac1{2(x-1)^2}-\frac2{3(x-1)^3}-\frac1{4(x-1)^4}+C.
+$$
+
 :::
 
 **d)**
@@ -500,9 +1230,27 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-<!-- Substitueix la línia següent per la solució de l’apartat. -->
 
-*Solució pendent.*
+Primer eliminam el quocient amb el canvi $t=\ln x$. La integral resultant es resol per parts.
+
+Com que $dt=dx/x$,
+
+$$
+I=\int\ln t\,dt.
+$$
+
+Triant $u=\ln t$ i $dv=dt$, tenim $du=dt/t$ i $v=t$. Per tant,
+
+$$
+\int\ln t\,dt=t\ln t-t+C.
+$$
+
+Desfent el canvi,
+
+$$
+I=\ln x\,\ln(\ln x)-\ln x+C,\qquad x>1.
+$$
+
 :::
 
 **e)**
@@ -512,9 +1260,27 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-<!-- Substitueix la línia següent per la solució de l’apartat. -->
 
-*Solució pendent.*
+Com que numerador i denominador tenen el mateix grau, començam fent la divisió; després descomponem en fraccions simples.
+
+$$
+\frac{x^2-5x+9}{x^2-5x+6}
+=1+\frac3{(x-2)(x-3)}.
+$$
+
+Descomponem la fracció pròpia:
+
+$$
+\frac3{(x-2)(x-3)}
+=-\frac3{x-2}+\frac3{x-3}.
+$$
+
+Aleshores,
+
+$$
+I=x-3\ln|x-2|+3\ln|x-3|+C.
+$$
+
 :::
 
 **f)**
@@ -524,9 +1290,31 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-<!-- Substitueix la línia següent per la solució de l’apartat. -->
+La potència del cosinus és senar. Separam un factor $\cos x$ i escrivim
 
-*Solució pendent.*
+$$
+\cos^5x=\cos x(1-\sin^2x)^2
+=\cos x(1-2\sin^2x+\sin^4x).
+$$
+
+Ara podem integrar directament terme a terme: són integrals semiimmediates perquè hi apareix el factor $\cos x$, que és la derivada de $\sin x$. Obtenim
+
+$$
+\int\cos^5x\,dx
+=\sin x-\frac23\sin^3x+\frac15\sin^5x+C.
+$$
+
+Si, en canvi, explicitam el canvi $t=\sin x$, tenim $dt=\cos x\,dx$ i
+
+$$
+\begin{aligned}
+I&=\int(1-t^2)^2\,dt
+=\int(1-2t^2+t^4)\,dt\\
+&=t-\frac23t^3+\frac15t^5+C\\
+&=\sin x-\frac23\sin^3x+\frac15\sin^5x+C.
+\end{aligned}
+$$
+
 :::
 
 **g)**
@@ -536,9 +1324,39 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-<!-- Substitueix la línia següent per la solució de l’apartat. -->
 
-*Solució pendent.*
+Per a $\sqrt{x^2-1}$ podem emprar la substitució trigonomètrica $x=1/\cos t$. Després apareixerà una integral racional.
+
+Per calcular-la, consideram primer $x>1$ i prenem $x=1/\cos t$. Amb aquest canvi, $dx=(\sin t/\cos^2t)\,dt$ i $\sqrt{x^2-1}=\tan t$. Així,
+
+$$
+I=\int\frac{dt}{\cos t}.
+$$
+
+Escrivim
+
+$$
+\frac1{\cos t}=\frac{\cos t}{1-\sin^2t},
+$$
+
+fem $u=\sin t$ i descomponem en fraccions simples:
+
+$$
+\begin{aligned}
+I&=\int\frac{du}{1-u^2}\\
+&=\frac12\int\left(\frac1{1+u}+\frac1{1-u}\right)du\\
+&=\frac12\ln\left|\frac{1+u}{1-u}\right|+C.
+\end{aligned}
+$$
+
+Com que $u=\sqrt{x^2-1}/x$ i $(x+\sqrt{x^2-1})(x-\sqrt{x^2-1})=1$, resulta
+
+$$
+I=\ln\left|x+\sqrt{x^2-1}\right|+C.
+$$
+
+Aquesta expressió també és vàlida en l'altre interval del domini, $x<-1$, amb una constant d'integració pròpia.
+
 :::
 
 **h)**
@@ -548,7 +1366,28 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-<!-- Substitueix la línia següent per la solució de l’apartat. -->
 
-*Solució pendent.*
+La substitució $x=\tan t$ elimina el radical $\sqrt{1+x^2}$ i permet reduir la integral a una immediata.
+
+Prenem $x=\tan t$. Aleshores $dx=dt/\cos^2t$ i, escollint la branca adequada del canvi, $\sqrt{1+x^2}=1/\cos t$. Per tant,
+
+$$
+\begin{aligned}
+I&=\int\frac{1}{\tan^2t}\cdot\cos t\,dt\\
+&=\int\frac{\cos t}{\sin^2t}\,dt.
+\end{aligned}
+$$
+
+Amb $u=\sin t$, $du=\cos t\,dt$, obtenim
+
+$$
+I=\int u^{-2}\,du=-\frac1u+C=-\frac1{\sin t}+C.
+$$
+
+Com que $\sin t=x/\sqrt{1+x^2}$, desfent el canvi,
+
+$$
+I=-\frac{\sqrt{1+x^2}}{x}+C.
+$$
+
 :::
