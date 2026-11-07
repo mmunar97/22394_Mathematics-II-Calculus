@@ -3,3 +3,5 @@ title: "22394 - Matemàtiques II - Càlcul. Llibre de solucions"
 ---
 
 Llibre digital de l'assignatura 22394 - Matemàtiques II - Càlcul, del Grau en Enginyeria Electrònica Industrial i Automàtica, de la Universitat de les Illes Balears. Al menú lateral, trobareu a la secció corresponent els exercicis proposats i la seva solució. 
+
+L'autor d'aquest llibre és el Dr. Marc Munar Covas, professor titular laboral de la Universitat de les Illes Balears. 

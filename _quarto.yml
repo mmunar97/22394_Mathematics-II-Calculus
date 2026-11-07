@@ -13,6 +13,7 @@ website:
       - section: "Fulls d'exercicis"
         contents:
           - tema3.qmd
+          - tema4.qmd
 
 format:
   html:
