@@ -1,0 +1,802 @@
+---
+title: "Tema 5. Equacions diferencials ordinàries"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-title: "Contingut"
+---
+
+## Llista 1. Equacions diferencials ordinàries
+
+### Exercici 1
+
+Determinau l’ordre de les equacions diferencials següents:
+
+**a)**
+
+$$
+2y''-5y'-3y=0
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+La derivada d’ordre més alt que apareix és $y''$. Per tant, **l’ordre és 2**.
+:::
+
+**b)**
+
+$$
+2y'y^{(4)}+3xy=y''
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+Hi intervé $y^{(4)}$, la derivada quarta; el fet que multipliqui $y'$ no modifica l’ordre. Per tant, **l’ordre és 4**.
+:::
+
+**c)**
+
+$$
+-\frac{2}{x^3}+3xy'=6y
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+Només hi apareix la primera derivada, $y'$. Per tant, **l’ordre és 1**.
+:::
+
+**d)**
+
+$$
+x''-3tx'=0
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+Consideram $x$ com una funció de $t$. La derivada de grau més alt és $x''$. Per tant, **l’ordre és 2**.
+:::
+
+### Exercici 2
+
+Resoleu les equacions diferencials lineals homogènies següents:
+
+**a)**
+
+$$
+2y''-5y'-3y=0
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+L'equació característica és $$
+2\lambda^2-5\lambda-3=(\lambda-3)(2\lambda+1)=0.
+$$ Com que les arrels $3$ i $-1/2$ són reals i diferents, obtenim $$
+y(x)=C_1e^{3x}+C_2e^{-x/2}.
+$$
+:::
+
+**b)**
+
+$$
+4y''-4y'+y=0
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+La característica factoritza com $$
+4\lambda^2-4\lambda+1=(2\lambda-1)^2=0.
+$$ L'arrel $\lambda=1/2$ és doble, de manera que $$
+y(x)=(C_1+C_2x)e^{x/2}.
+$$
+:::
+
+**c)**
+
+$$
+y''-2y'+3y=0
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+L'equació característica $\lambda^2-2\lambda+3=0$ té arrels $1\pm i\sqrt2$. Per a un parell d'arrels complexes conjugades, els apunts donen $$
+y(x)=e^x\big(C_1\cos(\sqrt2\,x)+C_2\sin(\sqrt2\,x)\big).
+$$
+:::
+
+**d)**
+
+$$
+\frac{d^5y}{dx^5}-5\frac{d^4y}{dx^4}+12\frac{d^3y}{dx^3}-8\frac{d^2y}{dx^2}=0
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+Treim factor comú i factoritzam la característica: $$
+\lambda^5-5\lambda^4+12\lambda^3-8\lambda^2
+=\lambda^2(\lambda-1)(\lambda^2-4\lambda+8).
+$$ Les arrels són $0$ (doble), $1$ i $2\pm2i$. Així, $$
+y(x)=C_1+C_2x+C_3e^x
++e^{2x}(C_4\cos 2x+C_5\sin 2x).
+$$
+:::
+
+**e)**
+
+$$
+y^{(5)}+5y^{(4)}-2y^{(3)}-10y''+y'+5y=0
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+Agrupant els termes de la característica trobam $$
+\lambda^5+5\lambda^4-2\lambda^3-10\lambda^2+\lambda+5
+=(\lambda+5)(\lambda-1)^2(\lambda+1)^2.
+$$ Per tant, les arrels són $-5$ (simple), $1$ i $-1$ (dobles), i $$
+y(x)=C_1e^{-5x}+(C_2+C_3x)e^x+(C_4+C_5x)e^{-x}.
+$$
+:::
+
+**f)**
+
+$$
+y^{(4)}-7y''-18y=0
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+La característica és $$
+\lambda^4-7\lambda^2-18
+=(\lambda^2-9)(\lambda^2+2).
+$$ Les arrels són $3$, $-3$ i $\pm i\sqrt2$. En conseqüència, $$
+y(x)=C_1e^{3x}+C_2e^{-3x}
++C_3\cos(\sqrt2\,x)+C_4\sin(\sqrt2\,x).
+$$
+:::
+
+### Exercici 3
+
+Resoleu les equacions diferencials següents:
+
+**a)**
+
+$$
+2y''+5y'-y=0
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+La característica $2\lambda^2+5\lambda-1=0$ té les dues arrels reals $$
+\lambda_{1,2}=\frac{-5\pm\sqrt{33}}4.
+$$ Per tant, $$
+y(x)=C_1e^{\frac{-5+\sqrt{33}}4x}+C_2e^{\frac{-5-\sqrt{33}}4x}.
+$$
+:::
+
+**b)**
+
+$$
+4y''+y'+y=0
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+Resolem $4\lambda^2+\lambda+1=0$, amb arrels $$
+\lambda=\frac{-1\pm i\sqrt{15}}8.
+$$ Així, $$
+y(x)=e^{-x/8}\left(C_1\cos\frac{\sqrt{15}x}{8}
++C_2\sin\frac{\sqrt{15}x}{8}\right).
+$$
+:::
+
+**c)**
+
+$$
+y^{(3)}+8y=0
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+Factoritzam l'equació característica: $$
+\lambda^3+8=(\lambda+2)(\lambda^2-2\lambda+4)=0.
+$$ Les arrels són $-2$ i $1\pm i\sqrt3$, i per tant $$
+y(x)=C_1e^{-2x}+e^x\left(C_2\cos(\sqrt3\,x)
++C_3\sin(\sqrt3\,x)\right).
+$$
+:::
+
+**d)**
+
+$$
+y^{(3)}-3y'=0
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+La característica és $\lambda(\lambda^2-3)=0$, d'on $$
+y_h=C_1+C_2e^{\sqrt3x}+C_3e^{-\sqrt3x}.
+$$ Com que el segon membre és constant i $0$ és una arrel simple, cercam una particular de la forma $y_p=Ax$. Substituint, $-3A=2$, és a dir, $A=-2/3$. Així, $$
+y(x)=C_1+C_2e^{\sqrt3x}+C_3e^{-\sqrt3x}-\frac{2x}{3}.
+$$
+:::
+
+**e)**
+
+$$
+y^{(4)}-7y''+4y'=0
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+La característica de l'homogènia associada és $$
+\lambda(\lambda^3-7\lambda+4)=0.
+$$ Denotem per $\lambda_1,\lambda_2,\lambda_3$ les tres arrels reals de $\lambda^3-7\lambda+4=0$ (aproximadament $-2.895$, $0.603$ i $2.292$). Aleshores, $$
+y_h=C_1+C_2e^{\lambda_1x}+C_3e^{\lambda_2x}+C_4e^{\lambda_3x}.
+$$ Per a la part constant provam $y_p=Ax$, ja que $0$ és una arrel simple. Substituint, $4A=-20$ i per tant $y_p=-5x$. La solució general és $$
+y(x)=C_1+C_2e^{\lambda_1x}+C_3e^{\lambda_2x}+C_4e^{\lambda_3x}-5x.
+$$
+:::
+
+**f)**
+
+$$
+y^{(3)}-4y''+9y'-10y=0
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+La característica es factoritza en $$
+\lambda^3-4\lambda^2+9\lambda-10
+=(\lambda-2)(\lambda^2-2\lambda+5).
+$$ Com que les arrels són $2$ i $1\pm2i$, tenim $$
+y(x)=C_1e^{2x}+e^x(C_2\cos2x+C_3\sin2x).
+$$
+:::
+
+### Exercici 4
+
+Resoleu les equacions diferencials lineals no homogènies següents:
+
+**a)**
+
+$$
+2y''-5y'-3y=3x
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+L'homogènia associada té arrels característiques $3$ i $-1/2$, com en l'exercici 2.a. Per tant, $y_h=C_1e^{3x}+C_2e^{-x/2}$.
+
+Com que el segon membre és un polinomi de primer grau i $0$ no és arrel de la característica, provam $y_p=Ax+B$. Substituint, $$
+-5A-3(Ax+B)=3x.
+$$ Igualant coeficients, $A=-1$ i $B=5/3$. En conseqüència, $$
+y(x)=C_1e^{3x}+C_2e^{-x/2}-x+\frac53.
+$$
+:::
+
+**b)**
+
+$$
+4y''-4y'+y=e^{2x}
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+L'homogènia té l'arrel doble $1/2$, d'on $y_h=(C_1+C_2x)e^{x/2}$.
+
+Com que $2$ no és arrel de la característica, cercam $y_p=Ae^{2x}$. En substituir resulta $$
+(16-8+1)Ae^{2x}=e^{2x},\qquad 9A=1.
+$$ Per tant, $$
+y(x)=(C_1+C_2x)e^{x/2}+\frac19e^{2x}.
+$$
+:::
+
+**c)**
+
+$$
+y''-2y'+3y=xe^x
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+L'homogènia té arrels $1\pm i\sqrt2$, de manera que $$
+y_h=e^x(C_1\cos(\sqrt2x)+C_2\sin(\sqrt2x)).
+$$ Com que $1$ no és arrel de la característica, provam $y_p=e^x(Ax+B)$. Les derivades donen $$
+y_p''-2y_p'+3y_p=e^x(2Ax+2B).
+$$ Igualant amb $xe^x$, obtenim $A=1/2$, $B=0$. Així, $$
+y(x)=y_h+\frac{x}{2}e^x.
+$$
+:::
+
+**d)**
+
+$$
+\frac{d^5y}{dx^5}-5\frac{d^4y}{dx^4}+12\frac{d^3y}{dx^3}-8\frac{d^2y}{dx^2}=2
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+La solució homogènia és la de l'exercici 2.d: $$
+y_h=C_1+C_2x+C_3e^x+e^{2x}(C_4\cos2x+C_5\sin2x).
+$$ Com que el terme independent és constant i $0$ és una arrel doble, el procediment dels apunts indica provar $y_p=Ax^2$. En substituir, només contribueix $-8y_p''=-16A$, i $-16A=2$. Per tant, $$
+y(x)=y_h-\frac{x^2}{8}.
+$$
+:::
+
+**e)**
+
+$$
+y^{(5)}+5y^{(4)}-2y^{(3)}-10y''+y'+5y=x^2
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+La part homogènia, obtinguda en l'exercici 2.e, és $$
+y_h=C_1e^{-5x}+(C_2+C_3x)e^x+(C_4+C_5x)e^{-x}.
+$$ Com que $0$ no és arrel característica, cercam $y_p=Ax^2+Bx+D$. En substituir i agrupar potències d'$x$ resulta $$
+5Ax^2+(2A+5B)x+(5D+B-20A)=x^2.
+$$ Això dona $A=1/5$, $B=-2/25$ i $D=102/125$. Així, $$
+y(x)=y_h+\frac{x^2}{5}-\frac{2x}{25}+\frac{102}{125}.
+$$
+:::
+
+**f)**
+
+$$
+y^{(4)}-7y''-18y=e^{-x}
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+La part homogènia és $$
+y_h=C_1e^{3x}+C_2e^{-3x}
++C_3\cos(\sqrt2x)+C_4\sin(\sqrt2x).
+$$ Com que $-1$ no és arrel característica, cercam $y_p=Ae^{-x}$. En substituir, $$
+(1-7-18)Ae^{-x}=e^{-x}\quad\Rightarrow\quad A=-\frac1{24}.
+$$ Per tant, $$
+y(x)=y_h-\frac1{24}e^{-x}.
+$$
+:::
+
+### Exercici 5
+
+Resoleu les equacions diferencials lineals no homogènies següents:
+
+**a)**
+
+$$
+2y''+5y'-y=3xe^x
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+La característica homogènia té arrels $(-5\pm\sqrt{33})/4$. Així, $$
+y_h=C_1e^{\frac{-5+\sqrt{33}}4x}+C_2e^{\frac{-5-\sqrt{33}}4x}.
+$$ Com que $1$ no és arrel característica, provam $y_p=e^x(Ax+B)$. Substituint i agrupant, $$
+e^x(6Ax+9A+6B)=3xe^x.
+$$ D'aquí $A=1/2$ i $B=-3/4$, i $$
+y(x)=y_h+\frac{2x-3}{4}e^x.
+$$
+:::
+
+**b)**
+
+$$
+4y''+y'+y=2+x
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+L'equació característica $4\lambda^2+\lambda+1=0$ té arrels $(-1\pm i\sqrt{15})/8$. D'on $$
+y_h=e^{-x/8}\left(C_1\cos\frac{\sqrt{15}x}{8}+C_2\sin\frac{\sqrt{15}x}{8}\right).
+$$ Per al polinomi del segon membre cercam $y_p=Ax+B$. Substituint, $A+(Ax+B)=x+2$, i resulta $A=B=1$. Per tant, $$
+y(x)=y_h+x+1.
+$$
+:::
+
+**c)**
+
+$$
+y^{(3)}+8y=(1+x)e^{-2x}
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+La característica homogènia $\lambda^3+8=(\lambda+2)(\lambda^2-2\lambda+4)$ té arrels $-2$ i $1\pm i\sqrt3$. Per tant, $$
+y_h=C_1e^{-2x}+e^x(C_2\cos(\sqrt3x)+C_3\sin(\sqrt3x)).
+$$ Com que $-2$ és arrel simple i el segon membre és $e^{-2x}$ multiplicat per un polinomi de grau 1, cercam $y_p=xe^{-2x}(Ax+B)$. La substitució i identificació de coeficients dona $A=1/24$, $B=1/8$. Així, $$
+y(x)=y_h+\frac{x(x+3)}{24}e^{-2x}.
+$$
+:::
+
+**d)**
+
+$$
+y^{(3)}-3y'-2=2x+1
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+Passam el terme constant al segon membre: $y^{(3)}-3y'=2x+3$. La característica homogènia és $\lambda(\lambda^2-3)=0$, d'on $$
+y_h=C_1+C_2e^{\sqrt3x}+C_3e^{-\sqrt3x}.
+$$ Com que $0$ és arrel simple, cercam $y_p=x(Ax+B)$. Substituint, $$
+-3(2Ax+B)=2x+3,
+$$ d'on $A=-1/3$ i $B=-1$. Per tant, $$
+y(x)=y_h-\frac{x^2}{3}-x.
+$$
+:::
+
+**e)**
+
+$$
+y^{(4)}-7y''+4y'+20=e^{-3x}
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+Escrivim $y^{(4)}-7y''+4y'=e^{-3x}-20$. La homogènia associada té arrels $0,\lambda_1,\lambda_2,\lambda_3$, on $\lambda_i$ són les arrels de $\lambda^3-7\lambda+4=0$. Així, $$
+y_h=C_1+C_2e^{\lambda_1x}+C_3e^{\lambda_2x}+C_4e^{\lambda_3x}.
+$$ Per al terme $e^{-3x}$, provam $Ae^{-3x}$; com que $(-3)^4-7(-3)^2+4(-3)=6$, resulta $A=1/6$. Per al terme $-20$, com que $0$ és una arrel simple, provam $Bx$ i obtenim $4B=-20$, és a dir, $B=-5$. Per tant, $$
+y(x)=y_h+\frac16e^{-3x}-5x.
+$$
+:::
+
+**f)**
+
+$$
+y^{(3)}-4y''+9y'-10y=3
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+Les arrels de l'homogènia són $2$ i $1\pm2i$, d'on $$
+y_h=C_1e^{2x}+e^x(C_2\cos2x+C_3\sin2x).
+$$ Cercam una particular constant $y_p=A$, ja que $0$ no és arrel de la característica. Substituint, $-10A=3$, i així $$
+y(x)=y_h-\frac3{10}.
+$$
+:::
+
+### Exercici 6
+
+Trobau la solució general i la que compleix les condicions indicades mitjançant el mètode dels coeficients indeterminats:
+
+**a)**
+
+$$
+\begin{cases}y''+2y'+3y=6x+1,\\y(0)=2,\quad y'(0)=-1.\end{cases}
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+L'equació característica $\lambda^2+2\lambda+3=0$ té arrels $-1\pm i\sqrt2$, i $$
+y_h=e^{-x}(C_1\cos(\sqrt2x)+C_2\sin(\sqrt2x)).
+$$ Provam $y_p=Ax+B$. La substitució dona $3Ax+(2A+3B)=6x+1$, d'on $A=2$, $B=-1$. Per tant, $$
+y=y_h+2x-1.
+$$ Amb $y(0)=2$ obtenim $C_1=3$. Derivant i aplicant $y'(0)=-1$ resulta $-C_1+\sqrt2 C_2+2=-1$, d'on $C_2=0$. La solució demanada és $$
+y(x)=3e^{-x}\cos(\sqrt2x)+2x-1.
+$$
+:::
+
+**b)**
+
+$$
+\begin{cases}y^{(3)}+y''-5y'+3y=6e^x,\\y(0)=0,\quad y'(0)=1,\quad y''(0)=3.\end{cases}
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+La característica factoritza com $$
+\lambda^3+\lambda^2-5\lambda+3=(\lambda-1)^2(\lambda+3).
+$$ Per això $y_h=(C_1+C_2x)e^x+C_3e^{-3x}$. Com que el terme $e^x$ correspon a una arrel doble, provam $y_p=Ax^2e^x$. Substituint resulta $8A e^x=6e^x$, de manera que $A=3/4$.
+
+La solució general és $$
+y(x)=\left(C_1+C_2x+\frac34x^2\right)e^x+C_3e^{-3x}.
+$$ Aplicant les tres condicions inicials obtenim $$
+\begin{cases}
+C_1+C_3=0,\\
+C_1+C_2-3C_3=1,\\
+C_1+2C_2+9C_3+\frac32=3.
+\end{cases}
+$$ Resolent, $C_1=1/32$, $C_2=7/8$ i $C_3=-1/32$. Per tant, $$
+y(x)=\left(\frac1{32}+\frac78x+\frac34x^2\right)e^x-\frac1{32}e^{-3x}.
+$$
+:::
+
+**c)**
+
+$$
+\begin{cases}y''+2y'=4x+8,\\y(1)=2,\quad y'(0)=2.\end{cases}
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+L'homogènia associada té característiques $\lambda(\lambda+2)=0$, de manera que $y_h=C_1+C_2e^{-2x}$.
+
+Com que $0$ és arrel simple, cercam $y_p=x(Ax+B)$. Substituint, $$
+2A+2(2Ax+B)=4x+8,
+$$ i obtenim $A=1$, $B=3$. Així, $y=C_1+C_2e^{-2x}+x^2+3x$.
+
+De $y'(0)=2$ resulta $-2C_2+3=2$, d'on $C_2=1/2$. La condició $y(1)=2$ dona $C_1=-2-\frac12e^{-2}$. Per tant, $$
+y(x)=x^2+3x-2+\frac12(e^{-2x}-e^{-2}).
+$$
+:::
+
+**d)**
+
+$$
+\begin{cases}y''-3y'-4y=xe^{2x},\\y(-1)=1,\quad y'(2)=1.\end{cases}
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+La característica $(\lambda-4)(\lambda+1)=0$ dona $y_h=C_1e^{4x}+C_2e^{-x}$.
+
+Cercam $y_p=e^{2x}(Ax+B)$, ja que $2$ no és arrel de la característica. Substituint obtenim $A=-1/6$ i $B=-1/36$. La solució general és $$
+y=C_1e^{4x}+C_2e^{-x}-\frac{6x+1}{36}e^{2x}.
+$$ En imposar les dues condicions, resulta $$
+\begin{cases}
+C_1e^{-4}+C_2e=1-\frac5{36}e^{-2},\\
+4C_1e^8-C_2e^{-2}=1+\frac89e^4.
+\end{cases}
+$$ Per abreujar, posem $A_0=1-5e^{-2}/36$ i $B_0=1+8e^4/9$. El sistema dona $$
+C_1=\frac{B_0+e^{-3}A_0}{4e^8+e^{-7}},
+\qquad C_2=e^{-1}(A_0-e^{-4}C_1).
+$$ Substituint aquests dos valors en la solució general obtenim la solució que compleix les condicions prescrites.
+:::
+
+**e)**
+
+$$
+\begin{cases}y''-3y'-4y=5e^{-x},\\y(0)=1,\quad y'(0)=1.\end{cases}
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+La característica té arrels $4$ i $-1$, d'on $y_h=C_1e^{4x}+C_2e^{-x}$.
+
+Com que $-1$ és arrel simple, provam $y_p=Axe^{-x}$. En substituir, $-5Ae^{-x}=5e^{-x}$, i obtenim $A=-1$. Per tant, $$
+y=C_1e^{4x}+(C_2-x)e^{-x}.
+$$ Imposant $y(0)=1$ i $y'(0)=1$ obtenim $$
+C_1+C_2=1,\qquad 4C_1-C_2-1=1.
+$$ Així, $C_1=3/5$, $C_2=2/5$, i $$
+y(x)=\frac35e^{4x}+\left(\frac25-x\right)e^{-x}.
+$$
+:::
+
+**f)**
+
+$$
+\begin{cases}y^{(4)}+2y^{(3)}-2y''+8y=3x,\\y(0)=1,\ y'(0)=0,\ y''(0)=0,\ y^{(3)}(0)=2.\end{cases}
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+La característica factoritza en $$
+\lambda^4+2\lambda^3-2\lambda^2+8=(\lambda+2)^2(\lambda^2-2\lambda+2).
+$$ Les arrels són $-2$ (doble) i $1\pm i$. Per tant, $$
+y_h=(C_1+C_2x)e^{-2x}+e^x(C_3\cos x+C_4\sin x).
+$$ Com que $0$ no és arrel característica, cercam $y_p=Ax+B$. Substituint $8(Ax+B)=3x$, obtenim $A=3/8$, $B=0$. Així, $$
+y=y_h+\frac{3x}{8}.
+$$ Les quatre condicions inicials donen $$
+\begin{cases}
+C_1+C_3=1,\\
+-2C_1+C_2+C_3+C_4+\frac38=0,\\
+4C_1-4C_2+2C_4=0,\\
+-8C_1+12C_2-2C_3+2C_4=2.
+\end{cases}
+$$ Resolent, obtenim $C_1=17/25$, $C_2=27/40$, $C_3=8/25$ i $C_4=-1/100$. Per tant, $$
+y(x)=\left(\frac{17}{25}+\frac{27}{40}x\right)e^{-2x}
++e^x\left(\frac8{25}\cos x-\frac1{100}\sin x\right)+\frac{3x}{8}.
+$$
+:::
+
+### Exercici 7
+
+Resoleu les equacions diferencials amb variables separables següents:
+
+**a)**
+
+$$
+y'=\frac1{xy}
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+Escrivim l'equació amb variables separades, $y\,dy=dx/x$. Integrant, $$
+\frac{y^2}{2}=\ln|x|+C,
+$$ o, absorbint el factor $2$ en la constant, $$
+y^2=2\ln|x|+C.
+$$ Treballam en intervals on $x\neq0$ i $y\neq0$, com exigeix l'equació inicial.
+:::
+
+**b)**
+
+$$
+(1+e^x)yy'=e^x
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+Separam les variables: $$
+y\,dy=\frac{e^x}{1+e^x}\,dx.
+$$ El segon membre és una integral semiimmediata, perquè la derivada de $1+e^x$ és $e^x$. Així, $$
+\frac{y^2}{2}=\ln(1+e^x)+C,
+$$ i per tant $y^2=2\ln(1+e^x)+C$.
+:::
+
+**c)**
+
+$$
+e^x\,dx=\frac{dy}{y\ln y}
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+Les variables ja estan separades. En integrar, $$
+\int e^x\,dx=\int\frac{dy}{y\ln y}
+\quad\Longrightarrow\quad
+e^x=\ln|\ln y|+C.
+$$ En el segon membre reconeixem la derivada de $\ln y$ dividida per $\ln y$. L'expressió és vàlida per a $y>0$, $y\neq1$.
+:::
+
+**d)**
+
+$$
+x(y^2-1)\,dx-y(x^2-1)\,dy=0
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+Sempre que els factors corresponents no s'anul·lin, podem separar: $$
+\frac{x}{x^2-1}\,dx=\frac{y}{y^2-1}\,dy.
+$$ Integrant i multiplicant per dos, $$
+\ln|x^2-1|=\ln|y^2-1|+C.
+$$ Aquesta relació equival a $y^2-1=K(x^2-1)$, amb $K\neq0$. Les solucions constants $y=1$ i $y=-1$, que s'han pogut perdre en dividir per $y^2-1$, també satisfan l'equació original i s'incorporen amb $K=0$. Així, podem escriure $$
+y^2-1=K(x^2-1),\qquad K\in\mathbb R.
+$$
+:::
+
+**e)**
+
+$$
+(x+1)\,dy=(y+1)\,dx
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+Si $y\neq-1$, separam les variables: $$
+\frac{dy}{y+1}=\frac{dx}{x+1}
+\quad\Longrightarrow\quad
+\ln|y+1|=\ln|x+1|+C.
+$$ D'aquí resulta $$
+y+1=K(x+1).
+$$ La solució $y=-1$, que s'ha exclòs en dividir, també es recupera prenent $K=0$.
+:::
+
+**f)**
+
+$$
+x\sqrt{1+y^2}+yy'\sqrt{1+x^2}=0
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+Passam un dels termes a l'altre membre i dividim pels radicals, que són estrictament positius: $$
+\frac{y}{\sqrt{1+y^2}}\,dy
+=-\frac{x}{\sqrt{1+x^2}}\,dx.
+$$ Les dues integrals són semiimmediates. Per tant, $$
+\sqrt{1+y^2}+\sqrt{1+x^2}=C.
+$$
+:::
+
+**g)**
+
+$$
+(1+x)y\,dx+(1-y)x\,dy=0
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+Per a $xy\neq0$, podem separar: $$
+\left(\frac1y-1\right)dy
+=-\left(\frac1x+1\right)dx.
+$$ Integrant obtenim $$
+\ln|y|-y=-\ln|x|-x+C,
+$$ que podem reescriure com $$
+xy\,e^{x-y}=K.
+$$ Aquesta darrera expressió també inclou la solució $y=0$, prenent $K=0$.
+:::
+
+**h)**
+
+$$
+(1+y^2)\,dx+(1+x^2)\,dy=0
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+Els factors $1+x^2$ i $1+y^2$ són sempre positius. Per tant, $$
+\frac{dy}{1+y^2}=-\frac{dx}{1+x^2}.
+$$ Integrant les dues funcions immediates de tipus arctangent, $$
+\arctan y+\arctan x=C.
+$$
+:::
+
+### Exercici 8
+
+Resoleu les equacions diferencials homogènies següents:
+
+**a)**
+
+$$
+y'=\frac{xy+y^2}{x^2}
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+Com que el segon membre depèn de $y/x$, feim el canvi $y=ux$, amb $y'=u+xu'$. Substituint, $$
+u+xu'=u+u^2\quad\Longrightarrow\quad xu'=u^2.
+$$ Si $u\neq0$, separam i integram: $$
+\int u^{-2}\,du=\int\frac{dx}{x}
+\quad\Longrightarrow\quad
+-\frac1u=\ln|x|+C.
+$$ Desfent el canvi, $$
+y=-\frac{x}{\ln|x|+C}.
+$$ A més, $u=0$ també resol l'equació transformada; per tant, $y=0$ és una altra solució.
+:::
+
+**b)**
+
+$$
+y'=\frac{y}{x}\tan\left(\frac{y}{x}\right)
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+El canvi que indiquen els apunts per a les homogènies és $y=ux$, amb $y'=u+xu'$. Així, $$
+u+xu'=u\tan u
+\quad\Longrightarrow\quad
+xu'=u(\tan u-1).
+$$ En els intervals on $u(\tan u-1)\neq0$, separam les variables: $$
+\frac{du}{u(\tan u-1)}=\frac{dx}{x}.
+$$ Aquesta és la reducció a una equació de variables separades. **La primitiva del membre esquerre no es pot obtenir amb les tècniques elementals d'integració explicades en els apunts**, de manera que deixarem la solució en forma implícita: $$
+\int\frac{du}{u(\tan u-1)}=\ln|x|+C,
+\qquad u=\frac yx.
+$$ En dividir podem haver perdut solucions: $u=0$ i $\tan u=1$ donen, respectivament, $$
+y=0,\qquad y=\left(\frac\pi4+k\pi\right)x,
+\quad k\in\mathbb Z.
+$$ Per tant, el canvi es pot efectuar amb les tècniques del tema, però el desenvolupament posterior no és una integral immediata.
+:::
+
+**c)**
+
+$$
+(x+y)\,dx-(y-x)\,dy=0
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+La funció $y'=(x+y)/(y-x)$ és homogènia. Feim $y=ux$, d'on $y'=u+xu'$. Aleshores, $$
+u+xu'=\frac{1+u}{u-1}
+\quad\Longrightarrow\quad
+\frac{u-1}{1+2u-u^2}\,du=\frac{dx}{x}.
+$$ Integrant el membre esquerre a partir de la derivada del denominador, obtenim $$
+-\frac12\ln|u^2-2u-1|=\ln|x|+C.
+$$ Desfent el canvi, arribam a $$
+y^2-2xy-x^2=K.
+$$ La igualtat també incorpora les solucions rectilínies $y=(1\pm\sqrt2)x$ amb $K=0$.
+:::
+
+**d)**
+
+$$
+xy^2y'=y^3-x^3
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+Aïllam la derivada i identificam l'homogeneïtat: $$
+y'=\frac{y}{x}-\frac{x^2}{y^2}.
+$$ Amb $y=ux$ i $y'=u+xu'$ queda $$
+u+xu'=u-\frac1{u^2}
+\quad\Longrightarrow\quad
+u^2\,du=-\frac{dx}{x}.
+$$ Integrant, $$
+\frac{u^3}{3}=-\ln|x|+C.
+$$ En tornar a $u=y/x$, resulta $$
+\frac{y^3}{x^3}+3\ln|x|=C,
+$$ als intervals en què l'equació original està definida.
+:::
+
+**e)**
+
+$$
+y'=\frac{2y^4+x^4}{xy^3}
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+El segon membre només depèn de $y/x$. Amb $y=ux$, tenim $$
+u+xu'=2u+\frac1{u^3}
+\quad\Longrightarrow\quad
+\frac{u^3}{1+u^4}\,du=\frac{dx}{x}.
+$$ Integrant, $$
+\frac14\ln(1+u^4)=\ln|x|+C.
+$$ En desfer el canvi i absorbir la constant obtenim $$
+x^4+y^4=Kx^8,\qquad K>0,
+$$ en intervals on $x\neq0$ i $y\neq0$.
+:::
+
+**f)**
+
+$$
+y'=\frac{2xy}{x^2-y^2}
+$$
+
+::: {.callout-note collapse="true" title="Solució"}
+Amb el canvi $y=ux$ obtenim $$
+u+xu'=\frac{2u}{1-u^2}
+\quad\Longrightarrow\quad
+xu'=\frac{u(1+u^2)}{1-u^2}.
+$$ Si $u\neq0$, separam les variables i simplificam: $$
+\int\left(\frac1u-\frac{2u}{1+u^2}\right)du
+=\int\frac{dx}{x}.
+$$ D'aquí $$
+\ln|u|-\ln(1+u^2)=\ln|x|+C.
+$$ Desfent el canvi i reordenant resulta $$
+y=K(x^2+y^2).
+$$ Aquesta expressió incorpora també la solució $y=0$ quan $K=0$, que s'havia exclòs en dividir per $u$.
+:::

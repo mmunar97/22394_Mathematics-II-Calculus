@@ -20,7 +20,6 @@ f(x,y)=\sqrt{1-x^2-y^2}
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 El radicand ha de ser no negatiu: $1-x^2-y^2\geq 0$. Així,
 
 $$
@@ -28,7 +27,6 @@ $$
 $$
 
 És el disc unitat tancat, inclosa la circumferència.
-
 :::
 
 **b)**
@@ -38,7 +36,6 @@ f(x,y)=\frac{\sqrt{x^2+y^2-9}}{x}
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 La condició de l'arrel és $x^2+y^2\geq9$ i el denominador exigeix $x\neq0$. Per tant,
 
 $$
@@ -46,7 +43,6 @@ $$
 $$
 
 Representam l'exterior del cercle de radi $3$, amb la frontera inclosa, llevat dels punts de l'eix $OY$.
-
 :::
 
 **c)**
@@ -56,7 +52,6 @@ f(x,y)=\ln(x+y)
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 L'argument del logaritme ha de ser estrictament positiu:
 
 $$
@@ -64,7 +59,6 @@ $$
 $$
 
 És el semiplà obert $y>-x$; la recta frontera no hi pertany.
-
 :::
 
 **d)**
@@ -74,7 +68,6 @@ f(x,y)=\frac{x^2+y^2}{\sqrt{x^2+y^2+1}-1}
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 El radicand és sempre positiu. El denominador s'anul·la només si
 
 $$
@@ -82,7 +75,6 @@ $$
 $$
 
 En conseqüència, $\operatorname{Dom}(f)=\mathbb R^2\setminus\{(0,0)\}$: tot el pla llevat de l'origen.
-
 :::
 
 **e)**
@@ -92,7 +84,6 @@ f(x,y)=\sqrt{3y-6x+3}+\ln(1-x)
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Necessitam simultàniament
 
 $$
@@ -106,7 +97,6 @@ $$
 $$
 
 És la part del semiplà situat damunt la recta $y=2x-1$ que queda a l'esquerra de $x=1$. La recta obliqua s'inclou i la vertical s'exclou.
-
 :::
 
 **f)**
@@ -116,9 +106,7 @@ f(x,y)=\frac{xy}{x^2+y^2}
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 El denominador només val zero a l'origen. El domini és $\mathbb R^2\setminus\{(0,0)\}$.
-
 :::
 
 **g)**
@@ -128,7 +116,6 @@ f(x,y)=\sqrt{1-x^2}\,\sqrt{1-y^2}
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Les dues arrels exigeixen $-1\leq x\leq1$ i $-1\leq y\leq1$. Així,
 
 $$
@@ -136,7 +123,6 @@ $$
 $$
 
 que és el quadrat tancat de vèrtexs $(\pm1,\pm1)$.
-
 :::
 
 **h)**
@@ -146,7 +132,6 @@ f(x,y)=\frac1{3x^2+2y^2-6}
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 El denominador no es pot anul·lar. Per tant,
 
 $$
@@ -154,7 +139,6 @@ $$
 $$
 
 És tot el pla, tant l'interior com l'exterior de l'el·lipse, sense la seva frontera.
-
 :::
 
 ### Exercici 2
@@ -168,9 +152,7 @@ z=x+y
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Les corbes de nivell satisfan $x+y=k$, és a dir, $y=k-x$. Són rectes paral·leles de pendent $-1$, una per a cada $k\in\mathbb R$.
-
 :::
 
 **b)**
@@ -180,7 +162,6 @@ z=\sqrt{xy}
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 La funció només està definida quan $xy\geq0$ i no pren valors negatius. Per a $k>0$,
 
 $$
@@ -188,7 +169,6 @@ $$
 $$
 
 una hipèrbola amb branques al primer i tercer quadrant. Per a $k=0$ obtenim els dos eixos de coordenades; per a $k<0$ no hi ha corba.
-
 :::
 
 **c)**
@@ -198,7 +178,6 @@ z=ax^2+by^2,\qquad a,b>0
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Per a $k>0$,
 
 $$
@@ -206,7 +185,6 @@ $$
 $$
 
 una el·lipse centrada a l'origen amb semieixos $\sqrt{k/a}$ i $\sqrt{k/b}$. Per a $k=0$ només queda l'origen; per a $k<0$ el conjunt és buit.
-
 :::
 
 **d)**
@@ -216,7 +194,6 @@ z=\frac{y}{x^2}
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Com que $x\neq0$, els nivells venen donats per
 
 $$
@@ -224,7 +201,6 @@ y=kx^2,\qquad x\neq0.
 $$
 
 Són paràboles amb el vèrtex exclòs; per a $k=0$ s'obté l'eix d'abscisses sense l'origen.
-
 :::
 
 **e)**
@@ -234,9 +210,7 @@ z=(x-1)^2-(y+5)^2
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 La condició de nivell és $(x-1)^2-(y+5)^2=k$. Per a $k>0$ són hipèrboles d'eix transversal horitzontal; per a $k<0$, vertical. Si $k=0$, la corba es descompon en les rectes $y+5=\pm(x-1)$. Totes tenen centre al punt $(1,-5)$.
-
 :::
 
 **f)**
@@ -246,7 +220,6 @@ z=x^2-4x-4y+8
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Completant quadrats,
 
 $$
@@ -254,7 +227,6 @@ k=(x-2)^2-4y+4\quad\Longrightarrow\quad y=\frac{(x-2)^2}{4}+1-\frac{k}{4}.
 $$
 
 Són paràboles que obren cap amunt, amb vèrtex $(2,1-k/4)$.
-
 :::
 
 **g)**
@@ -264,7 +236,6 @@ z=e^{xy}
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Només existeixen nivells positius. Si $k>0$,
 
 $$
@@ -272,7 +243,6 @@ xy=\ln k.
 $$
 
 Per a $k>1$ les branques de la hipèrbola estan als quadrants I i III; per a $0<k<1$, als quadrants II i IV. Per a $k=1$, la corba són els dos eixos.
-
 :::
 
 **h)**
@@ -282,7 +252,6 @@ z=e^{\frac{2x}{x^2+y^2}}
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 El domini exclou $(0,0)$ i els nivells han de satisfer $k>0$. Si $k=1$, resulta $x=0$, amb $y\neq0$. Si $k\neq1$, prenent logaritmes i completant el quadrat:
 
 $$
@@ -290,7 +259,6 @@ $$
 $$
 
 Són circumferències tangents a l'origen, que queda exclòs del conjunt de nivell.
-
 :::
 
 **i)**
@@ -300,9 +268,7 @@ z=|x|+y
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Per a qualsevol $k$ tenim $y=k-|x|$: dues semirectes que formen una V invertida, amb vèrtex $(0,k)$.
-
 :::
 
 ### Exercici 3
@@ -316,7 +282,6 @@ f(x,y)=\frac{xy}{\sqrt{x^2+y^2}}
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Escrivim $r=\sqrt{x^2+y^2}$, amb $r>0$. Aplicant la regla del producte i la cadena,
 
 $$
@@ -330,7 +295,6 @@ f_{xx}=-\frac{3xy^3}{r^5},\qquad f_{xy}=f_{yx}=\frac{3x^2y^2}{r^5},\qquad f_{yy}
 $$
 
 Aquestes expressions són vàlides fora de l'origen, on la funció no està definida.
-
 :::
 
 **b)**
@@ -340,7 +304,6 @@ f(x,y,z)=x^2y+z^2x+y\sin(xz)
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Les primeres derivades són
 
 $$
@@ -352,7 +315,6 @@ Les de segon ordre resulten
 $$
 \begin{aligned}f_{xx}&=2y-yz^2\sin(xz),&f_{yy}&=0,\\ f_{zz}&=2x-x^2y\sin(xz),&f_{xy}=f_{yx}&=2x+z\cos(xz),\\ f_{xz}=f_{zx}&=2z+y\cos(xz)-xyz\sin(xz),&f_{yz}=f_{zy}&=x\cos(xz).\end{aligned}
 $$
-
 :::
 
 **c)**
@@ -362,7 +324,6 @@ f(x,y)=xe^{x^2+y^2}
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Posant $s=x^2+y^2$,
 
 $$
@@ -374,7 +335,6 @@ D'aquí obtenim
 $$
 \begin{aligned}f_{xx}&=e^s(6x+4x^3),\\ f_{xy}=f_{yx}&=2ye^s(1+2x^2),\\ f_{yy}&=2xe^s(1+2y^2).\end{aligned}
 $$
-
 :::
 
 **d)**
@@ -384,7 +344,6 @@ f(x,y)=\sqrt{\frac{x^2}{a^2}+\frac{y^2}{b^2}},\qquad a,b\neq0
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Escrivim $q=x^2/a^2+y^2/b^2$ i treballam fora de l'origen. Per la regla de la cadena,
 
 $$
@@ -398,7 +357,6 @@ f_{xx}=\frac{y^2}{a^2b^2q^{3/2}},\quad f_{xy}=f_{yx}=-\frac{xy}{a^2b^2q^{3/2}},\
 $$
 
 A l'origen no hi ha derivades parcials perquè la funció no és diferenciable en general (amb $a,b$ no nuls).
-
 :::
 
 **e)**
@@ -408,7 +366,6 @@ f(x,y)=\ln(x^2+y)
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Sigui $q=x^2+y>0$. Aleshores
 
 $$
@@ -420,7 +377,6 @@ i
 $$
 f_{xx}=\frac{2(y-x^2)}{q^2},\quad f_{xy}=f_{yx}=-\frac{2x}{q^2},\quad f_{yy}=-\frac1{q^2}.
 $$
-
 :::
 
 **f)**
@@ -430,7 +386,6 @@ f(x,y)=\arctan\left(\frac{x+y}{1-xy}\right)
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 El denominador exigeix $xy\neq1$. Derivam el quocient i aplicam la regla de la cadena; després de simplificar,
 
 $$
@@ -444,7 +399,6 @@ f_{xx}=-\frac{2x}{(1+x^2)^2},\quad f_{xy}=f_{yx}=0,\quad f_{yy}=-\frac{2y}{(1+y^
 $$
 
 No cal identificar la funció amb una suma global d'arctangents, que pot diferir en múltiples de $\pi$.
-
 :::
 
 ### Exercici 4
@@ -458,7 +412,6 @@ f(x,y)=\frac{x^2y}{\sqrt{x^2+y^2}}
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Derivant respecte de cada variable,
 
 $$
@@ -466,7 +419,6 @@ f_x=\frac{xy(x^2+2y^2)}{(x^2+y^2)^{3/2}},\qquad f_y=\frac{x^4}{(x^2+y^2)^{3/2}}.
 $$
 
 Per tant, $\nabla f(1,1)=\left(\frac3{2\sqrt2},\frac1{2\sqrt2}\right)$.
-
 :::
 
 **b)**
@@ -476,13 +428,11 @@ f(x,y)=\cos(\pi xy)+\cos(\pi y)
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 $$
 f_x=-\pi y\sin(\pi xy),\qquad f_y=-\pi x\sin(\pi xy)-\pi\sin(\pi y).
 $$
 
 Com que $\sin\pi=0$, obtenim $\nabla f(1,1)=(0,0)$.
-
 :::
 
 **c)**
@@ -492,7 +442,6 @@ f(x,y)=xe^{x^2+y^3}
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Les parcials són
 
 $$
@@ -500,7 +449,6 @@ f_x=e^{x^2+y^3}(1+2x^2),\qquad f_y=3xy^2e^{x^2+y^3}.
 $$
 
 Substituint $(1,1)$, resulta $\nabla f(1,1)=(3e^2,3e^2)$.
-
 :::
 
 ### Exercici 5
@@ -508,7 +456,6 @@ Substituint $(1,1)$, resulta $\nabla f(1,1)=(3e^2,3e^2)$.
 La temperatura sobre una placa metàl·lica plana és $T(x,y)=20-4x^2-y^2$. En quina direcció creix més ràpidament la temperatura en el punt $(2,-3)$?
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 La direcció de màxim creixement és la del gradient:
 
 $$
@@ -522,7 +469,6 @@ $$
 $$
 
 La derivada direccional màxima és $\|\nabla T(2,-3)\|=2\sqrt{73}$.
-
 :::
 
 ### Exercici 6
@@ -530,7 +476,6 @@ La derivada direccional màxima és $\|\nabla T(2,-3)\|=2\sqrt{73}$.
 Provau que $f(x,y)=3x^2y^4-12x^6+12xy^5$ satisfà $xf_x+yf_y=6f(x,y)$.
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Calculam les parcials:
 
 $$
@@ -544,7 +489,6 @@ $$
 $$
 
 També es pot reconèixer que tots els monomis són homogenis de grau sis.
-
 :::
 
 ### Exercici 7
@@ -552,7 +496,6 @@ També es pot reconèixer que tots els monomis són homogenis de grau sis.
 Comprovau que $f(x,y)=\ln\left(\frac{x^2}{y^2}\right)$ verifica $xf_x+yf_y=0$.
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 En el domini $x\neq0$, $y\neq0$ podem escriure $f=2\ln|x|-2\ln|y|$. Així,
 
 $$
@@ -560,7 +503,6 @@ f_x=\frac2x,\qquad f_y=-\frac2y,
 $$
 
 i, en conseqüència, $xf_x+yf_y=2-2=0$.
-
 :::
 
 ### Exercici 8
@@ -568,7 +510,6 @@ i, en conseqüència, $xf_x+yf_y=2-2=0$.
 Comprovau que es compleix el teorema de Schwarz per a $f(x,y)=x^y$.
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Per a $x>0$, escrivim $f=e^{y\ln x}$ i derivam:
 
 $$
@@ -582,7 +523,6 @@ f_{xy}=x^{y-1}(1+y\ln x)=f_{yx}.
 $$
 
 Com que són contínues en el domini obert $x>0$, es compleix el teorema de Schwarz.
-
 :::
 
 ### Exercici 9
@@ -590,7 +530,6 @@ Com que són contínues en el domini obert $x>0$, es compleix el teorema de Schw
 Comprovau que $u(x,y,z)=\sqrt{x^2+y^2+z^2}$ satisfà $u_{xx}+u_{yy}+u_{zz}=2/u$.
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 En els punts on $u>0$,
 
 $$
@@ -604,7 +543,6 @@ u_{xx}+u_{yy}+u_{zz}=\frac3u-\frac{x^2+y^2+z^2}{u^3}=\frac3u-\frac1u=\frac2u.
 $$
 
 L'equació s'entén fora de l'origen.
-
 :::
 
 ### Exercici 10
@@ -612,7 +550,6 @@ L'equació s'entén fora de l'origen.
 Donada $z=x^2y-y^2$, amb $x=\sin t$ i $y=e^t$, calculau $dz/dt$.
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Per la regla de la cadena,
 
 $$
@@ -624,7 +561,6 @@ Substituint les variables,
 $$
 \frac{dz}{dt}=e^t\bigl(2\sin t\cos t+\sin^2t\bigr)-2e^{2t}.
 $$
-
 :::
 
 ### Exercici 11
@@ -636,7 +572,6 @@ Calculau $\partial f/\partial x$ i $\partial f/\partial y$ de $f(u,v)=u^2+3uv+4u
 Aplicant la regla de la cadena.
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Agrupam $f=5u^2+3uv$, d'on $f_u=10u+3v$ i $f_v=3u$. Les parcials de les variables intermèdies són
 
 $$
@@ -650,7 +585,6 @@ $$
 $$
 
 Finalment substituïm $u$ i $v$ per obtenir les expressions en $x,y$.
-
 :::
 
 **b)**
@@ -658,7 +592,6 @@ Finalment substituïm $u$ i $v$ per obtenir les expressions en $x,y$.
 Substituint directament $u$ i $v$ en la funció.
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Tenim
 
 $$
@@ -672,7 +605,6 @@ $$
 $$
 
 Coincideixen amb les expressions obtingudes per la regla de la cadena.
-
 :::
 
 ### Exercici 12
@@ -680,7 +612,6 @@ Coincideixen amb les expressions obtingudes per la regla de la cadena.
 Sigui $g\in C^2(\mathbb R^2)$ i $z=g(u,v)$, on $u=x^2y^2$ i $v=xy$. Calculau $\partial^2z/(\partial y\,\partial x)$.
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Començam amb
 
 $$
@@ -694,7 +625,6 @@ $$
 $$
 
 Totes les derivades de $g$ s'avaluen en $(u,v)=(x^2y^2,xy)$.
-
 :::
 
 ### Exercici 13
@@ -702,7 +632,6 @@ Totes les derivades de $g$ s'avaluen en $(u,v)=(x^2y^2,xy)$.
 Calculau la matriu Hessiana de $f(x,y)=x^2e^{3x-y}$ en $(0,2)$.
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Començam derivant:
 
 $$
@@ -714,7 +643,6 @@ En el punt indicat,
 $$
 H_f(0,2)=\begin{pmatrix}2e^{-2}&0\\0&0\end{pmatrix}.
 $$
-
 :::
 
 ### Exercici 14
@@ -722,7 +650,6 @@ $$
 Calculau la matriu Hessiana de $f(x,y)=ye^{x^2y}$ en $(1,1)$.
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Les primeres derivades són $f_x=2xy^2e^{x^2y}$ i $f_y=e^{x^2y}(1+x^2y)$. Derivant una altra vegada,
 
 $$
@@ -734,7 +661,6 @@ Per tant,
 $$
 H_f(1,1)=e\begin{pmatrix}6&6\\6&3\end{pmatrix}.
 $$
-
 :::
 
 ### Exercici 15
@@ -742,7 +668,6 @@ $$
 Sabem que $( -1,0)$ és un punt crític de $f(x,y)=ax^2+2xy-y^2+2x+2y$. Determinau $a$.
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Les condicions d'estacionarietat són
 
 $$
@@ -750,7 +675,6 @@ f_x=2ax+2y+2=0,\qquad f_y=2x-2y+2=0.
 $$
 
 Al punt $(-1,0)$, la primera dona $-2a+2=0$, per tant $a=1$. La segona també s'hi anul·la.
-
 :::
 
 ### Exercici 16
@@ -764,15 +688,13 @@ f(x,y)=x^2e^{3x-y}
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Com que
 
 $$
 f_x=x(2+3x)e^{3x-y},\qquad f_y=-x^2e^{3x-y},
 $$
 
-les dues parcials s'anul·len exactament quan $x=0$, per a qualsevol $y$. A més, $f(x,y)\geq0$ i $f(0,y)=0$, de manera que **tots els punts $(0,y)$ són mínims absoluts no estrictes**. L'Hessiana és degenerada sobre aquesta recta; la classificació prové directament del signe de la funció.
-
+les dues parcials s'anul·len exactament quan $x=0$, per a qualsevol $y$. A més, $f(x,y)\geq0$ i $f(0,y)=0$, de manera que **tots els punts** $(0,y)$ són mínims absoluts no estrictes. L'Hessiana és degenerada sobre aquesta recta; la classificació prové directament del signe de la funció.
 :::
 
 **b)**
@@ -782,7 +704,6 @@ f(x,y)=x^2+2xy+2y^2+2x-2y
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 De $f_x=2x+2y+2=0$ i $f_y=2x+4y-2=0$ obtenim $(x,y)=(-3,2)$. L'Hessiana és constant:
 
 $$
@@ -790,7 +711,6 @@ H_f=\begin{pmatrix}2&2\\2&4\end{pmatrix},\qquad \det H_f=4>0,\ f_{xx}=2>0.
 $$
 
 És un mínim estricte (també absolut), amb $f(-3,2)=-5$.
-
 :::
 
 **c)**
@@ -800,7 +720,6 @@ f(x,y)=xy+\ln x+y^2
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 En el domini $x>0$,
 
 $$
@@ -814,7 +733,6 @@ H_f=\begin{pmatrix}-1/x^2&1\\1&2\end{pmatrix},\qquad\det H_f(\sqrt2,-1/\sqrt2)=-
 $$
 
 el punt és de sella.
-
 :::
 
 **d)**
@@ -824,7 +742,6 @@ f(x,y)=2x^2+xy+2y^2
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Les equacions $4x+y=0$, $x+4y=0$ donen l'origen. Tenim
 
 $$
@@ -832,7 +749,6 @@ H_f=\begin{pmatrix}4&1\\1&4\end{pmatrix},\qquad\det H_f=15>0,\quad f_{xx}=4>0.
 $$
 
 Per tant, $(0,0)$ és un mínim estricte i absolut, de valor $0$.
-
 :::
 
 **e)**
@@ -842,7 +758,6 @@ f(x,y)=8x^3+2xy-3x^2+y^2+1
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 De $f_y=2(x+y)=0$ es dedueix $y=-x$. Substituint a $f_x=24x^2+2y-6x=0$ queda $8x(3x-1)=0$. Els punts crítics són $(0,0)$ i $(1/3,-1/3)$.
 
 $$
@@ -850,7 +765,6 @@ H_f(x,y)=\begin{pmatrix}48x-6&2\\2&2\end{pmatrix}.
 $$
 
 A $(0,0)$, el determinant és $-16<0$, per tant és de sella. A $(1/3,-1/3)$, el determinant és $16>0$ i $f_{xx}=10>0$: és un mínim relatiu, amb valor $23/27$.
-
 :::
 
 **f)**
@@ -860,7 +774,6 @@ f(x,y)=\ln\left(\frac34+x^2+y^4\right)
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 La funció logaritme és creixent i l'argument compleix $\frac34+x^2+y^4\geq\frac34$, amb igualtat només a l'origen. Les parcials són
 
 $$
@@ -868,7 +781,6 @@ f_x=\frac{2x}{3/4+x^2+y^4},\qquad f_y=\frac{4y^3}{3/4+x^2+y^4}.
 $$
 
 L'únic punt crític és $(0,0)$, on tenim un mínim absolut estricte, de valor $\ln(3/4)$.
-
 :::
 
 **g)**
@@ -878,9 +790,7 @@ f(x,y)=(x-1)^2+2y^2
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Les derivades són $f_x=2(x-1)$, $f_y=4y$. L'únic punt crític és $(1,0)$ i, com que la funció és una suma de quadrats no negatius, és un mínim absolut estricte, de valor $0$.
-
 :::
 
 **h)**
@@ -890,7 +800,6 @@ f(x,y)=xye^{-x}+y^2
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Les parcials són
 
 $$
@@ -904,7 +813,6 @@ H_f=\begin{pmatrix}ye^{-x}(x-2)&e^{-x}(1-x)\\e^{-x}(1-x)&2\end{pmatrix}.
 $$
 
 A $(0,0)$, el determinant és $-1$, i és un punt de sella. A $(1,-1/(2e))$, l'Hessiana és diagonal amb termes positius $1/(2e^2)$ i $2$: és un mínim relatiu, de valor $-1/(4e^2)$.
-
 :::
 
 ### Exercici 17
@@ -916,7 +824,6 @@ Estudiau les condicions sobre $a,b\in\mathbb R$ perquè $z=x^2+y^2+axy+bx$ tengu
 Un punt de sella en $(2,-3)$.
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 La condició que sigui crític és
 
 $$
@@ -930,7 +837,6 @@ H=\begin{pmatrix}2&a\\a&2\end{pmatrix}
 $$
 
 té determinant $4-a^2=-5<0$, de manera que efectivament és un punt de sella.
-
 :::
 
 **b)**
@@ -938,7 +844,6 @@ té determinant $4-a^2=-5<0$, de manera que efectivament és un punt de sella.
 Un mínim en $(0,0)$.
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Perquè l'origen sigui crític ha de ser $b=0$. Aleshores la forma quadràtica $x^2+y^2+axy$ és semidefinida positiva si, i només si, $|a|\leq2$. Per tant,
 
 $$
@@ -946,7 +851,6 @@ b=0,\qquad -2\leq a\leq2.
 $$
 
 El mínim és estricte per a $|a|<2$ i no estricte per a $a=\pm2$.
-
 :::
 
 **c)**
@@ -954,9 +858,7 @@ El mínim és estricte per a $|a|<2$ i no estricte per a $a=\pm2$.
 Un màxim en $(-5,4)$.
 
 ::: {.callout-note collapse="true" title="Solució"}
-
-Les equacions de punt crític exigirien $a=8/5$ i $b=18/5$. Però $z_{xx}=2>0$ per a qualsevol valor dels paràmetres, de manera que cap punt crític no pot ser un màxim local. **No existeixen valors de $a,b$ que compleixin la condició.**
-
+Les equacions de punt crític exigirien $a=8/5$ i $b=18/5$. Però $z_{xx}=2>0$ per a qualsevol valor dels paràmetres, de manera que cap punt crític no pot ser un màxim local. **No existeixen valors de** $a,b$ que compleixin la condició.
 :::
 
 ### Exercici 18
@@ -970,7 +872,6 @@ z=xy,\qquad x+y=1
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Substituïm $y=1-x$:
 
 $$
@@ -978,7 +879,6 @@ z(x)=x(1-x)=\frac14-\left(x-\frac12\right)^2.
 $$
 
 El màxim condicionat és $z=1/4$ a $(1/2,1/2)$. No hi ha mínim, perquè $z(x)\to-\infty$ quan $|x|\to\infty$.
-
 :::
 
 **b)**
@@ -988,7 +888,6 @@ z=x+2y,\qquad x^2+y^2=5
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Per Cauchy–Schwarz,
 
 $$
@@ -996,7 +895,6 @@ $$
 $$
 
 La igualtat s'assoleix als punts $(1,2)$ i $(-1,-2)$. El màxim és $5$ i el mínim és $-5$, respectivament. També es pot obtenir amb multiplicadors de Lagrange.
-
 :::
 
 **c)**
@@ -1006,7 +904,6 @@ z=x^2+y^2,\qquad \frac{x}{2}+\frac{y}{3}=1
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 La restricció equival a $3x+2y=6$. Amb Lagrange,
 
 $$
@@ -1020,7 +917,6 @@ x=\frac{18}{13},\quad y=\frac{12}{13},\quad z_{\min}=\frac{36}{13}.
 $$
 
 És el punt de la recta més pròxim a l'origen. No hi ha màxim, ja que la recta és no acotada.
-
 :::
 
 ### Exercici 19
@@ -1028,7 +924,6 @@ $$
 Calculau la distància mínima entre la recta $x+y=4$ i la circumferència $x^2+y^2=1$.
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 La distància de l'origen a la recta és
 
 $$
@@ -1042,7 +937,6 @@ d_{\min}=2\sqrt2-1.
 $$
 
 S'assoleix al punt $(1/\sqrt2,1/\sqrt2)$ de la circumferència.
-
 :::
 
 ### Exercici 20
@@ -1050,7 +944,6 @@ S'assoleix al punt $(1/\sqrt2,1/\sqrt2)$ de la circumferència.
 Una placa circular de centre $(0,0)$ i radi $1$, amb la frontera inclosa, té temperatura $T(x,y)=x^2+2y^2-x$. Determinau els punts més freds i més calents i les seves temperatures.
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Com que el disc tancat és compacte, hi ha extrems absoluts. A l'interior,
 
 $$
@@ -1064,7 +957,6 @@ T=2-x^2-x=\frac94-\left(x+\frac12\right)^2,\qquad-1\leq x\leq1.
 $$
 
 El màxim és $9/4$, assolit als punts $(-1/2,\sqrt3/2)$ i $(-1/2,-\sqrt3/2)$. Comparant amb els valors de la frontera, el mínim absolut és $-1/4$ a $(1/2,0)$.
-
 :::
 
 ### Exercici 21
@@ -1072,7 +964,6 @@ El màxim és $9/4$, assolit als punts $(-1/2,\sqrt3/2)$ i $(-1/2,-\sqrt3/2)$. C
 El benefici de produir $x$ unitats del producte A i $y$ del B és $P(x,y)=8x+10y-0.001(x^2+xy+y^2)-10000$. Trobau el nivell de producció que maximitza el benefici.
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Les condicions de primer ordre són
 
 $$
@@ -1092,7 +983,6 @@ P(2000,4000)=18000.
 $$
 
 Per tant, convé produir $2000$ unitats d'A i $4000$ de B.
-
 :::
 
 ### Exercici 22
@@ -1100,7 +990,6 @@ Per tant, convé produir $2000$ unitats d'A i $4000$ de B.
 Una fàbrica té un benefici $B(x,y,z)=x^3-\frac12y^2+z+10$, on $x,y,z$ són les tones emprades de tres matèries primeres. El contracte obliga a consumir exactament $2$ tones de la primera i quantitats iguals de les altres dues. Calculau les quantitats que maximitzen el benefici.
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Les condicions són $x=2$ i $y=z=t$, amb $t\geq0$. Per tant,
 
 $$
@@ -1108,7 +997,6 @@ B(2,t,t)=18-\frac12t^2+t=\frac{37}{2}-\frac12(t-1)^2.
 $$
 
 El màxim s'assoleix a $t=1$. La fàbrica ha d'emprar $x=2$, $y=1$, $z=1$ tones i el benefici màxim és $37/2$.
-
 :::
 
 ### Exercici 23
@@ -1116,7 +1004,6 @@ El màxim s'assoleix a $t=1$. La fàbrica ha d'emprar $x=2$, $y=1$, $z=1$ tones 
 Un consumidor té un pressupost de $7.000$ euros per gastar en dos productes, de preus unitaris $100$ i $200$ euros. La satisfacció és $U(x,y)=40x+170y-x^2-xy-3y^2$. Determinau les quantitats que maximitzen la satisfacció sense superar el pressupost.
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 La restricció del pressupost és
 
 $$
@@ -1154,7 +1041,6 @@ x=\frac{70}{11}\approx6,36,\qquad y=\frac{300}{11}\approx27,27,
 $$
 
 amb satisfacció màxima $U_{\max}=\frac{26900}{11}$. La despesa és $\frac{67000}{11}\approx6090,91$ euros, inferior als $7000$ disponibles.
-
 :::
 
 ### Exercici 24
@@ -1168,18 +1054,16 @@ f(x,y)=x^3+y^3-3xy,\quad D=\{(x,y):0\leq x\leq2,\ -1\leq y\leq2\}
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 A l'interior, les equacions $3x^2-3y=0$, $3y^2-3x=0$ donen $(1,1)$ (el punt $(0,0)$ és a la frontera). Avaluam $f(1,1)=-1$.
 
 A la frontera:
 
-  - Si $x=0$, $f=y^3$, i els extrems es troben als extrems de l'interval.
-  - Si $x=2$, $f=8+y^3-6y$, amb candidat $y=\sqrt2$.
-  - Si $y=-1$, $f=x^3+3x-1$, que és creixent.
-  - Si $y=2$, $f=x^3-6x+8$, amb candidat $x=\sqrt2$.
+-   Si $x=0$, $f=y^3$, i els extrems es troben als extrems de l'interval.
+-   Si $x=2$, $f=8+y^3-6y$, amb candidat $y=\sqrt2$.
+-   Si $y=-1$, $f=x^3+3x-1$, que és creixent.
+-   Si $y=2$, $f=x^3-6x+8$, amb candidat $x=\sqrt2$.
 
-Comparant els candidats i els vèrtexs, el **mínim absolut és $-1$**, assolit a $(0,-1)$ i $(1,1)$, i el **màxim absolut és $13$**, assolit a $(2,-1)$.
-
+Comparant els candidats i els vèrtexs, el **mínim absolut és** $-1$, assolit a $(0,-1)$ i $(1,1)$, i el **màxim absolut és** $13$, assolit a $(2,-1)$.
 :::
 
 **b)**
@@ -1189,7 +1073,6 @@ f(x,y)=48xy-32x^3-24y^2,\quad D=[0,1]\times[0,1]
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 A l'interior, $f_x=48y-96x^2=0$ i $f_y=48x-48y=0$ donen $(1/2,1/2)$, on $f=2$.
 
 A les quatre vores, examinam les funcions d'una variable: $f(0,y)=-24y^2$, $f(1,y)=48y-32-24y^2$, $f(x,0)=-32x^3$ i $f(x,1)=48x-32x^3-24$. D'aquí, comparant punts crítics i extrems de cada interval, obtenim
@@ -1197,7 +1080,6 @@ A les quatre vores, examinam les funcions d'una variable: $f(0,y)=-24y^2$, $f(1,
 $$
 f_{\max}=2\quad\text{a }(1/2,1/2),\qquad f_{\min}=-32\quad\text{a }(1,0).
 $$
-
 :::
 
 ## Llista 2. Integració de funcions de diverses variables
@@ -1213,13 +1095,11 @@ f(x,y)=x^2y,\quad R=[0,3]\times[1,2]
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Com que la regió és rectangular, podem separar el producte:
 
 $$
 \iint_R x^2y\,dA=\left(\int_0^3x^2\,dx\right)\left(\int_1^2y\,dy\right)=9\cdot\frac32=\frac{27}{2}.
 $$
-
 :::
 
 **b)**
@@ -1229,13 +1109,11 @@ f(x,y)=y\sin(xy),\quad R=[1,2]\times[0,\pi]
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 És més senzill integrar primer respecte de $x$:
 
 $$
 \begin{aligned}I&=\int_0^\pi\left[ -\cos(xy)\right]_{x=1}^{x=2}dy\\&=\int_0^\pi(\cos y-\cos2y)\,dy=0.\end{aligned}
 $$
-
 :::
 
 **c)**
@@ -1245,13 +1123,11 @@ f(x,y)=x^2+y^2,\quad R=[0,2]\times[1,2]
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Per linealitat,
 
 $$
 I=\left(\int_0^2x^2dx\right)(2-1)+(2-0)\int_1^2y^2dy=\frac83+\frac{14}{3}=\frac{22}{3}.
 $$
-
 :::
 
 **d)**
@@ -1261,11 +1137,9 @@ f(x,y)=\cos x\sin y,\quad R=[0,\pi/2]\times[0,\pi/2]
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 $$
 I=\left(\int_0^{\pi/2}\cos x\,dx\right)\left(\int_0^{\pi/2}\sin y\,dy\right)=1.
 $$
-
 :::
 
 **e)**
@@ -1275,13 +1149,11 @@ f(x,y)=x^2+4y,\quad R=[0,2]\times[0,3]
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 La linealitat de la integral permet escriure
 
 $$
 I=3\int_0^2x^2dx+2\int_0^3 4y\,dy=3\cdot\frac83+2\cdot18=44.
 $$
-
 :::
 
 **f)**
@@ -1291,13 +1163,11 @@ f(x,y)=y(x^3-12x),\quad R=[-2,1]\times[0,1]
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Separam les variables:
 
 $$
 \begin{aligned}I&=\left(\int_0^1y\,dy\right)\left[\frac{x^4}{4}-6x^2\right]_{-2}^1\\&=\frac12\left(-\frac{23}{4}+20\right)=\frac{57}{8}.\end{aligned}
 $$
-
 :::
 
 **g)**
@@ -1307,7 +1177,6 @@ f(x,y)=x^y,\quad R=[0,1]\times[0,1]
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Integram primer respecte de $x$. Per a $0\leq y\leq1$,
 
 $$
@@ -1321,7 +1190,6 @@ I=\int_0^1\frac{dy}{y+1}=\ln2.
 $$
 
 El valor puntual $0^0$ no afecta la integral.
-
 :::
 
 ### Exercici 2
@@ -1329,7 +1197,6 @@ El valor puntual $0^0$ no afecta la integral.
 Resoleu $\iint_R(x+2y)\,dA$, on $R$ és la regió limitada per les paràboles $y=2x^2$ i $y=1+x^2$.
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Les paràboles es tallen quan $2x^2=1+x^2$, és a dir, $x=\pm1$. En aquest interval, $2x^2\leq1+x^2$. Per tant,
 
 $$
@@ -1347,7 +1214,6 @@ La part senar té integral nul·la en $[-1,1]$ i la resta dona
 $$
 I=2\left[ x+\frac{2x^3}{3}-\frac{3x^5}{5}\right]_0^1=\frac{32}{15}.
 $$
-
 :::
 
 ### Exercici 3
@@ -1355,7 +1221,6 @@ $$
 Avaluau $\iint_R xy\,dA$, on $R$ és la regió limitada per la recta $y=x-1$ i la paràbola $y^2=2x+6$.
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 És útil integrar primer respecte de $x$: la recta és $x=y+1$ i la paràbola és $x=y^2/2-3$. Es tallen quan
 
 $$
@@ -1367,7 +1232,6 @@ Entre aquests valors la paràbola queda a l'esquerra. Així,
 $$
 \begin{aligned}I&=\int_{-2}^4\int_{y^2/2-3}^{y+1}xy\,dx\,dy\\&=\frac12\int_{-2}^4y\left[(y+1)^2-\left(\frac{y^2}{2}-3\right)^2\right]dy=36.\end{aligned}
 $$
-
 :::
 
 ### Exercici 4
@@ -1375,7 +1239,6 @@ $$
 Avaluau $\iint_R(3x+4y^2)\,dA$, on $R$ és el semianell superior comprès entre $x^2+y^2=1$ i $x^2+y^2=4$.
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 En polars, $1\leq r\leq2$ i $0\leq\theta\leq\pi$, amb $x=r\cos\theta$, $y=r\sin\theta$ i $dA=r\,dr\,d\theta$. Per tant,
 
 $$
@@ -1387,7 +1250,6 @@ El terme amb $\cos\theta$ s'anul·la per simetria, mentre que $\int_0^\pi\sin^2\
 $$
 I=4\left[\frac{r^4}{4}\right]_1^2\frac\pi2=\frac{15\pi}{2}.
 $$
-
 :::
 
 ### Exercici 5
@@ -1395,13 +1257,11 @@ $$
 Calculau l’àrea mitjançant una integral doble de la regió situada entre $y=\sin x$ i $y=\cos x$, per a $\pi/4\leq x\leq5\pi/4$.
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 En aquest interval, $\sin x\geq\cos x$. L'àrea és la integral doble de la funció constant $1$ sobre el recinte:
 
 $$
 \begin{aligned}A&=\int_{\pi/4}^{5\pi/4}\int_{\cos x}^{\sin x}1\,dy\,dx\\&=\int_{\pi/4}^{5\pi/4}(\sin x-\cos x)dx\\&=[-\cos x-\sin x]_{\pi/4}^{5\pi/4}=2\sqrt2.\end{aligned}
 $$
-
 :::
 
 ### Exercici 6
@@ -1409,13 +1269,11 @@ $$
 Calculau el volum del tetraedre limitat pels plans $x+2y+z=2$, $x=2y$, $x=0$ i $z=0$.
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 El tetraedre té $0\leq x\leq1$, $x/2\leq y\leq1-x/2$ i $0\leq z\leq2-x-2y$. Per això,
 
 $$
 \begin{aligned}V&=\int_0^1\int_{x/2}^{1-x/2}\int_0^{2-x-2y}dz\,dy\,dx\\&=\int_0^1\int_{x/2}^{1-x/2}(2-x-2y)\,dy\,dx\\&=\int_0^1(1-x)^2dx=\frac13.\end{aligned}
 $$
-
 :::
 
 ### Exercici 7
@@ -1429,13 +1287,11 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 La regió triangular és $0\leq y\leq1$, $0\leq x\leq1-y$. Per tant,
 
 $$
 \int_0^1\int_0^{1-y}(x-2y)dx\,dy=-\frac16.
 $$
-
 :::
 
 **b)**
@@ -1445,13 +1301,11 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Invertint la regió $0\leq y\leq x\leq1$,
 
 $$
 \int_0^1\int_y^1x\,dx\,dy=\frac13.
 $$
-
 :::
 
 **c)**
@@ -1461,13 +1315,11 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 La nova descripció és $0\leq y\leq2$ i $0\leq x\leq y/2$. Així,
 
 $$
 \int_0^2\int_0^{y/2}(x-y)dx\,dy=-1.
 $$
-
 :::
 
 **d)**
@@ -1477,13 +1329,11 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 La regió queda donada per $0\leq y\leq2$, $0\leq x\leq\sqrt{2-y}$. Integram respecte de $x$:
 
 $$
 \begin{aligned}I&=\int_0^2\int_0^{\sqrt{2-y}}xe^{x^2}\,dx\,dy\\&=\frac12\int_0^2(e^{2-y}-1)dy=\frac{e^2-3}{2}.\end{aligned}
 $$
-
 :::
 
 **e)**
@@ -1493,13 +1343,11 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 En invertir $0\leq y\leq x^2\leq1$, tenim $0\leq y\leq1$ i $\sqrt y\leq x\leq1$. Aleshores,
 
 $$
 I=\int_0^1\int_{\sqrt y}^1x\cos y\,dx\,dy=\frac12\int_0^1(1-y)\cos y\,dy=\frac{1-\cos1}{2}.
 $$
-
 :::
 
 **f)**
@@ -1509,13 +1357,11 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Com que $x^2\leq y\leq3x$ per a $0\leq x\leq3$, tenim $0\leq y\leq9$ i $y/3\leq x\leq\sqrt y$. Per tant,
 
 $$
 \begin{aligned}I&=\int_0^9\int_{y/3}^{\sqrt y}xy\,dx\,dy\\&=\frac12\int_0^9\left(y^2-\frac{y^3}{9}\right)dy=\frac{243}{8}.\end{aligned}
 $$
-
 :::
 
 **g)**
@@ -1525,13 +1371,11 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Les corbes $y=x^2$ i $y=x$ delimiten $0\leq y\leq1$, $y\leq x\leq\sqrt y$. Així,
 
 $$
 I=\int_0^1\int_y^{\sqrt y}(1+2y)dx\,dy=\int_0^1(1+2y)(\sqrt y-y)dy=\frac3{10}.
 $$
-
 :::
 
 **h)**
@@ -1541,7 +1385,6 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 La regió compleix $0\leq x\leq y\leq\pi$. Canviant l'ordre s'elimina el quocient:
 
 $$
@@ -1549,7 +1392,6 @@ I=\int_0^\pi\int_0^y\frac{\sin y}{y}dx\,dy=\int_0^\pi\sin y\,dy=2.
 $$
 
 L'integrand s'entén per continuïtat a $y=0$.
-
 :::
 
 **i)**
@@ -1559,13 +1401,11 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Tenim $0\leq y\leq2$ i $0\leq x\leq y^2$. Per tant,
 
 $$
 I=\int_0^2\int_0^{y^2}\frac{dx}{y^3+1}\,dy=\int_0^2\frac{y^2}{y^3+1}dy=\frac13\ln9.
 $$
-
 :::
 
 **j)**
@@ -1575,7 +1415,6 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 El canvi d'ordre és $0\leq x\leq\pi/2$ i $0\leq y\leq\sin x$. Així,
 
 $$
@@ -1583,7 +1422,6 @@ $$
 $$
 
 En la darrera integral basta prendre $t=1+\cos^2x$.
-
 :::
 
 **k)**
@@ -1593,7 +1431,6 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Invertim la regió: $0\leq x\leq3$, $0\leq y\leq x/3$. D'aquesta manera,
 
 $$
@@ -1601,7 +1438,6 @@ I=\int_0^3\int_0^{x/3}e^{x^2}dy\,dx=\frac13\int_0^3xe^{x^2}\,dx=\frac{e^9-1}{6}.
 $$
 
 Aquest canvi d'ordre evita calcular una primitiva de $e^{x^2}$.
-
 :::
 
 **l)**
@@ -1611,13 +1447,11 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 En invertir l'ordre, $0\leq x\leq9$ i $0\leq y\leq\sqrt x$. Així,
 
 $$
 I=\int_0^9\int_0^{\sqrt x}y\cos(x^2)\,dy\,dx=\frac12\int_0^9x\cos(x^2)\,dx=\frac14\sin81.
 $$
-
 :::
 
 ### Exercici 8
@@ -1631,13 +1465,11 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 El disc és simètric respecte de l'eix d'ordenades, mentre que $x$ és senar en aquesta simetria. Per tant, la integral és $0$. En polars també s'obté
 
 $$
 \int_0^{2\pi}\int_0^5r^2\cos\theta\,dr\,d\theta=0.
 $$
-
 :::
 
 **b)**
@@ -1647,13 +1479,11 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 La regió és un quart d'anell: $2\leq r\leq5$, $0\leq\theta\leq\pi/2$. Com que $xy\,dA=r^3\sin\theta\cos\theta\,dr\,d\theta$,
 
 $$
 I=\left[\frac{r^4}{4}\right]_2^5\left[\frac{\sin^2\theta}{2}\right]_0^{\pi/2}=\frac{609}{8}.
 $$
-
 :::
 
 **c)**
@@ -1663,13 +1493,11 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 L'integrand es transforma en $r^2$ i el jacobià aporta un altre factor $r$. Per tant,
 
 $$
 \begin{aligned}I&=\int_0^{2\pi}\int_\theta^{2\theta}r^3\,dr\,d\theta\\&=\frac{15}{4}\int_0^{2\pi}\theta^4\,d\theta=24\pi^5.\end{aligned}
 $$
-
 :::
 
 ### Exercici 9
@@ -1683,13 +1511,11 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 La regió és el semidisc superior $(x-1)^2+y^2\leq1$. En polars, $0\leq\theta\leq\pi/2$ i $0\leq r\leq2\cos\theta$. Aleshores,
 
 $$
 I=\int_0^{\pi/2}\int_0^{2\cos\theta}r^3\sin\theta\cos\theta\,dr\,d\theta=\frac23.
 $$
-
 :::
 
 **b)**
@@ -1699,13 +1525,11 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 La regió és el semidisc dret $x^2+(y-2)^2\leq4$. En polars, $0\leq\theta\leq\pi/2$ i $0\leq r\leq4\sin\theta$. Per tant,
 
 $$
 I=\int_0^{\pi/2}\int_0^{4\sin\theta}r^3\cos\theta\sin\theta\,dr\,d\theta=\frac{32}{3}.
 $$
-
 :::
 
 **c)**
@@ -1715,13 +1539,11 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 El domini és el semidisc unitat superior: $0\leq r\leq1$, $0\leq\theta\leq\pi$. Així,
 
 $$
 I=\int_0^\pi\int_0^1r\cos(r^2)\,dr\,d\theta=\frac\pi2\sin1.
 $$
-
 :::
 
 **d)**
@@ -1731,13 +1553,11 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 El domini és un quart de disc de radi $2$, amb $0\leq\theta\leq\pi/2$. Per tant,
 
 $$
 I=\frac\pi2\int_0^2r\sin r\,dr=\frac\pi2(\sin2-2\cos2).
 $$
-
 :::
 
 **e)**
@@ -1747,13 +1567,11 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 La regió és el disc de centre $(1/2,0)$ i radi $1/2$. En polars queda $-\pi/2\leq\theta\leq\pi/2$, $0\leq r\leq\cos\theta$. Per tant,
 
 $$
 I=\int_{-\pi/2}^{\pi/2}\int_0^{\cos\theta}r^3\,dr\,d\theta=\frac14\int_{-\pi/2}^{\pi/2}\cos^4\theta\,d\theta=\frac{3\pi}{32}.
 $$
-
 :::
 
 **f)**
@@ -1763,13 +1581,11 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 És el quart de disc de radi $3$. Com que $(x^2+y^2)^{3/2}=r^3$,
 
 $$
 I=\int_0^{\pi/2}\int_0^3r^4\,dr\,d\theta=\frac{243\pi}{10}.
 $$
-
 :::
 
 **g)**
@@ -1779,13 +1595,11 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Es tracta del sector $0\leq\theta\leq\pi/4$ del disc de radi $2\sqrt2$. Per tant,
 
 $$
 I=\int_0^{\pi/4}\int_0^{2\sqrt2}r^2\,dr\,d\theta=\frac{4\sqrt2\pi}{3}.
 $$
-
 :::
 
 **h)**
@@ -1795,13 +1609,11 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 El domini és el semidisc unitat superior. Així,
 
 $$
 I=\int_0^\pi\int_0^1e^{r^2}r\,dr\,d\theta=\frac\pi2(e-1).
 $$
-
 :::
 
 **i)**
@@ -1811,13 +1623,11 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Per al quart de disc de radi $a$, $0\leq\theta\leq\pi/2$ i $0\leq r\leq a$. Per tant,
 
 $$
 I=\int_0^{\pi/2}\int_0^a r^2\cos\theta\,dr\,d\theta=\frac{a^3}{3}.
 $$
-
 :::
 
 ### Exercici 10
@@ -1825,7 +1635,6 @@ $$
 Calculau l’àrea de la superfície del paraboloide $z=(x^2+y^2)/16$ compresa entre $z=0$ i $z=7$.
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Si $z=f(x,y)$, l'àrea de la seva gràfica sobre una regió $D$ es calcula mitjançant
 
 $$
@@ -1841,7 +1650,6 @@ A&=\int_0^{2\pi}\int_0^{4\sqrt7}\sqrt{1+\frac{r^2}{64}}\,r\,dr\,d\theta\\
 &=\frac{16\pi}{3}\bigl(11\sqrt{11}-8\bigr).
 \end{aligned}
 $$
-
 :::
 
 ### Exercici 11
@@ -1849,14 +1657,12 @@ $$
 Calculau l’àrea de la part del pla $z=\frac15x+\frac1{10}y+3$ situada entre les circumferències $x^2+y^2=1$ i $x^2+y^2=4$.
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Per al pla $z=f(x,y)$, les derivades parcials són constants: $f_x=1/5$ i $f_y=1/10$. La regió de projecció és un anell de radis $1$ i $2$, d'àrea $\pi(4-1)=3\pi$. Per tant,
 
 $$
 \begin{aligned}A&=\iint_D\sqrt{1+\frac1{25}+\frac1{100}}\,dA\\
 &=\frac{\sqrt{105}}{10}\,3\pi=\frac{3\pi\sqrt{105}}{10}.\end{aligned}
 $$
-
 :::
 
 ### Exercici 12
@@ -1864,7 +1670,6 @@ $$
 Calculau l’àrea de la part del pla $12x+10y+15z=60$ situada en el primer octant.
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Aïllam $z$:
 
 $$
@@ -1877,7 +1682,6 @@ $$
 \begin{aligned}A&=\iint_D\sqrt{1+\left(-\frac45\right)^2+\left(-\frac23\right)^2}\,dA\\
 &=15\sqrt{1+\frac{16}{25}+\frac49}=\sqrt{469}.\end{aligned}
 $$
-
 :::
 
 ### Exercici 13
@@ -1891,13 +1695,11 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Integram cada sumand per separat, ja que els límits són constants:
 
 $$
 \begin{aligned}I&=\left(\int_0^1x^2dx\right)\!\cdot2\cdot2+\left(\int_0^2y^2dy\right)\!\cdot1\cdot2\\&\quad+\left(\int_{-1}^1z^2dz\right)\!\cdot1\cdot2\\&=\frac43+\frac{16}{3}+\frac43=8.\end{aligned}
 $$
-
 :::
 
 **b)**
@@ -1907,13 +1709,11 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Primer integram respecte de $x$ i després respecte de $y$:
 
 $$
 \begin{aligned}I&=\int_0^1\int_0^z\frac{y^3z}{2}\,dy\,dz\\&=\int_0^1\frac{z^5}{8}\,dz=\frac1{48}.\end{aligned}
 $$
-
 :::
 
 **c)**
@@ -1923,13 +1723,11 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Com que l'integrand no depèn de $x$, la primera integral només aporta la longitud de l'interval:
 
 $$
 \begin{aligned}I&=\left(\int_0^\pi\sin y\,dy\right)\left(\int_0^2z\sqrt{4-z^2}\,dz\right)\\&=2\cdot\frac83=\frac{16}{3}.\end{aligned}
 $$
-
 :::
 
 **d)**
@@ -1939,13 +1737,11 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Integrant respecte de $y$ obtenim $\int_0^{\sqrt{x}}yz\,dy=xz/2$. Per tant,
 
 $$
 \begin{aligned}I&=\frac12\int_0^3x\left[\frac{z^2}{2}\right]_0^{\sqrt{9-x^2}}dx\\&=\frac14\int_0^3x(9-x^2)dx=\frac{81}{16}.\end{aligned}
 $$
-
 :::
 
 **e)**
@@ -1955,7 +1751,6 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 El primer pas és $\int_1^z yz\,dx=yz(z-1)$. Tot seguit,
 
 $$
@@ -1963,7 +1758,6 @@ $$
 $$
 
 Observau que els límits de la integral interior s'han de respectar en l'ordre en què estan escrits, encara que per a alguns valors de $z$ l'extrem superior sigui menor que l'inferior.
-
 :::
 
 **f)**
@@ -1973,13 +1767,11 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Integram primer $z$:
 
 $$
 \begin{aligned}I&=\frac12\int_0^1\int_x^{2x}y(x+y)^2\,dy\,dx\\&=\frac12\int_0^1\left[\frac{x^2y^2}{2}+\frac{2xy^3}{3}+\frac{y^4}{4}\right]_{y=x}^{y=2x}dx\\&=\frac12\int_0^1\frac{119}{12}x^4\,dx=\frac{119}{120}.\end{aligned}
 $$
-
 :::
 
 ### Exercici 14
@@ -1987,13 +1779,11 @@ $$
 Avaluau $\iiint_E 1\,dV$, on $E$ és el tetraedre limitat pels plans $x=0$, $y=0$, $z=0$ i $x+y+z=1$.
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 El sòlid és $x,y,z\geq0$ i $x+y+z\leq1$. La integral representa el seu volum:
 
 $$
 \begin{aligned}\iiint_E1\,dV&=\int_0^1\int_0^{1-x}\int_0^{1-x-y}1\,dz\,dy\,dx\\&=\int_0^1\int_0^{1-x}(1-x-y)\,dy\,dx\\&=\frac12\int_0^1(1-x)^2dx=\frac16.\end{aligned}
 $$
-
 :::
 
 ### Exercici 15
@@ -2001,7 +1791,6 @@ $$
 Avaluau $\iiint_E\sqrt{x^2+z^2}\,dV$, on $E$ és la regió limitada pel paraboloide $y=x^2+z^2$ i el pla $y=4$.
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 La regió és de revolució al voltant de l'eix $OY$. Prenem coordenades polars al pla $xz$, amb $x=r\cos\theta$ i $z=r\sin\theta$. Aleshores $\sqrt{x^2+z^2}=r$, el jacobià és $r$ i els límits són
 
 $$
@@ -2013,7 +1802,6 @@ Per tant,
 $$
 \begin{aligned}I&=\int_0^{2\pi}\int_0^2\int_{r^2}^4r^2\,dy\,dr\,d\theta\\&=2\pi\int_0^2r^2(4-r^2)dr\\&=2\pi\left[\frac{4r^3}{3}-\frac{r^5}{5}\right]_0^2=\frac{128\pi}{15}.\end{aligned}
 $$
-
 :::
 
 ### Exercici 16
@@ -2025,7 +1813,6 @@ Utilitzau integrals triples per determinar el volum dels sòlids següents:
 El tetraedre limitat pels plans coordenats i el pla $2x+3y+6z=12$.
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Els punts de tall amb els eixos són $(6,0,0)$, $(0,4,0)$ i $(0,0,2)$. Amb límits adaptats a aquests plans,
 
 $$
@@ -2033,7 +1820,6 @@ $$
 $$
 
 També es pot comprovar amb la fórmula del volum d'un tetraedre d'intercepcions $V=6\cdot4\cdot2/6=8$.
-
 :::
 
 **b)**
@@ -2041,13 +1827,11 @@ També es pot comprovar amb la fórmula del volum d'un tetraedre d'intercepcions
 El sòlid limitat pel cilindre parabòlic $x=y^2$ i pels plans $z=0$ i $x+z=1$.
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 La projecció de la regió sobre el pla $xy$ està delimitada per $x=y^2$ i $x=1$. Així, $-1\leq y\leq1$, $y^2\leq x\leq1$ i $0\leq z\leq1-x$. Per tant,
 
 $$
 \begin{aligned}V&=\int_{-1}^1\int_{y^2}^1\int_0^{1-x}dz\,dx\,dy\\&=\frac12\int_{-1}^1(1-y^2)^2dy=\frac8{15}.\end{aligned}
 $$
-
 :::
 
 ### Exercici 17
@@ -2061,13 +1845,11 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 La projecció sobre el pla $xy$ és el disc unitat. En cilíndriques, $x^2+y^2=r^2$, l'integrand és $r^3$ i $dV=r\,dz\,dr\,d\theta$:
 
 $$
 \begin{aligned}I&=\int_0^{2\pi}\int_0^1\int_{r^2}^{2-r^2}r^4\,dz\,dr\,d\theta\\&=2\pi\int_0^1r^4(2-2r^2)dr\\&=4\pi\left(\frac15-\frac17\right)=\frac{8\pi}{35}.\end{aligned}
 $$
-
 :::
 
 **b)**
@@ -2077,13 +1859,11 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 La projecció és el quart de disc unitat del primer quadrant. Amb $x=r\cos\theta$, $y=r\sin\theta$ i $0\leq\theta\leq\pi/2$, la variable $z$ queda entre $r^2$ i $r$. Per tant,
 
 $$
 \begin{aligned}I&=\int_0^{\pi/2}\int_0^1\int_{r^2}^r r^3\cos\theta\sin\theta\,z\,dz\,dr\,d\theta\\&=\frac12\left(\int_0^{\pi/2}\cos\theta\sin\theta\,d\theta\right)\left(\int_0^1(r^5-r^7)dr\right)\\&=\frac12\cdot\frac12\left(\frac16-\frac18\right)=\frac1{96}.\end{aligned}
 $$
-
 :::
 
 ### Exercici 18
@@ -2097,13 +1877,11 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 És l'hemisferi superior de la bola de radi $3$. En coordenades esfèriques, $z=\rho\cos\varphi$, $\sqrt{x^2+y^2+z^2}=\rho$ i $dV=\rho^2\sin\varphi\,d\rho\,d\varphi\,d\theta$. Així,
 
 $$
 \begin{aligned}I&=\int_0^{2\pi}\int_0^{\pi/2}\int_0^3\rho^4\cos\varphi\sin\varphi\,d\rho\,d\varphi\,d\theta\\&=2\pi\cdot\frac12\cdot\frac{3^5}{5}=\frac{243\pi}{5}.\end{aligned}
 $$
-
 :::
 
 **b)**
@@ -2113,7 +1891,6 @@ $$
 $$
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 La projecció sobre el pla $xy$ és el quart de disc de radi $3$. El sòlid està per damunt del con $z=\sqrt{x^2+y^2}$ i dins l'esfera de radi $3\sqrt2$. Amb $z=\rho\cos\varphi$ i $\sqrt{x^2+y^2}=\rho\sin\varphi$, el con correspon a $\varphi=\pi/4$. Per això,
 
 $$
@@ -2125,7 +1902,6 @@ El factor $x^2+y^2+z^2=\rho^2$ dona
 $$
 \begin{aligned}I&=\int_0^{\pi/2}\int_0^{\pi/4}\int_0^{3\sqrt2}\rho^4\sin\varphi\,d\rho\,d\varphi\,d\theta\\&=\frac{486\pi}{5}(\sqrt2-1).\end{aligned}
 $$
-
 :::
 
 ### Exercici 19
@@ -2133,13 +1909,11 @@ $$
 Avaluau mitjançant coordenades cilíndriques $\iiint_E(x^2+y^2)\,dV$, on $E$ és el sòlid limitat pel cilindre $x^2+y^2=4$ i els plans $z=-1$ i $z=2$.
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 En cilíndriques, el cilindre és $0\leq r\leq2$ i els plans donen $-1\leq z\leq2$. L'integrand és $r^2$ i el jacobià és $r$:
 
 $$
 \begin{aligned}I&=\int_0^{2\pi}\int_0^2\int_{-1}^2r^3\,dz\,dr\,d\theta\\&=2\pi\cdot3\cdot\frac{2^4}{4}=24\pi.\end{aligned}
 $$
-
 :::
 
 ### Exercici 20
@@ -2147,7 +1921,6 @@ $$
 Calculau mitjançant coordenades cilíndriques $\iiint_E y\,dV$, on $E$ és el sòlid comprès entre els cilindres $x^2+y^2=1$ i $x^2+y^2=4$, per damunt del pla $xy$ i per davall del pla $z=x+2$.
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Tenim $1\leq r\leq2$, $0\leq\theta\leq2\pi$ i $0\leq z\leq 2+r\cos\theta$. La funció $2+r\cos\theta$ és no negativa sobre aquesta regió. Aleshores,
 
 $$
@@ -2155,7 +1928,6 @@ $$
 $$
 
 El resultat també es dedueix de la simetria de la regió i de l'integrand respecte de $y=0$.
-
 :::
 
 ### Exercici 21
@@ -2163,13 +1935,11 @@ El resultat també es dedueix de la simetria de la regió i de l'integrand respe
 Avaluau mitjançant coordenades cilíndriques $\iiint_E x^2\,dV$, on $E$ està dins el cilindre $x^2+y^2=1$, per damunt de $z=0$ i per davall del con $z^2=4x^2+4y^2$.
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Com que som damunt $z=0$, prenem la branca superior del con, $z=2r$. En cilíndriques, $x^2=r^2\cos^2\theta$ i el jacobià és $r$. Per tant,
 
 $$
 \begin{aligned}I&=\int_0^{2\pi}\int_0^1\int_0^{2r}r^3\cos^2\theta\,dz\,dr\,d\theta\\&=2\left(\int_0^{2\pi}\cos^2\theta\,d\theta\right)\left(\int_0^1r^4dr\right)\\&=\frac{2\pi}{5}.\end{aligned}
 $$
-
 :::
 
 ### Exercici 22
@@ -2177,13 +1947,11 @@ $$
 Avaluau mitjançant coordenades esfèriques $\iiint_B(x^2+y^2+z^2)\,dV$, on $B$ és la bola unitat $x^2+y^2+z^2\leq1$.
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 La regió correspon a $0\leq\rho\leq1$, $0\leq\varphi\leq\pi$ i $0\leq\theta\leq2\pi$. L'integrand és $\rho^2$:
 
 $$
 \begin{aligned}I&=\int_0^{2\pi}\int_0^\pi\int_0^1\rho^4\sin\varphi\,d\rho\,d\varphi\,d\theta\\&=2\pi\cdot2\cdot\frac15=\frac{4\pi}{5}.\end{aligned}
 $$
-
 :::
 
 ### Exercici 23
@@ -2191,21 +1959,18 @@ $$
 Determinau mitjançant coordenades esfèriques $\iiint_Ey^2\,dV$, on $E$ és la part de la bola unitat $x^2+y^2+z^2\leq1$ situada en el primer octant.
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 En esfèriques, $y=\rho\sin\varphi\sin\theta$. Per al primer octant, els límits són $0\leq\rho\leq1$, $0\leq\varphi\leq\pi/2$ i $0\leq\theta\leq\pi/2$. Així,
 
 $$
 \begin{aligned}I&=\int_0^{\pi/2}\int_0^{\pi/2}\int_0^1\rho^4\sin^3\varphi\sin^2\theta\,d\rho\,d\varphi\,d\theta\\&=\frac15\cdot\frac23\cdot\frac\pi4=\frac\pi{30}.\end{aligned}
 $$
-
 :::
 
 ### Exercici 24
 
-Avaluau mitjançant coordenades esfèriques $\iiint_E\sqrt{x^2+y^2+z^2}\,dV$, on $E$ és la regió **per damunt del con $\varphi=\pi/6$ i dins l’esfera $\rho=2$**.
+Avaluau mitjançant coordenades esfèriques $\iiint_E\sqrt{x^2+y^2+z^2}\,dV$, on $E$ és la regió **per damunt del con** $\varphi=\pi/6$ i dins l’esfera $\rho=2$.
 
 ::: {.callout-note collapse="true" title="Solució"}
-
 Interpretam la regió com la part interior de l'esfera de radi $2$ situada damunt el con de semiangle $\pi/6$ respecte de l'eix $OZ$. És un sòlid acotat, amb
 
 $$
@@ -2217,6 +1982,4 @@ La funció de l'integrand és $\sqrt{x^2+y^2+z^2}=\rho$ i el jacobià esfèric �
 $$
 \begin{aligned}I&=\int_0^{2\pi}\int_0^{\pi/6}\int_0^2\rho^3\sin\varphi\,d\rho\,d\varphi\,d\theta\\&=2\pi\cdot4\left(1-\cos\frac\pi6\right)\\&=4\pi(2-\sqrt3).\end{aligned}
 $$
-
 :::
-

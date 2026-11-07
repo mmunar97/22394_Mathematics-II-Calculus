@@ -1,0 +1,1925 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Tema 5. Equacions diferencials ordinàries – 22394 - Matemàtiques II - Càlcul. Llibre de solucions</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./tema4.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./tema3.html">Fulls d’exercicis</a></li><li class="breadcrumb-item"><a href="./tema5.html">Tema 5. Equacions diferencials ordinàries</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">22394 - Matemàtiques II - Càlcul. Llibre de solucions</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">22394 - Matemàtiques II - Càlcul. Llibre de solucions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Fulls d’exercicis</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tema3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tema 3. Càlcul integral d’una variable</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tema4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tema 4. Funcions de diverses variables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tema5.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Tema 5. Equacions diferencials ordinàries</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contingut</h2>
+   
+  <ul>
+  <li><a href="#llista-1.-equacions-diferencials-ordinàries" id="toc-llista-1.-equacions-diferencials-ordinàries" class="nav-link active" data-scroll-target="#llista-1.-equacions-diferencials-ordinàries">Llista 1. Equacions diferencials ordinàries</a>
+  <ul class="collapse">
+  <li><a href="#exercici-1" id="toc-exercici-1" class="nav-link" data-scroll-target="#exercici-1">Exercici 1</a></li>
+  <li><a href="#exercici-2" id="toc-exercici-2" class="nav-link" data-scroll-target="#exercici-2">Exercici 2</a></li>
+  <li><a href="#exercici-3" id="toc-exercici-3" class="nav-link" data-scroll-target="#exercici-3">Exercici 3</a></li>
+  <li><a href="#exercici-4" id="toc-exercici-4" class="nav-link" data-scroll-target="#exercici-4">Exercici 4</a></li>
+  <li><a href="#exercici-5" id="toc-exercici-5" class="nav-link" data-scroll-target="#exercici-5">Exercici 5</a></li>
+  <li><a href="#exercici-6" id="toc-exercici-6" class="nav-link" data-scroll-target="#exercici-6">Exercici 6</a></li>
+  <li><a href="#exercici-7" id="toc-exercici-7" class="nav-link" data-scroll-target="#exercici-7">Exercici 7</a></li>
+  <li><a href="#exercici-8" id="toc-exercici-8" class="nav-link" data-scroll-target="#exercici-8">Exercici 8</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./tema3.html">Fulls d’exercicis</a></li><li class="breadcrumb-item"><a href="./tema5.html">Tema 5. Equacions diferencials ordinàries</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Tema 5. Equacions diferencials ordinàries</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="llista-1.-equacions-diferencials-ordinàries" class="level2">
+<h2 class="anchored" data-anchor-id="llista-1.-equacions-diferencials-ordinàries">Llista 1. Equacions diferencials ordinàries</h2>
+<section id="exercici-1" class="level3">
+<h3 class="anchored" data-anchor-id="exercici-1">Exercici 1</h3>
+<p>Determinau l’ordre de les equacions diferencials següents:</p>
+<p><strong>a)</strong></p>
+<p><span class="math display">\[
+2y''-5y'-3y=0
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La derivada d’ordre més alt que apareix és <span class="math inline">\(y''\)</span>. Per tant, <strong>l’ordre és 2</strong>.</p>
+</div>
+</div>
+</div>
+<p><strong>b)</strong></p>
+<p><span class="math display">\[
+2y'y^{(4)}+3xy=y''
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Hi intervé <span class="math inline">\(y^{(4)}\)</span>, la derivada quarta; el fet que multipliqui <span class="math inline">\(y'\)</span> no modifica l’ordre. Per tant, <strong>l’ordre és 4</strong>.</p>
+</div>
+</div>
+</div>
+<p><strong>c)</strong></p>
+<p><span class="math display">\[
+-\frac{2}{x^3}+3xy'=6y
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Només hi apareix la primera derivada, <span class="math inline">\(y'\)</span>. Per tant, <strong>l’ordre és 1</strong>.</p>
+</div>
+</div>
+</div>
+<p><strong>d)</strong></p>
+<p><span class="math display">\[
+x''-3tx'=0
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Consideram <span class="math inline">\(x\)</span> com una funció de <span class="math inline">\(t\)</span>. La derivada de grau més alt és <span class="math inline">\(x''\)</span>. Per tant, <strong>l’ordre és 2</strong>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="exercici-2" class="level3">
+<h3 class="anchored" data-anchor-id="exercici-2">Exercici 2</h3>
+<p>Resoleu les equacions diferencials lineals homogènies següents:</p>
+<p><strong>a)</strong></p>
+<p><span class="math display">\[
+2y''-5y'-3y=0
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>L’equació característica és <span class="math display">\[
+2\lambda^2-5\lambda-3=(\lambda-3)(2\lambda+1)=0.
+\]</span> Com que les arrels <span class="math inline">\(3\)</span> i <span class="math inline">\(-1/2\)</span> són reals i diferents, obtenim <span class="math display">\[
+y(x)=C_1e^{3x}+C_2e^{-x/2}.
+\]</span></p>
+</div>
+</div>
+</div>
+<p><strong>b)</strong></p>
+<p><span class="math display">\[
+4y''-4y'+y=0
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La característica factoritza com <span class="math display">\[
+4\lambda^2-4\lambda+1=(2\lambda-1)^2=0.
+\]</span> L’arrel <span class="math inline">\(\lambda=1/2\)</span> és doble, de manera que <span class="math display">\[
+y(x)=(C_1+C_2x)e^{x/2}.
+\]</span></p>
+</div>
+</div>
+</div>
+<p><strong>c)</strong></p>
+<p><span class="math display">\[
+y''-2y'+3y=0
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>L’equació característica <span class="math inline">\(\lambda^2-2\lambda+3=0\)</span> té arrels <span class="math inline">\(1\pm i\sqrt2\)</span>. Per a un parell d’arrels complexes conjugades, els apunts donen <span class="math display">\[
+y(x)=e^x\big(C_1\cos(\sqrt2\,x)+C_2\sin(\sqrt2\,x)\big).
+\]</span></p>
+</div>
+</div>
+</div>
+<p><strong>d)</strong></p>
+<p><span class="math display">\[
+\frac{d^5y}{dx^5}-5\frac{d^4y}{dx^4}+12\frac{d^3y}{dx^3}-8\frac{d^2y}{dx^2}=0
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Treim factor comú i factoritzam la característica: <span class="math display">\[
+\lambda^5-5\lambda^4+12\lambda^3-8\lambda^2
+=\lambda^2(\lambda-1)(\lambda^2-4\lambda+8).
+\]</span> Les arrels són <span class="math inline">\(0\)</span> (doble), <span class="math inline">\(1\)</span> i <span class="math inline">\(2\pm2i\)</span>. Així, <span class="math display">\[
+y(x)=C_1+C_2x+C_3e^x
++e^{2x}(C_4\cos 2x+C_5\sin 2x).
+\]</span></p>
+</div>
+</div>
+</div>
+<p><strong>e)</strong></p>
+<p><span class="math display">\[
+y^{(5)}+5y^{(4)}-2y^{(3)}-10y''+y'+5y=0
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Agrupant els termes de la característica trobam <span class="math display">\[
+\lambda^5+5\lambda^4-2\lambda^3-10\lambda^2+\lambda+5
+=(\lambda+5)(\lambda-1)^2(\lambda+1)^2.
+\]</span> Per tant, les arrels són <span class="math inline">\(-5\)</span> (simple), <span class="math inline">\(1\)</span> i <span class="math inline">\(-1\)</span> (dobles), i <span class="math display">\[
+y(x)=C_1e^{-5x}+(C_2+C_3x)e^x+(C_4+C_5x)e^{-x}.
+\]</span></p>
+</div>
+</div>
+</div>
+<p><strong>f)</strong></p>
+<p><span class="math display">\[
+y^{(4)}-7y''-18y=0
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La característica és <span class="math display">\[
+\lambda^4-7\lambda^2-18
+=(\lambda^2-9)(\lambda^2+2).
+\]</span> Les arrels són <span class="math inline">\(3\)</span>, <span class="math inline">\(-3\)</span> i <span class="math inline">\(\pm i\sqrt2\)</span>. En conseqüència, <span class="math display">\[
+y(x)=C_1e^{3x}+C_2e^{-3x}
++C_3\cos(\sqrt2\,x)+C_4\sin(\sqrt2\,x).
+\]</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="exercici-3" class="level3">
+<h3 class="anchored" data-anchor-id="exercici-3">Exercici 3</h3>
+<p>Resoleu les equacions diferencials següents:</p>
+<p><strong>a)</strong></p>
+<p><span class="math display">\[
+2y''+5y'-y=0
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La característica <span class="math inline">\(2\lambda^2+5\lambda-1=0\)</span> té les dues arrels reals <span class="math display">\[
+\lambda_{1,2}=\frac{-5\pm\sqrt{33}}4.
+\]</span> Per tant, <span class="math display">\[
+y(x)=C_1e^{\frac{-5+\sqrt{33}}4x}+C_2e^{\frac{-5-\sqrt{33}}4x}.
+\]</span></p>
+</div>
+</div>
+</div>
+<p><strong>b)</strong></p>
+<p><span class="math display">\[
+4y''+y'+y=0
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Resolem <span class="math inline">\(4\lambda^2+\lambda+1=0\)</span>, amb arrels <span class="math display">\[
+\lambda=\frac{-1\pm i\sqrt{15}}8.
+\]</span> Així, <span class="math display">\[
+y(x)=e^{-x/8}\left(C_1\cos\frac{\sqrt{15}x}{8}
++C_2\sin\frac{\sqrt{15}x}{8}\right).
+\]</span></p>
+</div>
+</div>
+</div>
+<p><strong>c)</strong></p>
+<p><span class="math display">\[
+y^{(3)}+8y=0
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Factoritzam l’equació característica: <span class="math display">\[
+\lambda^3+8=(\lambda+2)(\lambda^2-2\lambda+4)=0.
+\]</span> Les arrels són <span class="math inline">\(-2\)</span> i <span class="math inline">\(1\pm i\sqrt3\)</span>, i per tant <span class="math display">\[
+y(x)=C_1e^{-2x}+e^x\left(C_2\cos(\sqrt3\,x)
++C_3\sin(\sqrt3\,x)\right).
+\]</span></p>
+</div>
+</div>
+</div>
+<p><strong>d)</strong></p>
+<p><span class="math display">\[
+y^{(3)}-3y'=0
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La característica és <span class="math inline">\(\lambda(\lambda^2-3)=0\)</span>, d’on <span class="math display">\[
+y_h=C_1+C_2e^{\sqrt3x}+C_3e^{-\sqrt3x}.
+\]</span> Com que el segon membre és constant i <span class="math inline">\(0\)</span> és una arrel simple, cercam una particular de la forma <span class="math inline">\(y_p=Ax\)</span>. Substituint, <span class="math inline">\(-3A=2\)</span>, és a dir, <span class="math inline">\(A=-2/3\)</span>. Així, <span class="math display">\[
+y(x)=C_1+C_2e^{\sqrt3x}+C_3e^{-\sqrt3x}-\frac{2x}{3}.
+\]</span></p>
+</div>
+</div>
+</div>
+<p><strong>e)</strong></p>
+<p><span class="math display">\[
+y^{(4)}-7y''+4y'=0
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La característica de l’homogènia associada és <span class="math display">\[
+\lambda(\lambda^3-7\lambda+4)=0.
+\]</span> Denotem per <span class="math inline">\(\lambda_1,\lambda_2,\lambda_3\)</span> les tres arrels reals de <span class="math inline">\(\lambda^3-7\lambda+4=0\)</span> (aproximadament <span class="math inline">\(-2.895\)</span>, <span class="math inline">\(0.603\)</span> i <span class="math inline">\(2.292\)</span>). Aleshores, <span class="math display">\[
+y_h=C_1+C_2e^{\lambda_1x}+C_3e^{\lambda_2x}+C_4e^{\lambda_3x}.
+\]</span> Per a la part constant provam <span class="math inline">\(y_p=Ax\)</span>, ja que <span class="math inline">\(0\)</span> és una arrel simple. Substituint, <span class="math inline">\(4A=-20\)</span> i per tant <span class="math inline">\(y_p=-5x\)</span>. La solució general és <span class="math display">\[
+y(x)=C_1+C_2e^{\lambda_1x}+C_3e^{\lambda_2x}+C_4e^{\lambda_3x}-5x.
+\]</span></p>
+</div>
+</div>
+</div>
+<p><strong>f)</strong></p>
+<p><span class="math display">\[
+y^{(3)}-4y''+9y'-10y=0
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La característica es factoritza en <span class="math display">\[
+\lambda^3-4\lambda^2+9\lambda-10
+=(\lambda-2)(\lambda^2-2\lambda+5).
+\]</span> Com que les arrels són <span class="math inline">\(2\)</span> i <span class="math inline">\(1\pm2i\)</span>, tenim <span class="math display">\[
+y(x)=C_1e^{2x}+e^x(C_2\cos2x+C_3\sin2x).
+\]</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="exercici-4" class="level3">
+<h3 class="anchored" data-anchor-id="exercici-4">Exercici 4</h3>
+<p>Resoleu les equacions diferencials lineals no homogènies següents:</p>
+<p><strong>a)</strong></p>
+<p><span class="math display">\[
+2y''-5y'-3y=3x
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>L’homogènia associada té arrels característiques <span class="math inline">\(3\)</span> i <span class="math inline">\(-1/2\)</span>, com en l’exercici 2.a. Per tant, <span class="math inline">\(y_h=C_1e^{3x}+C_2e^{-x/2}\)</span>.</p>
+<p>Com que el segon membre és un polinomi de primer grau i <span class="math inline">\(0\)</span> no és arrel de la característica, provam <span class="math inline">\(y_p=Ax+B\)</span>. Substituint, <span class="math display">\[
+-5A-3(Ax+B)=3x.
+\]</span> Igualant coeficients, <span class="math inline">\(A=-1\)</span> i <span class="math inline">\(B=5/3\)</span>. En conseqüència, <span class="math display">\[
+y(x)=C_1e^{3x}+C_2e^{-x/2}-x+\frac53.
+\]</span></p>
+</div>
+</div>
+</div>
+<p><strong>b)</strong></p>
+<p><span class="math display">\[
+4y''-4y'+y=e^{2x}
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>L’homogènia té l’arrel doble <span class="math inline">\(1/2\)</span>, d’on <span class="math inline">\(y_h=(C_1+C_2x)e^{x/2}\)</span>.</p>
+<p>Com que <span class="math inline">\(2\)</span> no és arrel de la característica, cercam <span class="math inline">\(y_p=Ae^{2x}\)</span>. En substituir resulta <span class="math display">\[
+(16-8+1)Ae^{2x}=e^{2x},\qquad 9A=1.
+\]</span> Per tant, <span class="math display">\[
+y(x)=(C_1+C_2x)e^{x/2}+\frac19e^{2x}.
+\]</span></p>
+</div>
+</div>
+</div>
+<p><strong>c)</strong></p>
+<p><span class="math display">\[
+y''-2y'+3y=xe^x
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>L’homogènia té arrels <span class="math inline">\(1\pm i\sqrt2\)</span>, de manera que <span class="math display">\[
+y_h=e^x(C_1\cos(\sqrt2x)+C_2\sin(\sqrt2x)).
+\]</span> Com que <span class="math inline">\(1\)</span> no és arrel de la característica, provam <span class="math inline">\(y_p=e^x(Ax+B)\)</span>. Les derivades donen <span class="math display">\[
+y_p''-2y_p'+3y_p=e^x(2Ax+2B).
+\]</span> Igualant amb <span class="math inline">\(xe^x\)</span>, obtenim <span class="math inline">\(A=1/2\)</span>, <span class="math inline">\(B=0\)</span>. Així, <span class="math display">\[
+y(x)=y_h+\frac{x}{2}e^x.
+\]</span></p>
+</div>
+</div>
+</div>
+<p><strong>d)</strong></p>
+<p><span class="math display">\[
+\frac{d^5y}{dx^5}-5\frac{d^4y}{dx^4}+12\frac{d^3y}{dx^3}-8\frac{d^2y}{dx^2}=2
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-20" class="callout-20-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La solució homogènia és la de l’exercici 2.d: <span class="math display">\[
+y_h=C_1+C_2x+C_3e^x+e^{2x}(C_4\cos2x+C_5\sin2x).
+\]</span> Com que el terme independent és constant i <span class="math inline">\(0\)</span> és una arrel doble, el procediment dels apunts indica provar <span class="math inline">\(y_p=Ax^2\)</span>. En substituir, només contribueix <span class="math inline">\(-8y_p''=-16A\)</span>, i <span class="math inline">\(-16A=2\)</span>. Per tant, <span class="math display">\[
+y(x)=y_h-\frac{x^2}{8}.
+\]</span></p>
+</div>
+</div>
+</div>
+<p><strong>e)</strong></p>
+<p><span class="math display">\[
+y^{(5)}+5y^{(4)}-2y^{(3)}-10y''+y'+5y=x^2
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-21" class="callout-21-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La part homogènia, obtinguda en l’exercici 2.e, és <span class="math display">\[
+y_h=C_1e^{-5x}+(C_2+C_3x)e^x+(C_4+C_5x)e^{-x}.
+\]</span> Com que <span class="math inline">\(0\)</span> no és arrel característica, cercam <span class="math inline">\(y_p=Ax^2+Bx+D\)</span>. En substituir i agrupar potències d’<span class="math inline">\(x\)</span> resulta <span class="math display">\[
+5Ax^2+(2A+5B)x+(5D+B-20A)=x^2.
+\]</span> Això dona <span class="math inline">\(A=1/5\)</span>, <span class="math inline">\(B=-2/25\)</span> i <span class="math inline">\(D=102/125\)</span>. Així, <span class="math display">\[
+y(x)=y_h+\frac{x^2}{5}-\frac{2x}{25}+\frac{102}{125}.
+\]</span></p>
+</div>
+</div>
+</div>
+<p><strong>f)</strong></p>
+<p><span class="math display">\[
+y^{(4)}-7y''-18y=e^{-x}
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-22" class="callout-22-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La part homogènia és <span class="math display">\[
+y_h=C_1e^{3x}+C_2e^{-3x}
++C_3\cos(\sqrt2x)+C_4\sin(\sqrt2x).
+\]</span> Com que <span class="math inline">\(-1\)</span> no és arrel característica, cercam <span class="math inline">\(y_p=Ae^{-x}\)</span>. En substituir, <span class="math display">\[
+(1-7-18)Ae^{-x}=e^{-x}\quad\Rightarrow\quad A=-\frac1{24}.
+\]</span> Per tant, <span class="math display">\[
+y(x)=y_h-\frac1{24}e^{-x}.
+\]</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="exercici-5" class="level3">
+<h3 class="anchored" data-anchor-id="exercici-5">Exercici 5</h3>
+<p>Resoleu les equacions diferencials lineals no homogènies següents:</p>
+<p><strong>a)</strong></p>
+<p><span class="math display">\[
+2y''+5y'-y=3xe^x
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-23" class="callout-23-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La característica homogènia té arrels <span class="math inline">\((-5\pm\sqrt{33})/4\)</span>. Així, <span class="math display">\[
+y_h=C_1e^{\frac{-5+\sqrt{33}}4x}+C_2e^{\frac{-5-\sqrt{33}}4x}.
+\]</span> Com que <span class="math inline">\(1\)</span> no és arrel característica, provam <span class="math inline">\(y_p=e^x(Ax+B)\)</span>. Substituint i agrupant, <span class="math display">\[
+e^x(6Ax+9A+6B)=3xe^x.
+\]</span> D’aquí <span class="math inline">\(A=1/2\)</span> i <span class="math inline">\(B=-3/4\)</span>, i <span class="math display">\[
+y(x)=y_h+\frac{2x-3}{4}e^x.
+\]</span></p>
+</div>
+</div>
+</div>
+<p><strong>b)</strong></p>
+<p><span class="math display">\[
+4y''+y'+y=2+x
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-24" class="callout-24-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>L’equació característica <span class="math inline">\(4\lambda^2+\lambda+1=0\)</span> té arrels <span class="math inline">\((-1\pm i\sqrt{15})/8\)</span>. D’on <span class="math display">\[
+y_h=e^{-x/8}\left(C_1\cos\frac{\sqrt{15}x}{8}+C_2\sin\frac{\sqrt{15}x}{8}\right).
+\]</span> Per al polinomi del segon membre cercam <span class="math inline">\(y_p=Ax+B\)</span>. Substituint, <span class="math inline">\(A+(Ax+B)=x+2\)</span>, i resulta <span class="math inline">\(A=B=1\)</span>. Per tant, <span class="math display">\[
+y(x)=y_h+x+1.
+\]</span></p>
+</div>
+</div>
+</div>
+<p><strong>c)</strong></p>
+<p><span class="math display">\[
+y^{(3)}+8y=(1+x)e^{-2x}
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-25" class="callout-25-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La característica homogènia <span class="math inline">\(\lambda^3+8=(\lambda+2)(\lambda^2-2\lambda+4)\)</span> té arrels <span class="math inline">\(-2\)</span> i <span class="math inline">\(1\pm i\sqrt3\)</span>. Per tant, <span class="math display">\[
+y_h=C_1e^{-2x}+e^x(C_2\cos(\sqrt3x)+C_3\sin(\sqrt3x)).
+\]</span> Com que <span class="math inline">\(-2\)</span> és arrel simple i el segon membre és <span class="math inline">\(e^{-2x}\)</span> multiplicat per un polinomi de grau 1, cercam <span class="math inline">\(y_p=xe^{-2x}(Ax+B)\)</span>. La substitució i identificació de coeficients dona <span class="math inline">\(A=1/24\)</span>, <span class="math inline">\(B=1/8\)</span>. Així, <span class="math display">\[
+y(x)=y_h+\frac{x(x+3)}{24}e^{-2x}.
+\]</span></p>
+</div>
+</div>
+</div>
+<p><strong>d)</strong></p>
+<p><span class="math display">\[
+y^{(3)}-3y'-2=2x+1
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-26" class="callout-26-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Passam el terme constant al segon membre: <span class="math inline">\(y^{(3)}-3y'=2x+3\)</span>. La característica homogènia és <span class="math inline">\(\lambda(\lambda^2-3)=0\)</span>, d’on <span class="math display">\[
+y_h=C_1+C_2e^{\sqrt3x}+C_3e^{-\sqrt3x}.
+\]</span> Com que <span class="math inline">\(0\)</span> és arrel simple, cercam <span class="math inline">\(y_p=x(Ax+B)\)</span>. Substituint, <span class="math display">\[
+-3(2Ax+B)=2x+3,
+\]</span> d’on <span class="math inline">\(A=-1/3\)</span> i <span class="math inline">\(B=-1\)</span>. Per tant, <span class="math display">\[
+y(x)=y_h-\frac{x^2}{3}-x.
+\]</span></p>
+</div>
+</div>
+</div>
+<p><strong>e)</strong></p>
+<p><span class="math display">\[
+y^{(4)}-7y''+4y'+20=e^{-3x}
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-27" class="callout-27-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Escrivim <span class="math inline">\(y^{(4)}-7y''+4y'=e^{-3x}-20\)</span>. La homogènia associada té arrels <span class="math inline">\(0,\lambda_1,\lambda_2,\lambda_3\)</span>, on <span class="math inline">\(\lambda_i\)</span> són les arrels de <span class="math inline">\(\lambda^3-7\lambda+4=0\)</span>. Així, <span class="math display">\[
+y_h=C_1+C_2e^{\lambda_1x}+C_3e^{\lambda_2x}+C_4e^{\lambda_3x}.
+\]</span> Per al terme <span class="math inline">\(e^{-3x}\)</span>, provam <span class="math inline">\(Ae^{-3x}\)</span>; com que <span class="math inline">\((-3)^4-7(-3)^2+4(-3)=6\)</span>, resulta <span class="math inline">\(A=1/6\)</span>. Per al terme <span class="math inline">\(-20\)</span>, com que <span class="math inline">\(0\)</span> és una arrel simple, provam <span class="math inline">\(Bx\)</span> i obtenim <span class="math inline">\(4B=-20\)</span>, és a dir, <span class="math inline">\(B=-5\)</span>. Per tant, <span class="math display">\[
+y(x)=y_h+\frac16e^{-3x}-5x.
+\]</span></p>
+</div>
+</div>
+</div>
+<p><strong>f)</strong></p>
+<p><span class="math display">\[
+y^{(3)}-4y''+9y'-10y=3
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-28" class="callout-28-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Les arrels de l’homogènia són <span class="math inline">\(2\)</span> i <span class="math inline">\(1\pm2i\)</span>, d’on <span class="math display">\[
+y_h=C_1e^{2x}+e^x(C_2\cos2x+C_3\sin2x).
+\]</span> Cercam una particular constant <span class="math inline">\(y_p=A\)</span>, ja que <span class="math inline">\(0\)</span> no és arrel de la característica. Substituint, <span class="math inline">\(-10A=3\)</span>, i així <span class="math display">\[
+y(x)=y_h-\frac3{10}.
+\]</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="exercici-6" class="level3">
+<h3 class="anchored" data-anchor-id="exercici-6">Exercici 6</h3>
+<p>Trobau la solució general i la que compleix les condicions indicades mitjançant el mètode dels coeficients indeterminats:</p>
+<p><strong>a)</strong></p>
+<p><span class="math display">\[
+\begin{cases}y''+2y'+3y=6x+1,\\y(0)=2,\quad y'(0)=-1.\end{cases}
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-29" class="callout-29-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>L’equació característica <span class="math inline">\(\lambda^2+2\lambda+3=0\)</span> té arrels <span class="math inline">\(-1\pm i\sqrt2\)</span>, i <span class="math display">\[
+y_h=e^{-x}(C_1\cos(\sqrt2x)+C_2\sin(\sqrt2x)).
+\]</span> Provam <span class="math inline">\(y_p=Ax+B\)</span>. La substitució dona <span class="math inline">\(3Ax+(2A+3B)=6x+1\)</span>, d’on <span class="math inline">\(A=2\)</span>, <span class="math inline">\(B=-1\)</span>. Per tant, <span class="math display">\[
+y=y_h+2x-1.
+\]</span> Amb <span class="math inline">\(y(0)=2\)</span> obtenim <span class="math inline">\(C_1=3\)</span>. Derivant i aplicant <span class="math inline">\(y'(0)=-1\)</span> resulta <span class="math inline">\(-C_1+\sqrt2 C_2+2=-1\)</span>, d’on <span class="math inline">\(C_2=0\)</span>. La solució demanada és <span class="math display">\[
+y(x)=3e^{-x}\cos(\sqrt2x)+2x-1.
+\]</span></p>
+</div>
+</div>
+</div>
+<p><strong>b)</strong></p>
+<p><span class="math display">\[
+\begin{cases}y^{(3)}+y''-5y'+3y=6e^x,\\y(0)=0,\quad y'(0)=1,\quad y''(0)=3.\end{cases}
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-30" class="callout-30-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La característica factoritza com <span class="math display">\[
+\lambda^3+\lambda^2-5\lambda+3=(\lambda-1)^2(\lambda+3).
+\]</span> Per això <span class="math inline">\(y_h=(C_1+C_2x)e^x+C_3e^{-3x}\)</span>. Com que el terme <span class="math inline">\(e^x\)</span> correspon a una arrel doble, provam <span class="math inline">\(y_p=Ax^2e^x\)</span>. Substituint resulta <span class="math inline">\(8A e^x=6e^x\)</span>, de manera que <span class="math inline">\(A=3/4\)</span>.</p>
+<p>La solució general és <span class="math display">\[
+y(x)=\left(C_1+C_2x+\frac34x^2\right)e^x+C_3e^{-3x}.
+\]</span> Aplicant les tres condicions inicials obtenim <span class="math display">\[
+\begin{cases}
+C_1+C_3=0,\\
+C_1+C_2-3C_3=1,\\
+C_1+2C_2+9C_3+\frac32=3.
+\end{cases}
+\]</span> Resolent, <span class="math inline">\(C_1=1/32\)</span>, <span class="math inline">\(C_2=7/8\)</span> i <span class="math inline">\(C_3=-1/32\)</span>. Per tant, <span class="math display">\[
+y(x)=\left(\frac1{32}+\frac78x+\frac34x^2\right)e^x-\frac1{32}e^{-3x}.
+\]</span></p>
+</div>
+</div>
+</div>
+<p><strong>c)</strong></p>
+<p><span class="math display">\[
+\begin{cases}y''+2y'=4x+8,\\y(1)=2,\quad y'(0)=2.\end{cases}
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-31" class="callout-31-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>L’homogènia associada té característiques <span class="math inline">\(\lambda(\lambda+2)=0\)</span>, de manera que <span class="math inline">\(y_h=C_1+C_2e^{-2x}\)</span>.</p>
+<p>Com que <span class="math inline">\(0\)</span> és arrel simple, cercam <span class="math inline">\(y_p=x(Ax+B)\)</span>. Substituint, <span class="math display">\[
+2A+2(2Ax+B)=4x+8,
+\]</span> i obtenim <span class="math inline">\(A=1\)</span>, <span class="math inline">\(B=3\)</span>. Així, <span class="math inline">\(y=C_1+C_2e^{-2x}+x^2+3x\)</span>.</p>
+<p>De <span class="math inline">\(y'(0)=2\)</span> resulta <span class="math inline">\(-2C_2+3=2\)</span>, d’on <span class="math inline">\(C_2=1/2\)</span>. La condició <span class="math inline">\(y(1)=2\)</span> dona <span class="math inline">\(C_1=-2-\frac12e^{-2}\)</span>. Per tant, <span class="math display">\[
+y(x)=x^2+3x-2+\frac12(e^{-2x}-e^{-2}).
+\]</span></p>
+</div>
+</div>
+</div>
+<p><strong>d)</strong></p>
+<p><span class="math display">\[
+\begin{cases}y''-3y'-4y=xe^{2x},\\y(-1)=1,\quad y'(2)=1.\end{cases}
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-32" class="callout-32-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La característica <span class="math inline">\((\lambda-4)(\lambda+1)=0\)</span> dona <span class="math inline">\(y_h=C_1e^{4x}+C_2e^{-x}\)</span>.</p>
+<p>Cercam <span class="math inline">\(y_p=e^{2x}(Ax+B)\)</span>, ja que <span class="math inline">\(2\)</span> no és arrel de la característica. Substituint obtenim <span class="math inline">\(A=-1/6\)</span> i <span class="math inline">\(B=-1/36\)</span>. La solució general és <span class="math display">\[
+y=C_1e^{4x}+C_2e^{-x}-\frac{6x+1}{36}e^{2x}.
+\]</span> En imposar les dues condicions, resulta <span class="math display">\[
+\begin{cases}
+C_1e^{-4}+C_2e=1-\frac5{36}e^{-2},\\
+4C_1e^8-C_2e^{-2}=1+\frac89e^4.
+\end{cases}
+\]</span> Per abreujar, posem <span class="math inline">\(A_0=1-5e^{-2}/36\)</span> i <span class="math inline">\(B_0=1+8e^4/9\)</span>. El sistema dona <span class="math display">\[
+C_1=\frac{B_0+e^{-3}A_0}{4e^8+e^{-7}},
+\qquad C_2=e^{-1}(A_0-e^{-4}C_1).
+\]</span> Substituint aquests dos valors en la solució general obtenim la solució que compleix les condicions prescrites.</p>
+</div>
+</div>
+</div>
+<p><strong>e)</strong></p>
+<p><span class="math display">\[
+\begin{cases}y''-3y'-4y=5e^{-x},\\y(0)=1,\quad y'(0)=1.\end{cases}
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-33" class="callout-33-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La característica té arrels <span class="math inline">\(4\)</span> i <span class="math inline">\(-1\)</span>, d’on <span class="math inline">\(y_h=C_1e^{4x}+C_2e^{-x}\)</span>.</p>
+<p>Com que <span class="math inline">\(-1\)</span> és arrel simple, provam <span class="math inline">\(y_p=Axe^{-x}\)</span>. En substituir, <span class="math inline">\(-5Ae^{-x}=5e^{-x}\)</span>, i obtenim <span class="math inline">\(A=-1\)</span>. Per tant, <span class="math display">\[
+y=C_1e^{4x}+(C_2-x)e^{-x}.
+\]</span> Imposant <span class="math inline">\(y(0)=1\)</span> i <span class="math inline">\(y'(0)=1\)</span> obtenim <span class="math display">\[
+C_1+C_2=1,\qquad 4C_1-C_2-1=1.
+\]</span> Així, <span class="math inline">\(C_1=3/5\)</span>, <span class="math inline">\(C_2=2/5\)</span>, i <span class="math display">\[
+y(x)=\frac35e^{4x}+\left(\frac25-x\right)e^{-x}.
+\]</span></p>
+</div>
+</div>
+</div>
+<p><strong>f)</strong></p>
+<p><span class="math display">\[
+\begin{cases}y^{(4)}+2y^{(3)}-2y''+8y=3x,\\y(0)=1,\ y'(0)=0,\ y''(0)=0,\ y^{(3)}(0)=2.\end{cases}
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-34-contents" aria-controls="callout-34" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-34" class="callout-34-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La característica factoritza en <span class="math display">\[
+\lambda^4+2\lambda^3-2\lambda^2+8=(\lambda+2)^2(\lambda^2-2\lambda+2).
+\]</span> Les arrels són <span class="math inline">\(-2\)</span> (doble) i <span class="math inline">\(1\pm i\)</span>. Per tant, <span class="math display">\[
+y_h=(C_1+C_2x)e^{-2x}+e^x(C_3\cos x+C_4\sin x).
+\]</span> Com que <span class="math inline">\(0\)</span> no és arrel característica, cercam <span class="math inline">\(y_p=Ax+B\)</span>. Substituint <span class="math inline">\(8(Ax+B)=3x\)</span>, obtenim <span class="math inline">\(A=3/8\)</span>, <span class="math inline">\(B=0\)</span>. Així, <span class="math display">\[
+y=y_h+\frac{3x}{8}.
+\]</span> Les quatre condicions inicials donen <span class="math display">\[
+\begin{cases}
+C_1+C_3=1,\\
+-2C_1+C_2+C_3+C_4+\frac38=0,\\
+4C_1-4C_2+2C_4=0,\\
+-8C_1+12C_2-2C_3+2C_4=2.
+\end{cases}
+\]</span> Resolent, obtenim <span class="math inline">\(C_1=17/25\)</span>, <span class="math inline">\(C_2=27/40\)</span>, <span class="math inline">\(C_3=8/25\)</span> i <span class="math inline">\(C_4=-1/100\)</span>. Per tant, <span class="math display">\[
+y(x)=\left(\frac{17}{25}+\frac{27}{40}x\right)e^{-2x}
++e^x\left(\frac8{25}\cos x-\frac1{100}\sin x\right)+\frac{3x}{8}.
+\]</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="exercici-7" class="level3">
+<h3 class="anchored" data-anchor-id="exercici-7">Exercici 7</h3>
+<p>Resoleu les equacions diferencials amb variables separables següents:</p>
+<p><strong>a)</strong></p>
+<p><span class="math display">\[
+y'=\frac1{xy}
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-35-contents" aria-controls="callout-35" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-35" class="callout-35-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Escrivim l’equació amb variables separades, <span class="math inline">\(y\,dy=dx/x\)</span>. Integrant, <span class="math display">\[
+\frac{y^2}{2}=\ln|x|+C,
+\]</span> o, absorbint el factor <span class="math inline">\(2\)</span> en la constant, <span class="math display">\[
+y^2=2\ln|x|+C.
+\]</span> Treballam en intervals on <span class="math inline">\(x\neq0\)</span> i <span class="math inline">\(y\neq0\)</span>, com exigeix l’equació inicial.</p>
+</div>
+</div>
+</div>
+<p><strong>b)</strong></p>
+<p><span class="math display">\[
+(1+e^x)yy'=e^x
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-36-contents" aria-controls="callout-36" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-36" class="callout-36-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Separam les variables: <span class="math display">\[
+y\,dy=\frac{e^x}{1+e^x}\,dx.
+\]</span> El segon membre és una integral semiimmediata, perquè la derivada de <span class="math inline">\(1+e^x\)</span> és <span class="math inline">\(e^x\)</span>. Així, <span class="math display">\[
+\frac{y^2}{2}=\ln(1+e^x)+C,
+\]</span> i per tant <span class="math inline">\(y^2=2\ln(1+e^x)+C\)</span>.</p>
+</div>
+</div>
+</div>
+<p><strong>c)</strong></p>
+<p><span class="math display">\[
+e^x\,dx=\frac{dy}{y\ln y}
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-37-contents" aria-controls="callout-37" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-37" class="callout-37-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Les variables ja estan separades. En integrar, <span class="math display">\[
+\int e^x\,dx=\int\frac{dy}{y\ln y}
+\quad\Longrightarrow\quad
+e^x=\ln|\ln y|+C.
+\]</span> En el segon membre reconeixem la derivada de <span class="math inline">\(\ln y\)</span> dividida per <span class="math inline">\(\ln y\)</span>. L’expressió és vàlida per a <span class="math inline">\(y&gt;0\)</span>, <span class="math inline">\(y\neq1\)</span>.</p>
+</div>
+</div>
+</div>
+<p><strong>d)</strong></p>
+<p><span class="math display">\[
+x(y^2-1)\,dx-y(x^2-1)\,dy=0
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-38-contents" aria-controls="callout-38" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-38" class="callout-38-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Sempre que els factors corresponents no s’anul·lin, podem separar: <span class="math display">\[
+\frac{x}{x^2-1}\,dx=\frac{y}{y^2-1}\,dy.
+\]</span> Integrant i multiplicant per dos, <span class="math display">\[
+\ln|x^2-1|=\ln|y^2-1|+C.
+\]</span> Aquesta relació equival a <span class="math inline">\(y^2-1=K(x^2-1)\)</span>, amb <span class="math inline">\(K\neq0\)</span>. Les solucions constants <span class="math inline">\(y=1\)</span> i <span class="math inline">\(y=-1\)</span>, que s’han pogut perdre en dividir per <span class="math inline">\(y^2-1\)</span>, també satisfan l’equació original i s’incorporen amb <span class="math inline">\(K=0\)</span>. Així, podem escriure <span class="math display">\[
+y^2-1=K(x^2-1),\qquad K\in\mathbb R.
+\]</span></p>
+</div>
+</div>
+</div>
+<p><strong>e)</strong></p>
+<p><span class="math display">\[
+(x+1)\,dy=(y+1)\,dx
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-39-contents" aria-controls="callout-39" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-39" class="callout-39-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Si <span class="math inline">\(y\neq-1\)</span>, separam les variables: <span class="math display">\[
+\frac{dy}{y+1}=\frac{dx}{x+1}
+\quad\Longrightarrow\quad
+\ln|y+1|=\ln|x+1|+C.
+\]</span> D’aquí resulta <span class="math display">\[
+y+1=K(x+1).
+\]</span> La solució <span class="math inline">\(y=-1\)</span>, que s’ha exclòs en dividir, també es recupera prenent <span class="math inline">\(K=0\)</span>.</p>
+</div>
+</div>
+</div>
+<p><strong>f)</strong></p>
+<p><span class="math display">\[
+x\sqrt{1+y^2}+yy'\sqrt{1+x^2}=0
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-40-contents" aria-controls="callout-40" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-40" class="callout-40-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Passam un dels termes a l’altre membre i dividim pels radicals, que són estrictament positius: <span class="math display">\[
+\frac{y}{\sqrt{1+y^2}}\,dy
+=-\frac{x}{\sqrt{1+x^2}}\,dx.
+\]</span> Les dues integrals són semiimmediates. Per tant, <span class="math display">\[
+\sqrt{1+y^2}+\sqrt{1+x^2}=C.
+\]</span></p>
+</div>
+</div>
+</div>
+<p><strong>g)</strong></p>
+<p><span class="math display">\[
+(1+x)y\,dx+(1-y)x\,dy=0
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-41-contents" aria-controls="callout-41" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-41" class="callout-41-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Per a <span class="math inline">\(xy\neq0\)</span>, podem separar: <span class="math display">\[
+\left(\frac1y-1\right)dy
+=-\left(\frac1x+1\right)dx.
+\]</span> Integrant obtenim <span class="math display">\[
+\ln|y|-y=-\ln|x|-x+C,
+\]</span> que podem reescriure com <span class="math display">\[
+xy\,e^{x-y}=K.
+\]</span> Aquesta darrera expressió també inclou la solució <span class="math inline">\(y=0\)</span>, prenent <span class="math inline">\(K=0\)</span>.</p>
+</div>
+</div>
+</div>
+<p><strong>h)</strong></p>
+<p><span class="math display">\[
+(1+y^2)\,dx+(1+x^2)\,dy=0
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-42-contents" aria-controls="callout-42" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-42" class="callout-42-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Els factors <span class="math inline">\(1+x^2\)</span> i <span class="math inline">\(1+y^2\)</span> són sempre positius. Per tant, <span class="math display">\[
+\frac{dy}{1+y^2}=-\frac{dx}{1+x^2}.
+\]</span> Integrant les dues funcions immediates de tipus arctangent, <span class="math display">\[
+\arctan y+\arctan x=C.
+\]</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="exercici-8" class="level3">
+<h3 class="anchored" data-anchor-id="exercici-8">Exercici 8</h3>
+<p>Resoleu les equacions diferencials homogènies següents:</p>
+<p><strong>a)</strong></p>
+<p><span class="math display">\[
+y'=\frac{xy+y^2}{x^2}
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-43-contents" aria-controls="callout-43" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-43" class="callout-43-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Com que el segon membre depèn de <span class="math inline">\(y/x\)</span>, feim el canvi <span class="math inline">\(y=ux\)</span>, amb <span class="math inline">\(y'=u+xu'\)</span>. Substituint, <span class="math display">\[
+u+xu'=u+u^2\quad\Longrightarrow\quad xu'=u^2.
+\]</span> Si <span class="math inline">\(u\neq0\)</span>, separam i integram: <span class="math display">\[
+\int u^{-2}\,du=\int\frac{dx}{x}
+\quad\Longrightarrow\quad
+-\frac1u=\ln|x|+C.
+\]</span> Desfent el canvi, <span class="math display">\[
+y=-\frac{x}{\ln|x|+C}.
+\]</span> A més, <span class="math inline">\(u=0\)</span> també resol l’equació transformada; per tant, <span class="math inline">\(y=0\)</span> és una altra solució.</p>
+</div>
+</div>
+</div>
+<p><strong>b)</strong></p>
+<p><span class="math display">\[
+y'=\frac{y}{x}\tan\left(\frac{y}{x}\right)
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-44-contents" aria-controls="callout-44" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-44" class="callout-44-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>El canvi que indiquen els apunts per a les homogènies és <span class="math inline">\(y=ux\)</span>, amb <span class="math inline">\(y'=u+xu'\)</span>. Així, <span class="math display">\[
+u+xu'=u\tan u
+\quad\Longrightarrow\quad
+xu'=u(\tan u-1).
+\]</span> En els intervals on <span class="math inline">\(u(\tan u-1)\neq0\)</span>, separam les variables: <span class="math display">\[
+\frac{du}{u(\tan u-1)}=\frac{dx}{x}.
+\]</span> Aquesta és la reducció a una equació de variables separades. <strong>La primitiva del membre esquerre no es pot obtenir amb les tècniques elementals d’integració explicades en els apunts</strong>, de manera que deixarem la solució en forma implícita: <span class="math display">\[
+\int\frac{du}{u(\tan u-1)}=\ln|x|+C,
+\qquad u=\frac yx.
+\]</span> En dividir podem haver perdut solucions: <span class="math inline">\(u=0\)</span> i <span class="math inline">\(\tan u=1\)</span> donen, respectivament, <span class="math display">\[
+y=0,\qquad y=\left(\frac\pi4+k\pi\right)x,
+\quad k\in\mathbb Z.
+\]</span> Per tant, el canvi es pot efectuar amb les tècniques del tema, però el desenvolupament posterior no és una integral immediata.</p>
+</div>
+</div>
+</div>
+<p><strong>c)</strong></p>
+<p><span class="math display">\[
+(x+y)\,dx-(y-x)\,dy=0
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-45-contents" aria-controls="callout-45" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-45" class="callout-45-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La funció <span class="math inline">\(y'=(x+y)/(y-x)\)</span> és homogènia. Feim <span class="math inline">\(y=ux\)</span>, d’on <span class="math inline">\(y'=u+xu'\)</span>. Aleshores, <span class="math display">\[
+u+xu'=\frac{1+u}{u-1}
+\quad\Longrightarrow\quad
+\frac{u-1}{1+2u-u^2}\,du=\frac{dx}{x}.
+\]</span> Integrant el membre esquerre a partir de la derivada del denominador, obtenim <span class="math display">\[
+-\frac12\ln|u^2-2u-1|=\ln|x|+C.
+\]</span> Desfent el canvi, arribam a <span class="math display">\[
+y^2-2xy-x^2=K.
+\]</span> La igualtat també incorpora les solucions rectilínies <span class="math inline">\(y=(1\pm\sqrt2)x\)</span> amb <span class="math inline">\(K=0\)</span>.</p>
+</div>
+</div>
+</div>
+<p><strong>d)</strong></p>
+<p><span class="math display">\[
+xy^2y'=y^3-x^3
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-46-contents" aria-controls="callout-46" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-46" class="callout-46-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Aïllam la derivada i identificam l’homogeneïtat: <span class="math display">\[
+y'=\frac{y}{x}-\frac{x^2}{y^2}.
+\]</span> Amb <span class="math inline">\(y=ux\)</span> i <span class="math inline">\(y'=u+xu'\)</span> queda <span class="math display">\[
+u+xu'=u-\frac1{u^2}
+\quad\Longrightarrow\quad
+u^2\,du=-\frac{dx}{x}.
+\]</span> Integrant, <span class="math display">\[
+\frac{u^3}{3}=-\ln|x|+C.
+\]</span> En tornar a <span class="math inline">\(u=y/x\)</span>, resulta <span class="math display">\[
+\frac{y^3}{x^3}+3\ln|x|=C,
+\]</span> als intervals en què l’equació original està definida.</p>
+</div>
+</div>
+</div>
+<p><strong>e)</strong></p>
+<p><span class="math display">\[
+y'=\frac{2y^4+x^4}{xy^3}
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-47-contents" aria-controls="callout-47" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-47" class="callout-47-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>El segon membre només depèn de <span class="math inline">\(y/x\)</span>. Amb <span class="math inline">\(y=ux\)</span>, tenim <span class="math display">\[
+u+xu'=2u+\frac1{u^3}
+\quad\Longrightarrow\quad
+\frac{u^3}{1+u^4}\,du=\frac{dx}{x}.
+\]</span> Integrant, <span class="math display">\[
+\frac14\ln(1+u^4)=\ln|x|+C.
+\]</span> En desfer el canvi i absorbir la constant obtenim <span class="math display">\[
+x^4+y^4=Kx^8,\qquad K&gt;0,
+\]</span> en intervals on <span class="math inline">\(x\neq0\)</span> i <span class="math inline">\(y\neq0\)</span>.</p>
+</div>
+</div>
+</div>
+<p><strong>f)</strong></p>
+<p><span class="math display">\[
+y'=\frac{2xy}{x^2-y^2}
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solució">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-48-contents" aria-controls="callout-48" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solució
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-48" class="callout-48-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Amb el canvi <span class="math inline">\(y=ux\)</span> obtenim <span class="math display">\[
+u+xu'=\frac{2u}{1-u^2}
+\quad\Longrightarrow\quad
+xu'=\frac{u(1+u^2)}{1-u^2}.
+\]</span> Si <span class="math inline">\(u\neq0\)</span>, separam les variables i simplificam: <span class="math display">\[
+\int\left(\frac1u-\frac{2u}{1+u^2}\right)du
+=\int\frac{dx}{x}.
+\]</span> D’aquí <span class="math display">\[
+\ln|u|-\ln(1+u^2)=\ln|x|+C.
+\]</span> Desfent el canvi i reordenant resulta <span class="math display">\[
+y=K(x^2+y^2).
+\]</span> Aquesta expressió incorpora també la solució <span class="math inline">\(y=0\)</span> quan <span class="math inline">\(K=0\)</span>, que s’havia exclòs en dividir per <span class="math inline">\(u\)</span>.</p>
+</div>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./tema4.html" class="pagination-link" aria-label="Tema 4. Funcions de diverses variables">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Tema 4. Funcions de diverses variables</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
