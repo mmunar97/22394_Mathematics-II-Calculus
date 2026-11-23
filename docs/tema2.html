@@ -30,6 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./tema3.html" rel="next">
+<link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -109,9 +111,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
-      22394 - Matemàtiques II - Càlcul. Llibre de solucions
-      </li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./tema2.html">Fulls d’exercicis</a></li><li class="breadcrumb-item"><a href="./tema2.html">Tema 2. Càlcul diferencial en una variable</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -151,6 +151,12 @@ window.Quarto = {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tema2.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Tema 2. Càlcul diferencial en una variable</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./tema3.html" class="sidebar-item-text sidebar-link">
@@ -241,7 +247,7 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./tema2.html">Fulls d’exercicis</a></li><li class="breadcrumb-item"><a href="./tema2.html">Tema 2. Càlcul diferencial en una variable</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Tema 2. Càlcul diferencial en una variable</h1>
 </div>
@@ -340,6 +346,14 @@ Solució
 <div class="callout-body-container callout-body">
 <p>El sinus està definit en tot <span class="math inline">\(\mathbb R\)</span>, de manera que només cal que existeixi l’arrel: <span class="math inline">\(\frac{1+x}{1-x}\geq0\)</span>, amb <span class="math inline">\(x\ne1\)</span>. El numerador s’anul·la en <span class="math inline">\(x=-1\)</span> i el denominador en <span class="math inline">\(x=1\)</span>:</p>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 20%">
+<col style="width: 7%">
+<col style="width: 12%">
+<col style="width: 15%">
+<col style="width: 19%">
+</colgroup>
 <thead>
 <tr class="header">
 <th style="text-align: center;"><span class="math inline">\(x\)</span></th>
@@ -1047,8 +1061,8 @@ Solució
 <li><span class="math inline">\(xe^{1/x}\)</span> és contínua i derivable en <span class="math inline">\((-\infty,0)\)</span>, perquè és el producte d’un polinomi i la composició de l’exponencial amb un quocient de polinomis.</li>
 <li><span class="math inline">\(\frac{x^3}3-\ln(1+x^2)\)</span>, amb domini <span class="math inline">\(\mathbb R\)</span> (ja que <span class="math inline">\(1+x^2&gt;0\)</span>), és contínua i derivable en <span class="math inline">\((0,+\infty)\)</span>.</li>
 </ul>
-<p><strong>Continuïtat en <span class="math inline">\(x=0\)</span>.</strong> Tenim <span class="math inline">\(f(0)=0-\ln1=0\)</span> i <span class="math display">\[\lim_{x\to0^-}xe^{1/x}=0\cdot e^{-\infty}=0\cdot0=0,\qquad\lim_{x\to0^+}\left(\frac{x^3}3-\ln(1+x^2)\right)=0-\ln1=0.\]</span> Els dos límits laterals coincideixen amb <span class="math inline">\(f(0)\)</span>: <span class="math inline">\(f\)</span> és contínua en <span class="math inline">\(0\)</span>.</p>
-<p><strong>Derivabilitat en <span class="math inline">\(x=0\)</span>.</strong> Calculam les derivades laterals: <span class="math display">\[f'(0^-)=\lim_{h\to0^-}\frac{he^{1/h}-0}{h}=\lim_{h\to0^-}e^{1/h}=e^{-\infty}=0,\]</span> <span class="math display">\[f'(0^+)=\lim_{h\to0^+}\frac{\frac{h^3}3-\ln(1+h^2)-0}{h}=\lim_{h\to0^+}\left(\frac{h^2}3-\frac{\ln(1+h^2)}{h}\right).\]</span> El primer sumand tendeix a <span class="math inline">\(0\)</span>. En el segon, <span class="math inline">\(\ln(1+h^2)\)</span> és el numerador i <span class="math inline">\(h^2\to0\)</span>, de manera que podem substituir-lo per l’infinitèsim equivalent <span class="math inline">\(h^2\)</span>: <span class="math display">\[\lim_{h\to0^+}\frac{\ln(1+h^2)}{h}=\lim_{h\to0^+}\frac{h^2}{h}=\lim_{h\to0^+}h=0.\]</span> Així, <span class="math inline">\(f'(0^+)=0\)</span>. Com que <span class="math inline">\(f'(0^-)=f'(0^+)=0\)</span>, <span class="math inline">\(f\)</span> és derivable en <span class="math inline">\(0\)</span> i <span class="math inline">\(f'(0)=0\)</span>.</p>
+<p><strong>Continuïtat en</strong> <span class="math inline">\(x=0\)</span>. Tenim <span class="math inline">\(f(0)=0-\ln1=0\)</span> i <span class="math display">\[\lim_{x\to0^-}xe^{1/x}=0\cdot e^{-\infty}=0\cdot0=0,\qquad\lim_{x\to0^+}\left(\frac{x^3}3-\ln(1+x^2)\right)=0-\ln1=0.\]</span> Els dos límits laterals coincideixen amb <span class="math inline">\(f(0)\)</span>: <span class="math inline">\(f\)</span> és contínua en <span class="math inline">\(0\)</span>.</p>
+<p><strong>Derivabilitat en</strong> <span class="math inline">\(x=0\)</span>. Calculam les derivades laterals: <span class="math display">\[f'(0^-)=\lim_{h\to0^-}\frac{he^{1/h}-0}{h}=\lim_{h\to0^-}e^{1/h}=e^{-\infty}=0,\]</span> <span class="math display">\[f'(0^+)=\lim_{h\to0^+}\frac{\frac{h^3}3-\ln(1+h^2)-0}{h}=\lim_{h\to0^+}\left(\frac{h^2}3-\frac{\ln(1+h^2)}{h}\right).\]</span> El primer sumand tendeix a <span class="math inline">\(0\)</span>. En el segon, <span class="math inline">\(\ln(1+h^2)\)</span> és el numerador i <span class="math inline">\(h^2\to0\)</span>, de manera que podem substituir-lo per l’infinitèsim equivalent <span class="math inline">\(h^2\)</span>: <span class="math display">\[\lim_{h\to0^+}\frac{\ln(1+h^2)}{h}=\lim_{h\to0^+}\frac{h^2}{h}=\lim_{h\to0^+}h=0.\]</span> Així, <span class="math inline">\(f'(0^+)=0\)</span>. Com que <span class="math inline">\(f'(0^-)=f'(0^+)=0\)</span>, <span class="math inline">\(f\)</span> és derivable en <span class="math inline">\(0\)</span> i <span class="math inline">\(f'(0)=0\)</span>.</p>
 <p>Concloem que <span class="math inline">\(f\)</span> és contínua i derivable en tot <span class="math inline">\(\mathbb R\)</span>, amb <span class="math display">\[f'(x)=\begin{cases}e^{1/x}\left(1-\dfrac1x\right),&amp;x&lt;0,\\0,&amp;x=0,\\x^2-\dfrac{2x}{1+x^2},&amp;x&gt;0.\end{cases}\]</span></p>
 </div>
 </div>
@@ -1072,8 +1086,8 @@ Solució
 <div id="callout-33" class="callout-33-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Ambdues funcions són contínues i derivables en <span class="math inline">\(\mathbb R\setminus\{0\}\)</span>, per ser producte d’un polinomi i la composició del sinus amb un quocient de polinomis.</p>
-<p><strong>Continuïtat en <span class="math inline">\(0\)</span>.</strong> Com que <span class="math inline">\(x^2\to0\)</span>, <span class="math inline">\(x\to0\)</span> i <span class="math inline">\(|\sin(1/x)|\leq1\)</span>, pel criteri <span class="math inline">\(0\cdot\)</span>fitada <span class="math display">\[\lim_{x\to0}x^2\sin\frac1x=0=f(0),\qquad \lim_{x\to0}x\sin\frac1x=0=g(0).\]</span> Les dues funcions són contínues en <span class="math inline">\(0\)</span>.</p>
-<p><strong>Derivabilitat en <span class="math inline">\(0\)</span>.</strong> L’expressió és la mateixa a banda i banda de zero, de manera que empram directament la definició: <span class="math display">\[f'(0)=\lim_{h\to0}\frac{h^2\sin(1/h)-0}{h}=\lim_{h\to0}h\sin\frac1h=0,\]</span> de nou pel criteri <span class="math inline">\(0\cdot\)</span>fitada. Per a <span class="math inline">\(g\)</span>, <span class="math display">\[\lim_{h\to0}\frac{g(h)-g(0)}h=\lim_{h\to0}\frac{h\sin(1/h)}{h}=\lim_{h\to0}\sin\frac1h,\]</span> que no existeix: les successions <span class="math inline">\(h_n=\frac1{2n\pi+\pi/2}\)</span> i <span class="math inline">\(k_n=\frac1{2n\pi}\)</span> tendeixen a <span class="math inline">\(0\)</span>, però <span class="math inline">\(\sin(1/h_n)=1\)</span> i <span class="math inline">\(\sin(1/k_n)=0\)</span>.</p>
+<p><strong>Continuïtat en</strong> <span class="math inline">\(0\)</span>. Com que <span class="math inline">\(x^2\to0\)</span>, <span class="math inline">\(x\to0\)</span> i <span class="math inline">\(|\sin(1/x)|\leq1\)</span>, pel criteri <span class="math inline">\(0\cdot\)</span>fitada <span class="math display">\[\lim_{x\to0}x^2\sin\frac1x=0=f(0),\qquad \lim_{x\to0}x\sin\frac1x=0=g(0).\]</span> Les dues funcions són contínues en <span class="math inline">\(0\)</span>.</p>
+<p><strong>Derivabilitat en</strong> <span class="math inline">\(0\)</span>. L’expressió és la mateixa a banda i banda de zero, de manera que empram directament la definició: <span class="math display">\[f'(0)=\lim_{h\to0}\frac{h^2\sin(1/h)-0}{h}=\lim_{h\to0}h\sin\frac1h=0,\]</span> de nou pel criteri <span class="math inline">\(0\cdot\)</span>fitada. Per a <span class="math inline">\(g\)</span>, <span class="math display">\[\lim_{h\to0}\frac{g(h)-g(0)}h=\lim_{h\to0}\frac{h\sin(1/h)}{h}=\lim_{h\to0}\sin\frac1h,\]</span> que no existeix: les successions <span class="math inline">\(h_n=\frac1{2n\pi+\pi/2}\)</span> i <span class="math inline">\(k_n=\frac1{2n\pi}\)</span> tendeixen a <span class="math inline">\(0\)</span>, però <span class="math inline">\(\sin(1/h_n)=1\)</span> i <span class="math inline">\(\sin(1/k_n)=0\)</span>.</p>
 <p>Per tant, <span class="math inline">\(f\)</span> és contínua i derivable en <span class="math inline">\(\mathbb R\)</span>, mentre que <span class="math inline">\(g\)</span> és contínua en <span class="math inline">\(\mathbb R\)</span> i derivable en <span class="math inline">\(\mathbb R\setminus\{0\}\)</span>.</p>
 </div>
 </div>
@@ -1135,8 +1149,8 @@ Solució
 <div id="callout-36" class="callout-36-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Per a <span class="math inline">\(x\ne0\)</span>, <span class="math inline">\(f\)</span> és contínua i derivable, ja que és diferència de quocients de funcions derivables amb denominadors no nuls; la seva derivada és <span class="math display">\[f'(x)=-\frac1{x^2}+\frac{e^x}{(e^x-1)^2},\qquad x\ne0.\]</span></p>
-<p><strong>Continuïtat en <span class="math inline">\(0\)</span>.</strong> És una indeterminació <span class="math inline">\(\infty-\infty\)</span>; amb denominador comú, <span class="math display">\[\lim_{x\to0}\left(\frac1x-\frac1{e^x-1}\right)=\lim_{x\to0}\frac{e^x-1-x}{x(e^x-1)}.\]</span> Al denominador, <span class="math inline">\(e^x-1\)</span> és un factor i el podem substituir per l’infinitèsim equivalent <span class="math inline">\(x\)</span>. Després aplicam L’Hôpital-Bernoulli (les funcions són derivables en tot <span class="math inline">\(\mathbb R\)</span> i <span class="math inline">\((x^2)'=2x\ne0\)</span> si <span class="math inline">\(x\ne0\)</span>): <span class="math display">\[\lim_{x\to0}\frac{e^x-1-x}{x^2}=\lim_{x\to0}\frac{e^x-1}{2x}=\lim_{x\to0}\frac{x}{2x}=\frac12,\]</span> on, en el darrer pas, hem tornat a usar <span class="math inline">\(e^x-1\approx x\)</span>. El límit coincideix amb <span class="math inline">\(f(0)=\frac12\)</span>: <span class="math inline">\(f\)</span> és contínua en <span class="math inline">\(0\)</span>.</p>
-<p><strong>Derivabilitat en <span class="math inline">\(0\)</span>.</strong> L’expressió és la mateixa a banda i banda de zero, de manera que empram directament la definició. Per a <span class="math inline">\(h\ne0\)</span>, <span class="math display">\[\frac{f(h)-f(0)}h=\frac1h\left(\frac{e^h-1-h}{h(e^h-1)}-\frac12\right)=\frac{2(e^h-1-h)-h(e^h-1)}{2h^2(e^h-1)}=\frac{(2-h)e^h-2-h}{2h^2(e^h-1)}.\]</span> Substituïm el factor <span class="math inline">\(e^h-1\)</span> del denominador per l’infinitèsim equivalent <span class="math inline">\(h\)</span> i obtenim una indeterminació <span class="math inline">\(0/0\)</span>: <span class="math display">\[f'(0)=\lim_{h\to0}\frac{(2-h)e^h-2-h}{2h^3}.\]</span> El numerador i <span class="math inline">\(2h^3\)</span> són derivables en <span class="math inline">\(\mathbb R\)</span>, i <span class="math inline">\(2h^3\)</span> i les seves derivades <span class="math inline">\(6h^2\)</span> i <span class="math inline">\(12h\)</span> no s’anul·len si <span class="math inline">\(h\ne0\)</span>. Aplicant tres vegades la regla de L’Hôpital-Bernoulli, <span class="math display">\[f'(0)=\lim_{h\to0}\frac{(1-h)e^h-1}{6h^2}=\lim_{h\to0}\frac{-he^h}{12h}=\lim_{h\to0}\frac{-(1+h)e^h}{12}=-\frac1{12}.\]</span> (Cada quocient intermedi torna a ser <span class="math inline">\(0/0\)</span>, i el darrer límit existeix.)</p>
+<p><strong>Continuïtat en</strong> <span class="math inline">\(0\)</span>. És una indeterminació <span class="math inline">\(\infty-\infty\)</span>; amb denominador comú, <span class="math display">\[\lim_{x\to0}\left(\frac1x-\frac1{e^x-1}\right)=\lim_{x\to0}\frac{e^x-1-x}{x(e^x-1)}.\]</span> Al denominador, <span class="math inline">\(e^x-1\)</span> és un factor i el podem substituir per l’infinitèsim equivalent <span class="math inline">\(x\)</span>. Després aplicam L’Hôpital-Bernoulli (les funcions són derivables en tot <span class="math inline">\(\mathbb R\)</span> i <span class="math inline">\((x^2)'=2x\ne0\)</span> si <span class="math inline">\(x\ne0\)</span>): <span class="math display">\[\lim_{x\to0}\frac{e^x-1-x}{x^2}=\lim_{x\to0}\frac{e^x-1}{2x}=\lim_{x\to0}\frac{x}{2x}=\frac12,\]</span> on, en el darrer pas, hem tornat a usar <span class="math inline">\(e^x-1\approx x\)</span>. El límit coincideix amb <span class="math inline">\(f(0)=\frac12\)</span>: <span class="math inline">\(f\)</span> és contínua en <span class="math inline">\(0\)</span>.</p>
+<p><strong>Derivabilitat en</strong> <span class="math inline">\(0\)</span>. L’expressió és la mateixa a banda i banda de zero, de manera que empram directament la definició. Per a <span class="math inline">\(h\ne0\)</span>, <span class="math display">\[\frac{f(h)-f(0)}h=\frac1h\left(\frac{e^h-1-h}{h(e^h-1)}-\frac12\right)=\frac{2(e^h-1-h)-h(e^h-1)}{2h^2(e^h-1)}=\frac{(2-h)e^h-2-h}{2h^2(e^h-1)}.\]</span> Substituïm el factor <span class="math inline">\(e^h-1\)</span> del denominador per l’infinitèsim equivalent <span class="math inline">\(h\)</span> i obtenim una indeterminació <span class="math inline">\(0/0\)</span>: <span class="math display">\[f'(0)=\lim_{h\to0}\frac{(2-h)e^h-2-h}{2h^3}.\]</span> El numerador i <span class="math inline">\(2h^3\)</span> són derivables en <span class="math inline">\(\mathbb R\)</span>, i <span class="math inline">\(2h^3\)</span> i les seves derivades <span class="math inline">\(6h^2\)</span> i <span class="math inline">\(12h\)</span> no s’anul·len si <span class="math inline">\(h\ne0\)</span>. Aplicant tres vegades la regla de L’Hôpital-Bernoulli, <span class="math display">\[f'(0)=\lim_{h\to0}\frac{(1-h)e^h-1}{6h^2}=\lim_{h\to0}\frac{-he^h}{12h}=\lim_{h\to0}\frac{-(1+h)e^h}{12}=-\frac1{12}.\]</span> (Cada quocient intermedi torna a ser <span class="math inline">\(0/0\)</span>, i el darrer límit existeix.)</p>
 <p>Concloem que <span class="math inline">\(f\)</span> és contínua i derivable en tot <span class="math inline">\(\mathbb R\)</span>, amb <span class="math inline">\(f'(0)=-\frac1{12}\)</span>.</p>
 </div>
 </div>
@@ -1160,8 +1174,8 @@ Solució
 <li><span class="math inline">\(\frac{x^2+4x+4}{x+2}=\frac{(x+2)^2}{x+2}\)</span>, amb domini <span class="math inline">\(\mathbb R\setminus\{-2\}\)</span>, és contínua i derivable en <span class="math inline">\((-\infty,-2)\cup(-2,0)\)</span> per ser quocient de polinomis; allà val <span class="math inline">\(x+2\)</span>. En <span class="math inline">\(x=-2\)</span> la funció no està definida i <span class="math inline">\(\lim_{x\to-2}(x+2)=0\)</span>: discontinuïtat evitable.</li>
 <li><span class="math inline">\(2+x^2\sin(3/x^2)\)</span> és contínua i derivable en <span class="math inline">\((0,+\infty)\)</span>, per ser suma i producte de polinomis i la composició del sinus amb un quocient de polinomis.</li>
 </ul>
-<p><strong>Continuïtat en <span class="math inline">\(x=0\)</span>.</strong> Tenim <span class="math inline">\(f(0)=\frac42=2\)</span> i <span class="math display">\[\lim_{x\to0^-}(x+2)=2,\qquad\lim_{x\to0^+}\left(2+x^2\sin\frac3{x^2}\right)=2+0=2,\]</span> on hem usat el criteri <span class="math inline">\(0\cdot\)</span>fitada. Així, <span class="math inline">\(f\)</span> és contínua en <span class="math inline">\(0\)</span>.</p>
-<p><strong>Derivabilitat en <span class="math inline">\(x=0\)</span>.</strong> <span class="math display">\[f'(0^-)=\lim_{h\to0^-}\frac{(h+2)-2}{h}=1,\qquad f'(0^+)=\lim_{h\to0^+}\frac{2+h^2\sin(3/h^2)-2}{h}=\lim_{h\to0^+}h\sin\frac3{h^2}=0,\]</span> pel criteri <span class="math inline">\(0\cdot\)</span>fitada. Com que <span class="math inline">\(f'(0^-)\ne f'(0^+)\)</span>, <span class="math inline">\(f\)</span> no és derivable en <span class="math inline">\(0\)</span>: és un punt angulós.</p>
+<p><strong>Continuïtat en</strong> <span class="math inline">\(x=0\)</span>. Tenim <span class="math inline">\(f(0)=\frac42=2\)</span> i <span class="math display">\[\lim_{x\to0^-}(x+2)=2,\qquad\lim_{x\to0^+}\left(2+x^2\sin\frac3{x^2}\right)=2+0=2,\]</span> on hem usat el criteri <span class="math inline">\(0\cdot\)</span>fitada. Així, <span class="math inline">\(f\)</span> és contínua en <span class="math inline">\(0\)</span>.</p>
+<p><strong>Derivabilitat en</strong> <span class="math inline">\(x=0\)</span>. <span class="math display">\[f'(0^-)=\lim_{h\to0^-}\frac{(h+2)-2}{h}=1,\qquad f'(0^+)=\lim_{h\to0^+}\frac{2+h^2\sin(3/h^2)-2}{h}=\lim_{h\to0^+}h\sin\frac3{h^2}=0,\]</span> pel criteri <span class="math inline">\(0\cdot\)</span>fitada. Com que <span class="math inline">\(f'(0^-)\ne f'(0^+)\)</span>, <span class="math inline">\(f\)</span> no és derivable en <span class="math inline">\(0\)</span>: és un punt angulós.</p>
 <p>Concloem que <span class="math inline">\(f\)</span> és contínua en <span class="math inline">\(\mathbb R\setminus\{-2\}\)</span> i derivable en <span class="math inline">\(\mathbb R\setminus\{-2,0\}\)</span>. Presenta una discontinuïtat evitable en <span class="math inline">\(x=-2\)</span> i un punt angulós en <span class="math inline">\(x=0\)</span>.</p>
 </div>
 </div>
@@ -2409,6 +2423,14 @@ Solució
 <div class="callout-body-container callout-body">
 <p><strong>Domini.</strong> El logaritme exigeix <span class="math inline">\(x^2+\frac1x=\frac{x^3+1}{x}&gt;0\)</span>. El numerador s’anul·la en <span class="math inline">\(x=-1\)</span> (ja que <span class="math inline">\(x^3+1=(x+1)(x^2-x+1)\)</span> i el segon factor no té arrels reals) i el denominador en <span class="math inline">\(x=0\)</span>:</p>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 20%">
+<col style="width: 7%">
+<col style="width: 12%">
+<col style="width: 15%">
+<col style="width: 19%">
+</colgroup>
 <thead>
 <tr class="header">
 <th style="text-align: center;"><span class="math inline">\(x\)</span></th>
@@ -3310,6 +3332,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link" aria-label="22394 - Matemàtiques II - Càlcul. Llibre de solucions">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">22394 - Matemàtiques II - Càlcul. Llibre de solucions</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./tema3.html" class="pagination-link" aria-label="Tema 3. Càlcul integral d'una variable">
+        <span class="nav-page-text">Tema 3. Càlcul integral d’una variable</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 
 

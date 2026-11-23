@@ -12,6 +12,7 @@ website:
       - index.qmd
       - section: "Fulls d'exercicis"
         contents:
+          - tema2.qmd
           - tema3.qmd
           - tema4.qmd
           - tema5.qmd
